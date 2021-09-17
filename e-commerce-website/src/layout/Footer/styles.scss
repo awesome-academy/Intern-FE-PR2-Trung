@@ -1,0 +1,70 @@
+@import 'src/assets/scss/common';
+
+.footer {
+  padding-top: 16px;
+  border-top: 4px solid $primary-color;
+
+  &__heading {
+    text-transform: uppercase;
+    color: $text-color;
+    font-size: 1.2rem;
+  }
+
+  &__list {
+    padding-left: 0;
+  }
+
+  &__item {
+    &-link {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: $light-text-color;
+      padding: 2px 0;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &-icon {
+      font-size: 1.6rem;
+      margin: -1px 8px 0 0;
+    }
+  }
+
+  &__payment {
+    max-width: 200px;
+  }
+
+  &__download {
+    display: flex;
+
+    &-qr {
+      width: 80px;
+      height: 80px;
+      border: 1px $light-text-color;
+    }
+
+    &-apps {
+      margin-left: 16px;
+    }
+
+    &-app-img {
+      height: 20px;
+    }
+  }
+
+  &__top {
+    padding: 28px 0 34px;
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    border-top: 1.6px solid rgba($light-text-color, 0.2);
+  }
+
+  &__country {
+    text-align: end;
+  }
+}

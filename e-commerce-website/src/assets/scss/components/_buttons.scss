@@ -1,0 +1,30 @@
+.button {
+  @include borderRadius(2px);
+  @include transition;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  background-color: $primary-color;
+  color: $white;
+  padding: 1px 15px;
+  text-transform: capitalize;
+  flex-shrink: 0;
+  border: none;
+  user-select: none;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.8);
+  }
+
+  &:disabled,
+  &[disabled],
+  &.disabled {
+    border: 1px solid $text-color;
+    background-color: rgba($light-text-color, 0.5);
+    color: $text-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}

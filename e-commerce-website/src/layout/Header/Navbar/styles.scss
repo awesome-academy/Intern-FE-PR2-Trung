@@ -1,0 +1,130 @@
+@import 'src/assets/scss/common';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: $navbar-height;
+  line-height: 3rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  &__item {
+    @include relative;
+    margin: 0 0.8rem;
+    font-weight: 300;
+
+    &--strong {
+      font-weight: 600;
+    }
+
+    &--separate::after {
+      @include absolute(50%, -9px);
+      @include transform(translateY(-50%));
+      content: '';
+      display: block;
+      height: 16px;
+      border-left: 1px solid #ff4545;
+    }
+  }
+
+  &__social {
+    margin-left: 6px;
+  }
+
+  &__user {
+    @extend .navbar__link;
+    @include relative;
+    justify-items: center;
+
+    &-img {
+      @include borderRadius(50%);
+      width: 22px;
+      height: 22px;
+    }
+
+    &-info {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: $white;
+    }
+
+    &-name {
+      margin-left: 8px;
+      font-weight: 400;
+    }
+
+    &:hover {
+      .navbar__user-menu {
+        display: block;
+      }
+    }
+
+    &-menu {
+      @include absolute(calc(100% + 6px), 0);
+      @include borderRadius(2px);
+      @include animation(menuGrowth ease-in 0.3s);
+      @include transformOrigin(120px top);
+      display: none;
+      padding-left: 0;
+      width: 160px;
+      background-color: $white;
+      box-shadow: 0 2px 10px rgba($black, 0.3);
+      z-index: 1;
+
+      &::after {
+        @include absolute(-20px, 20px);
+        content: '';
+        border-width: 1rem;
+        border-style: solid;
+        border-color: transparent transparent $white transparent;
+      }
+
+      &::before {
+        @include absolute(-10px, 0);
+        content: '';
+        display: block;
+        width: 10rem;
+        height: 1.4rem;
+      }
+    }
+
+    &-link {
+      display: block;
+      padding: 4px 16px;
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover {
+        background-color: rgba($light-text-color, 0.2);
+      }
+
+      &:first-child {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+    }
+  }
+
+  &__item,
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: $white;
+
+    &:hover {
+      cursor: pointer;
+      color: rgba($white, 0.7);
+    }
+  }
+}
