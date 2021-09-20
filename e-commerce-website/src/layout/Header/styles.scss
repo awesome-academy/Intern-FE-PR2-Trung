@@ -1,0 +1,185 @@
+@import 'src/assets/scss/common';
+@import 'src/assets/scss/animation';
+
+.header {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  background-image: linear-gradient(
+    180deg,
+    $primary-color,
+    $primary-color-light
+  );
+
+  &__main {
+    display: flex;
+    align-items: center;
+    height: $header-height - $navbar-height;
+  }
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__logo-img {
+    width: 150px;
+  }
+
+  &__search {
+    @include borderRadius(3px);
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: $white;
+    flex: 1;
+
+    &-input {
+      @include borderRadius(3px);
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      color: $text-color;
+      padding: 0 16px;
+    }
+
+    &-btn {
+      @include borderRadius(3px);
+      margin-right: 3px;
+      background-color: $primary-color;
+      color: $white;
+      height: 34px;
+      width: 60px;
+      border: none;
+      outline: none;
+
+      &:hover {
+        background-color: rgba($primary-color, 0.7);
+      }
+    }
+  }
+
+  &__cart {
+    width: 150px;
+    text-align: center;
+    color: $white;
+
+    &-icon {
+      cursor: pointer;
+      color: $white;
+    }
+
+    &-wrap {
+      @include relative;
+      display: inline-block;
+      padding: 0 12px;
+      cursor: pointer;
+      color: $white;
+
+      &:hover {
+        .header__cart-block {
+          display: block;
+        }
+      }
+    }
+
+    &-noti {
+      @include absolute(-6px, -4px);
+      @include borderRadius(10px);
+      padding: 1px 7px;
+      line-height: 1.4rem;
+      border: 2px solid $primary-color;
+      color: $primary-color-light;
+      background-color: $white;
+    }
+
+    &-block {
+      @include absolute(calc(100% + 6px), -48px);
+      @include borderRadius(2px);
+      @include transformOrigin(320px top);
+      @include animation(menuGrowth ease-in 0.3s);
+
+      display: none;
+      color: $text-color;
+      width: 40rem;
+      background-color: $white;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba($black, 0.3);
+      border: 1px solid $primary-color;
+
+      &::after {
+        @include absolute(-2rem, null, null, 31.6rem);
+        content: '';
+        border-width: 1rem;
+        border-style: solid;
+        border-color: transparent transparent $white transparent;
+      }
+
+      &::before {
+        @include absolute(-1rem, null, null, 27.6rem);
+        content: '';
+        display: block;
+        width: 10rem;
+        height: 1.4rem;
+      }
+
+      &--no-cart {
+        padding: 2.8rem 0;
+      }
+    }
+
+    &-no-cart-img {
+      width: 54%;
+    }
+
+    &-message {
+      margin-top: 2rem;
+      display: block;
+      font-size: 1.6rem;
+      color: $text-color;
+    }
+
+    &-header {
+      padding: 0.6rem 0;
+      font-size: 1.6rem;
+      color: $light-text-color;
+      border-bottom: 1px solid $primary-color;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover {
+      #headerCart {
+        display: block;
+      }
+    }
+
+    &-item {
+      padding: 1rem;
+      &-img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+      }
+
+      &-title {
+        margin-left: 2rem;
+        flex: 1;
+        text-align: start;
+        color: $text-color;
+      }
+
+      .price {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-show-btn {
+      max-width: 160px;
+      margin: 1rem 1rem 1rem auto;
+    }
+  }
+}

@@ -1,7 +1,10 @@
 $background-color: #f5f5f5;
+$light-text-color: #767676;
 $text-color: #333;
 $white: #fff;
 $black: #000;
+$primary-color: #d0011b;
+$primary-color-light: #ff0000;
 
 @font-face {
   font-family: 'Inter';
@@ -12,6 +15,9 @@ $black: #000;
 }
 
 $primary-font: 'Inter', sans-serif;
+
+$header-height: 120px;
+$navbar-height: 34px;
 
 $breakpoints: (
   xs: 0,
