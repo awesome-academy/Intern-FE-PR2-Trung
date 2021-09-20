@@ -13,7 +13,8 @@
         "useTabs": false,
         "singleQuote": true,
         "printWidth": 80,
-        "jsxSingleQuote": false
+        "jsxSingleQuote": false,
+        "no-console": "off"
       }
     ],
     "no-console": "warn"

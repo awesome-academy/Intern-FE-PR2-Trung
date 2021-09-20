@@ -10,6 +10,7 @@ import Products from './pages/Products'
 import User from './pages/User'
 import Admin from './pages/Admin'
 import Cart from './pages/Cart/Cart'
+import Breadcrumbs from './components/Breadcrumbs'
 
 export default function Routes() {
   return (
@@ -27,6 +28,7 @@ export default function Routes() {
       </Route>
       <Route path={path.products}>
         <MainLayout>
+          <Breadcrumbs />
           <Products />
         </MainLayout>
       </Route>

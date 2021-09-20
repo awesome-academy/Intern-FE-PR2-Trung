@@ -1,0 +1,9 @@
+@import 'src/assets/scss/common';
+
+.rating-stars {
+  color: $yellow;
+
+  svg {
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,117 @@
+@import 'src/assets/scss/common';
+
+.sort-bar {
+  @include borderRadius(2px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.4rem;
+  background-color: rgba($break-line-color, 0.5);
+
+  .sort-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 1;
+
+    &__option {
+      @include borderRadius(2px);
+      @include transition;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 1rem;
+      padding: 0 1.5rem;
+      height: 3.2rem;
+      text-transform: capitalize;
+      flex: 0 0 auto;
+      cursor: pointer;
+      background-color: $white;
+
+      &.active,
+      &:hover {
+        color: $white;
+        background-color: $primary-color;
+      }
+    }
+
+    &__price {
+      margin-left: 1rem;
+      padding: 0 1.5rem;
+      height: 3.2rem;
+      border: 0;
+      flex: 0 0 auto;
+
+      &.active {
+        color: $primary-color;
+      }
+    }
+
+    &__name {
+      @extend .sort-options__price;
+    }
+  }
+
+  .mini-page-control {
+    display: flex;
+    align-items: center;
+
+    &__page {
+      display: flex;
+
+      &-current {
+        color: $primary-color;
+      }
+    }
+
+    &__btn {
+      @include borderRadius(2px);
+      width: 3.6rem;
+      height: 3.4rem;
+      border: 0;
+      background-color: $white;
+      box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+
+      &:hover {
+        background-color: rgba($break-line-color, 0.1);
+      }
+
+      svg {
+        fill: $text-color;
+      }
+
+      &:disabled,
+      &[disabled],
+      &.disabled {
+        background-color: $break-line-color;
+        pointer-events: none;
+        cursor: default;
+
+        svg {
+          fill: rgba($text-color, 0.3);
+        }
+      }
+    }
+
+    &__prev {
+      @extend .mini-page-control__btn;
+      margin-left: 2rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 1px solid #f2f2f2;
+    }
+
+    &__next {
+      @extend .mini-page-control__btn;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}

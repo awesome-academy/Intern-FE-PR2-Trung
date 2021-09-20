@@ -37,7 +37,9 @@ a {
 button {
   cursor: pointer;
 
-  &:disabled {
+  &:disabled,
+  &[disabled],
+  &.disabled {
     cursor: default;
   }
 }
