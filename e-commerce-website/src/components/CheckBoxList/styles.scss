@@ -1,0 +1,26 @@
+@import 'src/assets/scss/common';
+
+.checkbox-list {
+  &__list {
+    li {
+      &.active {
+        font-weight: 700;
+        color: $primary-color;
+      }
+
+      input {
+        margin-right: 1rem;
+      }
+
+      label {
+        @include transition;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -4,16 +4,19 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
+    "json-server": "^0.16.3",
     "date-fns": "^2.23.0",
     "dompurify": "^2.3.2",
     "lodash": "^4.17.21",
     "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
@@ -27,6 +30,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "server": "nodemon ./src/config/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

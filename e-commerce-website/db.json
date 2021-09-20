@@ -1,0 +1,1053 @@
+{
+  "products": [
+    {
+      "id": "60afb2c76ef5b902180aacba",
+      "images": [
+        "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294",
+        "https://cf.shopee.vn/file/c38fc8e64b573086b262ac2146bfb576",
+        "https://cf.shopee.vn/file/c61cc420ca40439c2fc14eaca4d1eba8",
+        "https://cf.shopee.vn/file/9b7390e51bbc5baa25ed67cca911a689",
+        "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b",
+        "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e",
+        "https://cf.shopee.vn/file/dd2f5fed2a32fcaa32fdba9cfd09a02d"
+      ],
+      "price": 3190000,
+      "rating": 4.6,
+      "price_before_discount": 3990000,
+      "quantity": 138,
+      "sold": 1200,
+      "view": 1036,
+      "name": "Điện Thoại Vsmart Active 3 6GB/64GB - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b2",
+        "name": "Vsmart"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294"
+    },
+    {
+      "id": "60afb2426ef5b902180aacb9",
+      "images": [
+        "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e",
+        "https://cf.shopee.vn/file/a30912e04e455dc2fce0b00eb19adf44",
+        "https://cf.shopee.vn/file/7a9a4e30bfc941c4e449ca5d1ee5f72d",
+        "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74",
+        "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74",
+        "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74"
+      ],
+      "price": 2590000,
+      "rating": 4.2,
+      "price_before_discount": 3490000,
+      "quantity": 73,
+      "sold": 6800,
+      "view": 827,
+      "name": "Điện thoại OPPO A12 (3GB/32GB) - Hàng chính hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b1",
+        "name": "OPPO"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e"
+    },
+    {
+      "id": "60afb1c56ef5b902180aacb8",
+      "images": [
+        "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
+        "https://cf.shopee.vn/file/102f1de2b71e74dc947b16cbcc26359b",
+        "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+        "https://cf.shopee.vn/file/d0e24d9f53ee709bfa7f848903792480",
+        "https://cf.shopee.vn/file/f22f2248ad3029a7ea1866a3604649ee",
+        "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+      ],
+      "price": 20990000,
+      "rating": 5,
+      "price_before_discount": 26990000,
+      "quantity": 17,
+      "sold": 482,
+      "view": 344,
+      "name": "Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b3",
+        "name": "Apple"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d"
+    },
+    {
+      "id": "60afb14d6ef5b902180aacb7",
+      "images": [
+        "https://cf.shopee.vn/file/b84129a6a47d8bfdb3f36a0d05a60960",
+        "https://cf.shopee.vn/file/b905664ee2048fd39a0d693c5a931ccf",
+        "https://cf.shopee.vn/file/c8e880f319741f04e68f3968136ab2a9",
+        "https://cf.shopee.vn/file/c9ced0633e6e994d17138e0349bb64c9",
+        "https://cf.shopee.vn/file/511e2cfc03111c7ecea0995d78fba8b7",
+        "https://cf.shopee.vn/file/f9b17c2531ba74b545cfa2f868d6cbc1"
+      ],
+      "price": 2130000,
+      "rating": 5,
+      "price_before_discount": 2690000,
+      "quantity": 269,
+      "sold": 5600,
+      "view": 588,
+      "name": "Điện Thoại Realme C11 (2GB/32GB) - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b4",
+        "name": "Realme"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/b84129a6a47d8bfdb3f36a0d05a60960"
+    },
+    {
+      "id": "60afb07e6ef5b902180aacb6",
+      "images": [
+        "https://cf.shopee.vn/file/d5886573bfa51f3776a5d53b7bbe15f9",
+        "https://cf.shopee.vn/file/1b0059d99b304aa3aa8064f60563574b",
+        "https://cf.shopee.vn/file/9500640a086a928a6b2eb5764af81ac3",
+        "https://cf.shopee.vn/file/33a40335d55703137eeded97675f6902",
+        "https://cf.shopee.vn/file/04fd1b44b3c9f336e403c9c4b80ddf57",
+        "https://cf.shopee.vn/file/be006f0ed04dd6e1d2fad8dc2e8590b9",
+        "https://cf.shopee.vn/file/66ad24ee13eaec7e1a501e3144b5bfa0",
+        "https://cf.shopee.vn/file/2296858289794c8d4d1be771459309fd"
+      ],
+      "price": 1949000,
+      "rating": 5,
+      "price_before_discount": 1990000,
+      "quantity": 409,
+      "sold": 1000,
+      "view": 514,
+      "name": "Điện Thoại Xiaomi Redmi 9A 2GB/32GB - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b1",
+        "name": "Xiaomi"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/d5886573bfa51f3776a5d53b7bbe15f9"
+    },
+    {
+      "id": "60afafb76ef5b902180aacb4",
+      "images": [
+        "https://cf.shopee.vn/file/42e07e90ee3fa5a7e65238145f50d8fd",
+        "https://cf.shopee.vn/file/f200d95856d3b889977f8ea4a5f1dfe5",
+        "https://cf.shopee.vn/file/dddaea65c77883a1d1788dc0de912ef6",
+        "https://cf.shopee.vn/file/51019034e0cbe073fff8932d4d41cff9",
+        "https://cf.shopee.vn/file/0ead87048e08b25613ed31357823f8b7",
+        "https://cf.shopee.vn/file/87e49e7f4ddaf60e32987048b8d2ce64"
+      ],
+      "price": 244550,
+      "rating": 3.8,
+      "price_before_discount": 489000,
+      "quantity": 9920,
+      "sold": 728,
+      "view": 658,
+      "name": "Đồng Hồ Nam WWOOR 8826 Máy Nhật Dây Thép Mành Cao Cấp - Nhiều Màu",
+      "category": {
+        "id": "60afacca6ef5b902180aacaf",
+        "name": "Đồng hồ"
+      },
+      "brand": {
+        "id": "b5",
+        "name": "WWOOR"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/42e07e90ee3fa5a7e65238145f50d8fd"
+    },
+    {
+      "id": "60afaf286ef5b902180aacb3",
+      "images": [
+        "https://cf.shopee.vn/file/c9787ef07e442dc7c382e54e37f011a2",
+        "https://cf.shopee.vn/file/946eb90bec3ab373538562d3e3cf4e8c",
+        "https://cf.shopee.vn/file/b55cef1cedba6c3a6df4346bc87f2f60",
+        "https://cf.shopee.vn/file/7b092332c2a65f5e034f62831f8d46bc",
+        "https://cf.shopee.vn/file/818720592d08a278ee111595918643a9",
+        "https://cf.shopee.vn/file/97a8460c3121cd8d269067fbd0a56b46"
+      ],
+      "price": 300000,
+      "rating": 5,
+      "price_before_discount": 450000,
+      "quantity": 4034,
+      "sold": 2400,
+      "view": 393,
+      "name": "Đồng Hồ Nam CRRJU CR8940 Dây Thép Cao Cấp",
+      "category": {
+        "id": "60afacca6ef5b902180aacaf",
+        "name": "Đồng hồ"
+      },
+      "brand": {
+        "id": "b9",
+        "name": "CRRJU"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/c9787ef07e442dc7c382e54e37f011a2"
+    },
+    {
+      "id": "60afae906ef5b902180aacb2",
+      "images": [
+        "https://cf.shopee.vn/file/331f1cd055004f6f64a8bebc27258af6",
+        "https://cf.shopee.vn/file/b5851d65170b968a5fb276bac33ae7d5",
+        "https://cf.shopee.vn/file/95627253d8cb450c2b298200272c9104",
+        "https://cf.shopee.vn/file/f1b52592a753f620da419e0dfdf38468",
+        "https://cf.shopee.vn/file/394fafb9dfef1d23392eec4c596c0bc7",
+        "https://cf.shopee.vn/file/edf72898e24792df5a8274af5a3aab1f"
+      ],
+      "price": 199000,
+      "rating": 5,
+      "price_before_discount": 250000,
+      "quantity": 3091,
+      "sold": 2500,
+      "view": 442,
+      "name": "Đồng Hồ Nam FNGEEN Dây Thép Cao Cấp Không Gỉ, Có Lịch Ngày, Phong Cách Doanh Nhân Sang Trọng",
+      "category": {
+        "id": "60afacca6ef5b902180aacaf",
+        "name": "Đồng hồ"
+      },
+      "brand": {
+        "id": "b10",
+        "name": "FNGEEN"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/331f1cd055004f6f64a8bebc27258af6"
+    },
+    {
+      "id": "60afadff6ef5b902180aacb1",
+      "images": [
+        "https://cf.shopee.vn/file/7d4cfbe39546140483c474d0ec843d54",
+        "https://cf.shopee.vn/file/221c5a4ae90fae4782845fd0fee2a639",
+        "https://cf.shopee.vn/file/47b80cf4cce8c8a49d8ecdc28e9d7e1d",
+        "https://cf.shopee.vn/file/0378f32e5292a154ede5e10563a18488",
+        "https://cf.shopee.vn/file/2a43bac644593ae1dfe372ddc10fbb02",
+        "https://cf.shopee.vn/file/a8c51a522b7fa2d3e837f7a6546e77e0"
+      ],
+      "price": 260000,
+      "rating": 5,
+      "price_before_discount": 500000,
+      "quantity": 4050,
+      "sold": 2300,
+      "view": 399,
+      "name": "Đồng Hồ Điện Tử Thể Thao Nam Chính Hãng SMAEL JAPAN 2020 - Phong Cách Quân Đội",
+      "category": {
+        "id": "60afacca6ef5b902180aacaf",
+        "name": "Đồng hồ"
+      },
+      "brand": {
+        "id": "b1",
+        "name": "Xiaomi"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/7d4cfbe39546140483c474d0ec843d54"
+    },
+    {
+      "id": "60afad846ef5b902180aacb0",
+      "images": [
+        "https://cf.shopee.vn/file/7e13a38fffdd8c15107b939f8b11e548",
+        "https://cf.shopee.vn/file/5eaeea916b4f2b7c0864b82787e3bb16",
+        "https://cf.shopee.vn/file/f5282e3c8c3fa3ca482c584e31c9c550",
+        "https://cf.shopee.vn/file/b0b4a72fc9e4e9ced1ad5cad28e464ef",
+        "https://cf.shopee.vn/file/6f06f4f8cb38968ab6b6a2ae1ccb40de"
+      ],
+      "price": 229000,
+      "rating": 5,
+      "price_before_discount": 399000,
+      "quantity": 100123,
+      "sold": 31500,
+      "view": 2622,
+      "name": "Đồng Hồ Nam WWOOR 8018 Dây Thép Nhật Cao Cấp Nhiều Màu",
+      "category": {
+        "id": "60afacca6ef5b902180aacaf",
+        "name": "Đồng hồ"
+      },
+      "brand": {
+        "id": "b5",
+        "name": "WWOOR"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/7e13a38fffdd8c15107b939f8b11e548"
+    },
+    {
+      "id": "60af722af1a3041b289d8ba1",
+      "images": [
+        "https://cf.shopee.vn/file/4727464e1204cc2c3f70f62c125b03ec",
+        "https://cf.shopee.vn/file/15568698a339a2e0ad5da5253b53901e",
+        "https://cf.shopee.vn/file/f4193305df45bfafff4718b4d600afad",
+        "https://cf.shopee.vn/file/a85fae8849a471fc9b4abeab5da55613",
+        "https://cf.shopee.vn/file/3518a1bfb13a8762931ca72598f7adb0"
+      ],
+      "price": 194555,
+      "rating": 4.1,
+      "price_before_discount": 299999,
+      "quantity": 75,
+      "sold": 55,
+      "view": 115,
+      "name": "[KHUYẾN MÃI 35%] Áo Thun POLO Nam, Tay Ngắn Áo Cổ Sọc, Chất Liệu Cá Sấu Cao Cấp - Nhiều màu- Đủ Size",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/4727464e1204cc2c3f70f62c125b03ec"
+    },
+    {
+      "id": "60af70fbf1a3041b289d8ba0",
+      "images": [
+        "https://cf.shopee.vn/file/6ce71fa1ec178b864311003483176391",
+        "https://cf.shopee.vn/file/fb3c73dc44820408208634595ecb0716",
+        "https://cf.shopee.vn/file/6696774022f0524644015e428921e349",
+        "https://cf.shopee.vn/file/b64fd11ada054bbd8581f6a324e2f67d",
+        "https://cf.shopee.vn/file/bbe6cbc03a98dfd2f1663e3b219b069d",
+        "https://cf.shopee.vn/file/73c42af644f1adbfe6605ee2cb286d17"
+      ],
+      "price": 169000,
+      "rating": 4.5,
+      "price_before_discount": 279000,
+      "quantity": 2988,
+      "sold": 456,
+      "view": 77,
+      "name": "Áo Thun Polo Kẻ Ngang Trẻ Trung Sành Điệu Áo Phông Nam Có Cổ Tay Cộc Vải 100% Cotton Mềm Mịn Thoáng Mát HK016",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/6ce71fa1ec178b864311003483176391"
+    },
+    {
+      "id": "60af6f7bf1a3041b289d8b9c",
+      "images": [
+        "https://cf.shopee.vn/file/368d013d74489dd342a07c7dc1417dec",
+        "https://cf.shopee.vn/file/1e8458599628c116d82c5b9beac938ff",
+        "https://cf.shopee.vn/file/e5e9036c3ea0a19db4a6aed208f880bf",
+        "https://cf.shopee.vn/file/ead3e0dcefac4e1c1994269bc45f94e2",
+        "https://cf.shopee.vn/file/60e0b55b9ede5e8e0197f64cd1334d4a",
+        "https://cf.shopee.vn/file/699398220ddfe2b3c11b0d09f190ce78"
+      ],
+      "price": 399000,
+      "rating": 4.2,
+      "price_before_discount": 500000,
+      "quantity": 552,
+      "sold": 11,
+      "view": 10,
+      "name": "Áo Polo nam Polo vải cotton pha co giãn 4 chiều đẹp in logo cao bên ngực trái cao cấp, form slimfit basic - 00000673",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/368d013d74489dd342a07c7dc1417dec"
+    },
+    {
+      "id": "60af6f12f1a3041b289d8b9b",
+      "images": [
+        "https://cf.shopee.vn/file/6f85ffdc6135729dcf240a1545706b13",
+        "https://cf.shopee.vn/file/76441377bfa2eda0d1f83cca12174d7b",
+        "https://cf.shopee.vn/file/5e8f9d12de17e4284cc17dc80263b933",
+        "https://cf.shopee.vn/file/85df0fc1bbc5f0cb95f6574e4ea5a456",
+        "https://cf.shopee.vn/file/8b1e5f65eab11fe878e892273f262a66",
+        "https://cf.shopee.vn/file/f82c244736e8ca24b561f770f25e2d5e"
+      ],
+      "price": 75000,
+      "rating": 5,
+      "price_before_discount": 150000,
+      "quantity": 52,
+      "sold": 5,
+      "view": 7,
+      "name": "Áo thun Polo nam cổ bẻ BASIC vải cá sấu Cotton xuất xịn, chuẩn đẹp, màu HỒNG",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/6f85ffdc6135729dcf240a1545706b13"
+    },
+    {
+      "id": "60ad06ba2fb52902585972b0",
+      "images": [
+        "https://cf.shopee.vn/file/f35a6db134868606d4b22beb5fd40c90",
+        "https://cf.shopee.vn/file/6b0bde6b2e4cba2a9b3dcf045557f73b",
+        "https://cf.shopee.vn/file/2f7e74aba5afa79f5341f21dced39aa6",
+        "https://cf.shopee.vn/file/f0252871e44802d42d538d96f325d7e4",
+        "https://cf.shopee.vn/file/685fa141b21be4940027fd50c8758c85",
+        "https://cf.shopee.vn/file/96f263d64290ea634057dfbe0bd95282"
+      ],
+      "price": 69000,
+      "rating": 4.958,
+      "price_before_discount": 139000,
+      "quantity": 17659,
+      "sold": 497,
+      "view": 231,
+      "name": "[Mã FAMAYMA2 giảm 10K đơn 50K] Áo Thun ngắn tay unisex Tie Dye, form oversize, vải cotton loang mầu 2SClothing.",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/f35a6db134868606d4b22beb5fd40c90"
+    },
+    {
+      "id": "60ad061d2fb52902585972af",
+      "images": [
+        "https://cf.shopee.vn/file/0afe25f6eeb5ddd9083715c932d1aae7",
+        "https://cf.shopee.vn/file/8163a302af374b6f40391d1da9098c0a",
+        "https://cf.shopee.vn/file/ed553d925523b3a3c697caf2fb2b9d6b",
+        "https://cf.shopee.vn/file/89ae1af192d3b9358fc599a300ca21fc",
+        "https://cf.shopee.vn/file/17e7e21bb345993bc41129c562059dba"
+      ],
+      "price": 69000,
+      "rating": 4.9,
+      "price_before_discount": 138000,
+      "quantity": 107962,
+      "sold": 5655,
+      "view": 4963,
+      "name": "[Mã FADI5K245 giảm 5K đơn 0đ] Áo thun tay lỡ Gấu194 unisex form rộng trơn chữ vải coton mềm mịn co dãn 4 chiều - GAU1994",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/0afe25f6eeb5ddd9083715c932d1aae7"
+    },
+    {
+      "id": "60ad056c2fb52902585972ae",
+      "images": [
+        "https://cf.shopee.vn/file/a00da4d87c5bd9c97d269982c87d6c3e",
+        "https://cf.shopee.vn/file/feee272867bd3cbbad4ac257fa0df437",
+        "https://cf.shopee.vn/file/30db6f7b5e60707ab5e1f63a48a91bc5",
+        "https://cf.shopee.vn/file/76794653255db164f55912047a4ff282",
+        "https://cf.shopee.vn/file/b3a4fd1b428209c7c8d84b55187d4554"
+      ],
+      "price": 130000,
+      "rating": 0,
+      "price_before_discount": 150000,
+      "quantity": 6982,
+      "sold": 0,
+      "view": 32,
+      "name": "Áo Thun Tay Lỡ Polo Form Rộng Mon Mon Siêu Hot🍁 Unisex nam nữ đều mặc được)",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/a00da4d87c5bd9c97d269982c87d6c3e"
+    },
+    {
+      "id": "60ad04e32fb52902585972ad",
+      "images": [
+        "https://cf.shopee.vn/file/6d4517f83b156119020e6b79e1be1109",
+        "https://cf.shopee.vn/file/efcd4e34c699409e8fe1bbc228e26b35",
+        "https://cf.shopee.vn/file/e79359678b67faaedef09e1d075930cc",
+        "https://cf.shopee.vn/file/773ea648e775110380c559da29033319"
+      ],
+      "price": 37000,
+      "rating": 4.95,
+      "price_before_discount": 70000,
+      "quantity": 724,
+      "sold": 75,
+      "view": 17,
+      "name": "Áo Cotton Polo Nam Đông Xuân Cộc Tay Và Ba Lỗ ( Video+ Ảnh Thật )",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/6d4517f83b156119020e6b79e1be1109"
+    },
+    {
+      "id": "60ad04392fb52902585972ac",
+      "images": [
+        "https://cf.shopee.vn/file/20d7ab994420034f63bdba25859c2b13",
+        "https://cf.shopee.vn/file/d2bf5bd7c2576d4ff5430f0e53e65385"
+      ],
+      "price": 79000,
+      "rating": 4.8,
+      "price_before_discount": 150000,
+      "quantity": 23210,
+      "sold": 898,
+      "view": 204,
+      "name": "[XẢ KHO GIÁ SỐC] Áo thun Polo nam cổ tim ngắn tay đẹp nhiều màu đủ size ( có size lớn cho người 100 kg )",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b6",
+        "name": "Polo"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/20d7ab994420034f63bdba25859c2b13"
+    },
+    {
+      "id": "60ad03872fb52902585972ab",
+      "images": [
+        "https://cf.shopee.vn/file/f917e9b62a7ddfa8d44b24664b610da5",
+        "https://cf.shopee.vn/file/2d77e39f404b0578a8aa9d47dcf7dabb",
+        "https://cf.shopee.vn/file/09957bf058c025a33fd5545d82aa230b",
+        "https://cf.shopee.vn/file/1a8c81c4187077ef100fb4cf18a0ec85",
+        "https://cf.shopee.vn/file/ec4e780c2db8c698265991f80d8e91c0",
+        "https://cf.shopee.vn/file/39451670544f7285b5107f23fa69d16e"
+      ],
+      "price": 982350,
+      "rating": 4.9,
+      "price_before_discount": 189000,
+      "quantity": 3224,
+      "sold": 523,
+      "view": 287,
+      "name": "Áo thun nam nữ cotton co giãn unisex Giisel phông trơn basic tee tay lỡ oversize form rộng 10 màu",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b7",
+        "name": "Giisel"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/f917e9b62a7ddfa8d44b24664b610da5"
+    },
+    {
+      "id": "60ad02f62fb52902585972aa",
+      "images": [
+        "https://cf.shopee.vn/file/91bbc9a0d317da6ce3df645cc2e74c19",
+        "https://cf.shopee.vn/file/adbfc7fdad7a865cd64bf777deae42bb",
+        "https://cf.shopee.vn/file/47f8b47b48f321e59aed4d9e73dc4153",
+        "https://cf.shopee.vn/file/08b0a9c87c736f6ce54341e5f55054c8",
+        "https://cf.shopee.vn/file/c7fb393af2262ae6f07d8c012ae7c33b"
+      ],
+      "price": 106000,
+      "rating": 0,
+      "price_before_discount": 189000,
+      "quantity": 3000,
+      "sold": 0,
+      "view": 1,
+      "name": "Bộ thể thao mùa hè cao cấp thích hợp mặc ở nhà đi tập gym du lịch - chất liệu polydrop - Giisel *",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b7",
+        "name": "Giisel"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/91bbc9a0d317da6ce3df645cc2e74c19"
+    },
+    {
+      "id": "60ad02422fb52902585972a9",
+      "images": [
+        "https://cf.shopee.vn/file/eb7cce18ed96fa481c67220a199895f5",
+        "https://cf.shopee.vn/file/128586ecf6b60c5dab3a1f515f755df0",
+        "https://cf.shopee.vn/file/47e3981fdbe6d021796997ad2034a926",
+        "https://cf.shopee.vn/file/f18cb5f167aa57165b909a3c70aaf570",
+        "https://cf.shopee.vn/file/31bd41d2da4a0fefe4a3b5d58edb21be",
+        "https://cf.shopee.vn/file/a205525af3708e0a32a51596bf027b99"
+      ],
+      "price": 279000,
+      "rating": 5,
+      "price_before_discount": 315000,
+      "quantity": 1959,
+      "sold": 36,
+      "view": 19,
+      "name": "[Mã FAMALLT5 giảm 15% đơn 150K] Áo thun tay lỡ GENZ phông Unisex nam nữ Cotton oversize form rộng Racing Genz GZT021",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b8",
+        "name": "GENZ"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/eb7cce18ed96fa481c67220a199895f5"
+    },
+    {
+      "id": "60ad01992fb52902585972a8",
+      "images": [
+        "https://cf.shopee.vn/file/eb7cce18ed96fa481c67220a199895f5",
+        "https://cf.shopee.vn/file/128586ecf6b60c5dab3a1f515f755df0",
+        "https://cf.shopee.vn/file/47e3981fdbe6d021796997ad2034a926",
+        "https://cf.shopee.vn/file/f18cb5f167aa57165b909a3c70aaf570",
+        "https://cf.shopee.vn/file/31bd41d2da4a0fefe4a3b5d58edb21be",
+        "https://cf.shopee.vn/file/a205525af3708e0a32a51596bf027b99"
+      ],
+      "price": 100000,
+      "rating": 0,
+      "price_before_discount": 10000,
+      "quantity": 22396,
+      "sold": 0,
+      "view": 34,
+      "name": "Áo Thun Tay Lỡ Genz Basic Nhiều Màu Siêu Hot🍁 Unisex nam nữ đều mặc được",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b8",
+        "name": "GENZ"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/31bd41d2da4a0fefe4a3b5d58edb21be"
+    },
+    {
+      "id": "60ad01102fb52902585972a7",
+      "images": [
+        "https://cf.shopee.vn/file/eb7cce18ed96fa481c67220a199895f5",
+        "https://cf.shopee.vn/file/128586ecf6b60c5dab3a1f515f755df0",
+        "https://cf.shopee.vn/file/47e3981fdbe6d021796997ad2034a926",
+        "https://cf.shopee.vn/file/f18cb5f167aa57165b909a3c70aaf570",
+        "https://cf.shopee.vn/file/31bd41d2da4a0fefe4a3b5d58edb21be",
+        "https://cf.shopee.vn/file/a205525af3708e0a32a51596bf027b99"
+      ],
+      "price": 53000,
+      "rating": 5,
+      "price_before_discount": 106000,
+      "quantity": 16746,
+      "sold": 2255,
+      "view": 42,
+      "name": "Áo thun nam nữ tay lỡ Genz, áo phông nam nữ form rộng A304",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b8",
+        "name": "GENZ"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/47e3981fdbe6d021796997ad2034a926"
+    },
+    {
+      "id": "60ad004c2fb52902585972a6",
+      "images": [
+        "https://cf.shopee.vn/file/f917e9b62a7ddfa8d44b24664b610da5",
+        "https://cf.shopee.vn/file/2d77e39f404b0578a8aa9d47dcf7dabb",
+        "https://cf.shopee.vn/file/09957bf058c025a33fd5545d82aa230b",
+        "https://cf.shopee.vn/file/1a8c81c4187077ef100fb4cf18a0ec85",
+        "https://cf.shopee.vn/file/ec4e780c2db8c698265991f80d8e91c0",
+        "https://cf.shopee.vn/file/39451670544f7285b5107f23fa69d16e"
+      ],
+      "price": 49000,
+      "rating": 5,
+      "price_before_discount": 70000,
+      "quantity": 6797,
+      "sold": 21,
+      "view": 19,
+      "name": "Mẫu Mới Khuyến Mãi Sốc 3 Ngày ⚡ Áo Thun Tay Lỡ In Bướm Dirty Coins Ao Thun Unisex From Rộng -BONSEN STORE",
+      "category": {
+        "id": "60aba4e24efcc70f8892e1c6",
+        "name": "Áo thun"
+      },
+      "brand": {
+        "id": "b7",
+        "name": "Giisel"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/1a8c81c4187077ef100fb4cf18a0ec85"
+    },
+    {
+      "id": "60afb2c76ef5b90a180aacba",
+      "images": [
+        "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294",
+        "https://cf.shopee.vn/file/c38fc8e64b573086b262ac2146bfb576",
+        "https://cf.shopee.vn/file/c61cc420ca40439c2fc14eaca4d1eba8",
+        "https://cf.shopee.vn/file/9b7390e51bbc5baa25ed67cca911a689",
+        "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b",
+        "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e",
+        "https://cf.shopee.vn/file/dd2f5fed2a32fcaa32fdba9cfd09a02d"
+      ],
+      "price": 3190000,
+      "rating": 4.6,
+      "price_before_discount": 3990000,
+      "quantity": 138,
+      "sold": 1200,
+      "view": 1036,
+      "name": "Điện Thoại Vsmart Active 4 4GB/64GB - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b2",
+        "name": "Vsmart"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b"
+    },
+    {
+      "id": "60afb2c76ef5b99a180aacba",
+      "images": [
+        "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294",
+        "https://cf.shopee.vn/file/c38fc8e64b573086b262ac2146bfb576",
+        "https://cf.shopee.vn/file/c61cc420ca40439c2fc14eaca4d1eba8",
+        "https://cf.shopee.vn/file/9b7390e51bbc5baa25ed67cca911a689",
+        "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b",
+        "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e",
+        "https://cf.shopee.vn/file/dd2f5fed2a32fcaa32fdba9cfd09a02d"
+      ],
+      "price": 3190000,
+      "rating": 4.6,
+      "price_before_discount": 3990000,
+      "quantity": 138,
+      "sold": 1200,
+      "view": 1036,
+      "name": "Điện Thoại Vsmart Active 5 8GB/64GB - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b2",
+        "name": "Vsmart"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e"
+    },
+    {
+      "id": "60afb2c76ef5790a180aacba",
+      "images": [
+        "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294",
+        "https://cf.shopee.vn/file/c38fc8e64b573086b262ac2146bfb576",
+        "https://cf.shopee.vn/file/c61cc420ca40439c2fc14eaca4d1eba8",
+        "https://cf.shopee.vn/file/9b7390e51bbc5baa25ed67cca911a689",
+        "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b",
+        "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e",
+        "https://cf.shopee.vn/file/dd2f5fed2a32fcaa32fdba9cfd09a02d"
+      ],
+      "price": 3190000,
+      "rating": 4.6,
+      "price_before_discount": 3990000,
+      "quantity": 138,
+      "sold": 1200,
+      "view": 1036,
+      "name": "Điện Thoại Vsmart Active 5 4GB/64GB - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b2",
+        "name": "Vsmart"
+      },
+      "place": {
+        "id": "p1",
+        "name": "Hà Nội"
+      },
+      "image": "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e"
+    },
+    {
+      "id": "60afb2426ef5b902180a3cb9",
+      "images": [
+        "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e",
+        "https://cf.shopee.vn/file/a30912e04e455dc2fce0b00eb19adf44",
+        "https://cf.shopee.vn/file/7a9a4e30bfc941c4e449ca5d1ee5f72d",
+        "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74",
+        "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74",
+        "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74"
+      ],
+      "price": 2590000,
+      "rating": 4.2,
+      "price_before_discount": 3490000,
+      "quantity": 73,
+      "sold": 6800,
+      "view": 827,
+      "name": "Điện thoại OPPO A12 (3GB/32GB) - Hàng chính hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b1",
+        "name": "OPPO"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e"
+    },
+    {
+      "id": "60afb1c56ef5b902180aacb8",
+      "images": [
+        "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
+        "https://cf.shopee.vn/file/102f1de2b71e74dc947b16cbcc26359b",
+        "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+        "https://cf.shopee.vn/file/d0e24d9f53ee709bfa7f848903792480",
+        "https://cf.shopee.vn/file/f22f2248ad3029a7ea1866a3604649ee",
+        "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+      ],
+      "price": 20990000,
+      "rating": 5,
+      "price_before_discount": 26990000,
+      "quantity": 17,
+      "sold": 482,
+      "view": 344,
+      "name": "Điện thoại Apple Iphone 12 128GB - Hàng chính hãng VNA",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b3",
+        "name": "Apple"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c"
+    },
+    {
+      "id": "60afb14d6ef3b902180aacb7",
+      "images": [
+        "https://cf.shopee.vn/file/b84129a6a47d8bfdb3f36a0d05a60960",
+        "https://cf.shopee.vn/file/b905664ee2048fd39a0d693c5a931ccf",
+        "https://cf.shopee.vn/file/c8e880f319741f04e68f3968136ab2a9",
+        "https://cf.shopee.vn/file/c9ced0633e6e994d17138e0349bb64c9",
+        "https://cf.shopee.vn/file/511e2cfc03111c7ecea0995d78fba8b7",
+        "https://cf.shopee.vn/file/f9b17c2531ba74b545cfa2f868d6cbc1"
+      ],
+      "price": 2130000,
+      "rating": 5,
+      "price_before_discount": 2690000,
+      "quantity": 269,
+      "sold": 5600,
+      "view": 588,
+      "name": "Điện Thoại Realme C12 (2GB/32GB) - Hàng Chính Hãng",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b4",
+        "name": "Realme"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/c9ced0633e6e994d17138e0349bb64c9"
+    },
+    {
+      "id": "60afb1c56ee5b902180aacb8",
+      "images": [
+        "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
+        "https://cf.shopee.vn/file/102f1de2b71e74dc947b16cbcc26359b",
+        "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+        "https://cf.shopee.vn/file/d0e24d9f53ee709bfa7f848903792480",
+        "https://cf.shopee.vn/file/f22f2248ad3029a7ea1866a3604649ee",
+        "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+      ],
+      "price": 20990000,
+      "rating": 5,
+      "price_before_discount": 26990000,
+      "quantity": 17,
+      "sold": 482,
+      "view": 344,
+      "name": "Điện thoại Apple Iphone 11 128GB - Hàng chính hãng VNA",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b3",
+        "name": "Apple"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+    },
+    {
+      "id": "60afb1c56we5b902180aacb8",
+      "images": [
+        "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
+        "https://cf.shopee.vn/file/102f1de2b71e74dc947b16cbcc26359b",
+        "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+        "https://cf.shopee.vn/file/d0e24d9f53ee709bfa7f848903792480",
+        "https://cf.shopee.vn/file/f22f2248ad3029a7ea1866a3604649ee",
+        "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+      ],
+      "price": 20990000,
+      "rating": 5,
+      "price_before_discount": 26990000,
+      "quantity": 17,
+      "sold": 482,
+      "view": 344,
+      "name": "Điện thoại Apple Iphone 10 128GB - Hàng chính hãng VNA",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b3",
+        "name": "Apple"
+      },
+      "place": {
+        "id": "p2",
+        "name": "Đà Nẵng"
+      },
+      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c"
+    },
+    {
+      "id": "60afu1c56we5b902180aacb8",
+      "images": [
+        "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
+        "https://cf.shopee.vn/file/102f1de2b71e74dc947b16cbcc26359b",
+        "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+        "https://cf.shopee.vn/file/d0e24d9f53ee709bfa7f848903792480",
+        "https://cf.shopee.vn/file/f22f2248ad3029a7ea1866a3604649ee",
+        "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+      ],
+      "price": 20990000,
+      "rating": 5,
+      "price_before_discount": 26990000,
+      "quantity": 17,
+      "sold": 482,
+      "view": 344,
+      "name": "Điện thoại Apple Iphone 13 128GB - Hàng chính hãng VNA",
+      "category": {
+        "id": "60afafe76ef5b902180aacb5",
+        "name": "Điện thoại"
+      },
+      "brand": {
+        "id": "b3",
+        "name": "Apple"
+      },
+      "place": {
+        "id": "p3",
+        "name": "Hồ Chí Minh"
+      },
+      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c"
+    }
+  ]
+}

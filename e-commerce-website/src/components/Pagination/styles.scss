@@ -1,0 +1,51 @@
+@import 'src/assets/scss/common';
+
+.pagination {
+  margin: 3rem auto 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    &.active {
+      a {
+        background-color: $primary-color;
+        color: $white;
+
+        &:hover {
+          background-color: rgba($primary-color, 0.7);
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include borderRadius(2px);
+    @include transition;
+    display: block;
+    margin: 0 1.5rem;
+    min-width: 4rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $light-text-color;
+
+    &:first-child,
+    &:last-child {
+      @include relative;
+
+      svg {
+        @include absoluteCenter;
+      }
+    }
+
+    &:disabled,
+    &[disabled],
+    &.disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import 'src/assets/scss/common';
+
+.breadcrumbs {
+  padding: 1rem 0;
+  border-bottom: 1px solid $break-line-color;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem !important;
+    text-transform: capitalize !important;
+    color: $light-text-color !important;
+    text-decoration: none !important;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba($primary-color, 0.8) !important;
+    }
+
+    &--active {
+      color: $primary-color !important;
+    }
+
+    svg {
+      margin-right: 0.4rem;
+    }
+  }
+}
