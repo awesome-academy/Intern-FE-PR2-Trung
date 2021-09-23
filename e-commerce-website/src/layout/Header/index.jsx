@@ -1,5 +1,5 @@
 import Container from '@material-ui/core/Container'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSearch, FaShoppingCart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import noCartImage from 'src/assets/images/no-cart.png'
@@ -7,6 +7,8 @@ import { path } from 'src/constants/path'
 import Navbar from './Navbar'
 import './styles.scss'
 import logo from 'src/assets/logo/logo.svg'
+import { useHistory } from 'react-router'
+import useQuery from 'src/hooks/useQuery'
 
 function Header(props) {
   const cartItems = [
@@ -25,6 +27,25 @@ function Header(props) {
       id: 2
     }
   ]
+
+  const [searchValue, setSearchValue] = useState('')
+  const history = useHistory()
+  const query = useQuery()
+
+  useEffect(() => {
+    const { name = '' } = query
+    setSearchValue(name)
+  }, [query])
+
+  const onChangeSearch = event => {
+    setSearchValue(event.target.value)
+  }
+
+  const search = event => {
+    event.preventDefault()
+    history.push(path.products + `?name_like=${searchValue}`)
+  }
+
   return (
     <header className="header">
       <Container maxWidth="lg">
@@ -37,13 +58,14 @@ function Header(props) {
               </div>
             </Link>
           </div>
-          <form className="header__search">
+          <form className="header__search" onSubmit={search}>
             <input
               type="text"
               className="header__search-input"
               placeholder="Nhập để tìm kiếm sản phẩm"
+              onChange={onChangeSearch}
             ></input>
-            <button className="header__search-btn">
+            <button type="submit " className="header__search-btn">
               <FaSearch />
             </button>
           </form>

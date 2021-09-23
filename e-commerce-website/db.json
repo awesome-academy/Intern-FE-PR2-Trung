@@ -30,7 +30,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294"
+      "image": "https://cf.shopee.vn/file/301e0a89d67fc0609d35f1fc7670f294",
+      "createdAt": "2021-05-27T14:55:03.113Z",
+      "updatedAt": "2021-09-17T14:09:44.915Z"
     },
     {
       "id": "60afb2426ef5b902180aacb9",
@@ -54,14 +56,16 @@
         "name": "Điện thoại"
       },
       "brand": {
-        "id": "b1",
+        "id": "b11",
         "name": "OPPO"
       },
       "place": {
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e"
+      "image": "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e",
+      "createdAt": "2021-05-27T14:52:50.392Z",
+      "updatedAt": "2021-09-19T14:09:28.157Z"
     },
     {
       "id": "60afb1c56ef5b902180aacb8",
@@ -92,7 +96,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d"
+      "image": "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
+      "createdAt": "2021-05-27T14:50:45.708Z",
+      "updatedAt": "2021-09-17T14:10:21.483Z"
     },
     {
       "id": "60afb14d6ef5b902180aacb7",
@@ -123,7 +129,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/b84129a6a47d8bfdb3f36a0d05a60960"
+      "image": "https://cf.shopee.vn/file/b84129a6a47d8bfdb3f36a0d05a60960",
+      "createdAt": "2021-05-27T14:48:45.577Z",
+      "updatedAt": "2021-09-20T16:19:02.254Z"
     },
     {
       "id": "60afb07e6ef5b902180aacb6",
@@ -156,7 +164,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/d5886573bfa51f3776a5d53b7bbe15f9"
+      "image": "https://cf.shopee.vn/file/d5886573bfa51f3776a5d53b7bbe15f9",
+      "createdAt": "2021-05-27T14:45:18.517Z",
+      "updatedAt": "2021-09-16T12:16:29.232Z"
     },
     {
       "id": "60afafb76ef5b902180aacb4",
@@ -187,7 +197,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/42e07e90ee3fa5a7e65238145f50d8fd"
+      "image": "https://cf.shopee.vn/file/42e07e90ee3fa5a7e65238145f50d8fd",
+      "createdAt": "2021-05-27T14:41:59.307Z",
+      "updatedAt": "2021-09-17T02:10:03.229Z"
     },
     {
       "id": "60afaf286ef5b902180aacb3",
@@ -218,7 +230,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/c9787ef07e442dc7c382e54e37f011a2"
+      "image": "https://cf.shopee.vn/file/c9787ef07e442dc7c382e54e37f011a2",
+      "createdAt": "2021-05-27T14:39:36.099Z",
+      "updatedAt": "2021-09-15T08:31:49.672Z"
     },
     {
       "id": "60afae906ef5b902180aacb2",
@@ -249,7 +263,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/331f1cd055004f6f64a8bebc27258af6"
+      "image": "https://cf.shopee.vn/file/331f1cd055004f6f64a8bebc27258af6",
+      "createdAt": "2021-05-27T14:37:04.282Z",
+      "updatedAt": "2021-09-15T08:31:42.204Z"
     },
     {
       "id": "60afadff6ef5b902180aacb1",
@@ -273,14 +289,16 @@
         "name": "Đồng hồ"
       },
       "brand": {
-        "id": "b1",
-        "name": "Xiaomi"
+        "id": "b12",
+        "name": "SMAEL"
       },
       "place": {
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/7d4cfbe39546140483c474d0ec843d54"
+      "image": "https://cf.shopee.vn/file/7d4cfbe39546140483c474d0ec843d54",
+      "createdAt": "2021-05-27T14:34:39.366Z",
+      "updatedAt": "2021-09-13T08:01:45.120Z"
     },
     {
       "id": "60afad846ef5b902180aacb0",
@@ -310,7 +328,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/7e13a38fffdd8c15107b939f8b11e548"
+      "image": "https://cf.shopee.vn/file/7e13a38fffdd8c15107b939f8b11e548",
+      "createdAt": "2021-05-27T14:32:36.605Z",
+      "updatedAt": "2021-09-20T17:19:16.659Z"
     },
     {
       "id": "60af722af1a3041b289d8ba1",
@@ -340,7 +360,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/4727464e1204cc2c3f70f62c125b03ec"
+      "image": "https://cf.shopee.vn/file/4727464e1204cc2c3f70f62c125b03ec",
+      "createdAt": "2021-05-27T10:19:22.177Z",
+      "updatedAt": "2021-09-13T03:12:39.877Z"
     },
     {
       "id": "60af70fbf1a3041b289d8ba0",
@@ -371,7 +393,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/6ce71fa1ec178b864311003483176391"
+      "image": "https://cf.shopee.vn/file/6ce71fa1ec178b864311003483176391",
+      "createdAt": "2021-05-27T10:14:19.185Z",
+      "updatedAt": "2021-09-04T16:36:38.583Z"
     },
     {
       "id": "60af6f7bf1a3041b289d8b9c",
@@ -402,7 +426,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/368d013d74489dd342a07c7dc1417dec"
+      "image": "https://cf.shopee.vn/file/368d013d74489dd342a07c7dc1417dec",
+      "createdAt": "2021-05-27T10:07:55.092Z",
+      "updatedAt": "2021-07-19T07:38:24.125Z"
     },
     {
       "id": "60af6f12f1a3041b289d8b9b",
@@ -433,7 +459,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/6f85ffdc6135729dcf240a1545706b13"
+      "image": "https://cf.shopee.vn/file/6f85ffdc6135729dcf240a1545706b13",
+      "createdAt": "2021-05-27T10:06:10.339Z",
+      "updatedAt": "2021-08-29T15:02:53.089Z"
     },
     {
       "id": "60ad06ba2fb52902585972b0",
@@ -464,7 +492,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/f35a6db134868606d4b22beb5fd40c90"
+      "image": "https://cf.shopee.vn/file/f35a6db134868606d4b22beb5fd40c90",
+      "createdAt": "2021-05-25T14:16:26.462Z",
+      "updatedAt": "2021-09-12T16:37:57.392Z"
     },
     {
       "id": "60ad061d2fb52902585972af",
@@ -494,7 +524,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/0afe25f6eeb5ddd9083715c932d1aae7"
+      "image": "https://cf.shopee.vn/file/0afe25f6eeb5ddd9083715c932d1aae7",
+      "createdAt": "2021-05-25T14:13:49.042Z",
+      "updatedAt": "2021-09-20T10:00:08.360Z"
     },
     {
       "id": "60ad056c2fb52902585972ae",
@@ -524,7 +556,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/a00da4d87c5bd9c97d269982c87d6c3e"
+      "image": "https://cf.shopee.vn/file/a00da4d87c5bd9c97d269982c87d6c3e",
+      "createdAt": "2021-05-25T14:10:52.503Z",
+      "updatedAt": "2021-08-27T14:08:08.246Z"
     },
     {
       "id": "60ad04e32fb52902585972ad",
@@ -553,7 +587,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/6d4517f83b156119020e6b79e1be1109"
+      "image": "https://cf.shopee.vn/file/6d4517f83b156119020e6b79e1be1109",
+      "createdAt": "2021-05-25T14:08:35.273Z",
+      "updatedAt": "2021-05-25T14:08:35.273Z"
     },
     {
       "id": "60ad04392fb52902585972ac",
@@ -580,7 +616,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/20d7ab994420034f63bdba25859c2b13"
+      "image": "https://cf.shopee.vn/file/20d7ab994420034f63bdba25859c2b13",
+      "createdAt": "2021-05-25T14:05:45.785Z",
+      "updatedAt": "2021-09-20T09:59:41.228Z"
     },
     {
       "id": "60ad03872fb52902585972ab",
@@ -611,7 +649,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/f917e9b62a7ddfa8d44b24664b610da5"
+      "image": "https://cf.shopee.vn/file/f917e9b62a7ddfa8d44b24664b610da5",
+      "createdAt": "2021-05-25T14:02:47.426Z",
+      "updatedAt": "2021-09-15T03:16:01.250Z"
     },
     {
       "id": "60ad02f62fb52902585972aa",
@@ -641,7 +681,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/91bbc9a0d317da6ce3df645cc2e74c19"
+      "image": "https://cf.shopee.vn/file/91bbc9a0d317da6ce3df645cc2e74c19",
+      "createdAt": "2021-05-25T14:00:22.209Z",
+      "updatedAt": "2021-07-19T04:54:06.921Z"
     },
     {
       "id": "60ad02422fb52902585972a9",
@@ -672,7 +714,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/eb7cce18ed96fa481c67220a199895f5"
+      "image": "https://cf.shopee.vn/file/eb7cce18ed96fa481c67220a199895f5",
+      "createdAt": "2021-05-25T13:57:22.760Z",
+      "updatedAt": "2021-09-14T01:54:12.548Z"
     },
     {
       "id": "60ad01992fb52902585972a8",
@@ -703,7 +747,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/31bd41d2da4a0fefe4a3b5d58edb21be"
+      "image": "https://cf.shopee.vn/file/31bd41d2da4a0fefe4a3b5d58edb21be",
+      "createdAt": "2021-05-25T13:54:33.233Z",
+      "updatedAt": "2021-09-03T08:51:50.761Z"
     },
     {
       "id": "60ad01102fb52902585972a7",
@@ -734,7 +780,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/47e3981fdbe6d021796997ad2034a926"
+      "image": "https://cf.shopee.vn/file/47e3981fdbe6d021796997ad2034a926",
+      "createdAt": "2021-05-25T13:52:16.271Z",
+      "updatedAt": "2021-09-13T09:27:17.734Z"
     },
     {
       "id": "60ad004c2fb52902585972a6",
@@ -765,7 +813,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/1a8c81c4187077ef100fb4cf18a0ec85"
+      "image": "https://cf.shopee.vn/file/1a8c81c4187077ef100fb4cf18a0ec85",
+      "createdAt": "2021-05-25T13:49:00.060Z",
+      "updatedAt": "2021-09-19T14:21:29.301Z"
     },
     {
       "id": "60afb2c76ef5b90a180aacba",
@@ -797,7 +847,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b"
+      "image": "https://cf.shopee.vn/file/680b0422a55def7e4ed83fa98acee37b",
+      "createdAt": "2021-05-25T13:46:34.195Z",
+      "updatedAt": "2021-08-02T08:50:14.126Z"
     },
     {
       "id": "60afb2c76ef5b99a180aacba",
@@ -829,7 +881,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e"
+      "image": "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e",
+      "createdAt": "2021-05-25T13:44:28.020Z",
+      "updatedAt": "2021-09-12T16:21:27.996Z"
     },
     {
       "id": "60afb2c76ef5790a180aacba",
@@ -861,7 +915,9 @@
         "id": "p1",
         "name": "Hà Nội"
       },
-      "image": "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e"
+      "image": "https://cf.shopee.vn/file/f895766809c426f91009ac4495dc7c0e",
+      "createdAt": "2021-05-25T13:41:48.165Z",
+      "updatedAt": "2021-09-20T16:18:03.696Z"
     },
     {
       "id": "60afb2426ef5b902180a3cb9",
@@ -873,29 +929,31 @@
         "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74",
         "https://cf.shopee.vn/file/dd2f743ec781ffa336df5b3ad86ecb74"
       ],
-      "price": 2590000,
+      "price": 2890000,
       "rating": 4.2,
-      "price_before_discount": 3490000,
+      "price_before_discount": 3690000,
       "quantity": 73,
       "sold": 6800,
       "view": 827,
-      "name": "Điện thoại OPPO A12 (3GB/32GB) - Hàng chính hãng",
+      "name": "Điện thoại OPPO A12 (4GB/64GB) - Hàng chính hãng",
       "category": {
         "id": "60afafe76ef5b902180aacb5",
         "name": "Điện thoại"
       },
       "brand": {
-        "id": "b1",
+        "id": "b11",
         "name": "OPPO"
       },
       "place": {
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e"
+      "image": "https://cf.shopee.vn/file/5d40474419a7aa2b42bb2f6a35e1840e",
+      "createdAt": "2021-05-25T13:38:28.959Z",
+      "updatedAt": "2021-05-25T13:38:28.959Z"
     },
     {
-      "id": "60afb1c56ef5b902180aacb8",
+      "id": "60afb1c56ef5b902160aacb8",
       "images": [
         "https://cf.shopee.vn/file/709f1f49c8285b87c833f07ff029299d",
         "https://cf.shopee.vn/file/102f1de2b71e74dc947b16cbcc26359b",
@@ -923,7 +981,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c"
+      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+      "createdAt": "2021-05-25T13:36:13.145Z",
+      "updatedAt": "2021-09-10T09:28:38.332Z"
     },
     {
       "id": "60afb14d6ef3b902180aacb7",
@@ -954,7 +1014,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/c9ced0633e6e994d17138e0349bb64c9"
+      "image": "https://cf.shopee.vn/file/c9ced0633e6e994d17138e0349bb64c9",
+      "createdAt": "2021-05-05T13:36:13.145Z",
+      "updatedAt": "2021-09-09T09:28:38.332Z"
     },
     {
       "id": "60afb1c56ee5b902180aacb8",
@@ -985,7 +1047,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91"
+      "image": "https://cf.shopee.vn/file/77404ff511ce0585cca1f78f89b91c91",
+      "createdAt": "2021-04-25T13:36:13.145Z",
+      "updatedAt": "2021-08-10T09:28:38.332Z"
     },
     {
       "id": "60afb1c56we5b902180aacb8",
@@ -1016,7 +1080,9 @@
         "id": "p2",
         "name": "Đà Nẵng"
       },
-      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c"
+      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+      "createdAt": "2021-05-23T13:36:13.145Z",
+      "updatedAt": "2021-07-10T09:28:38.332Z"
     },
     {
       "id": "60afu1c56we5b902180aacb8",
@@ -1047,7 +1113,9 @@
         "id": "p3",
         "name": "Hồ Chí Minh"
       },
-      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c"
+      "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
+      "createdAt": "2021-05-11T13:36:13.145Z",
+      "updatedAt": "2021-09-11T09:28:38.332Z"
     }
   ]
 }
