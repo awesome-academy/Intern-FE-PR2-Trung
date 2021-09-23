@@ -1,6 +1,11 @@
 import React from 'react'
 import { FaRegStar, FaStar } from 'react-icons/fa'
 import './styles.scss'
+import PropTypes from 'prop-types'
+
+RatingStars.propTypes = {
+  rate: PropTypes.number
+}
 
 function RatingStars(props) {
   return (

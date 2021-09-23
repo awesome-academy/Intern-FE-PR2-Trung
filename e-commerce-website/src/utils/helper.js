@@ -20,7 +20,7 @@ export const formatCurrency = money =>
 
 export const formatQuantity = value => {
   const quantity = Number((Number(value) / 1000).toFixed(2))
-  if (quantity > 1) return quantity + 'k'
+  if (quantity >= 1) return quantity + 'k'
   return value
 }
 
@@ -42,5 +42,6 @@ export const extractData = (name, data) => {
     }
   }
 
+  changedData = changedData.sort((a, b) => a.name.localeCompare(b.name))
   return changedData
 }
