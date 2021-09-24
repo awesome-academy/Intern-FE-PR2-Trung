@@ -11,6 +11,7 @@ import User from './pages/User'
 import Admin from './pages/Admin'
 import Cart from './pages/Cart/Cart'
 import Breadcrumbs from './components/Breadcrumbs'
+import AuthLayout from './layout/AuthLayout'
 
 export default function Routes() {
   return (
@@ -21,10 +22,14 @@ export default function Routes() {
         </MainLayout>
       </Route>
       <Route path={path.login}>
-        <Login />
+        <AuthLayout title="Đăng nhập">
+          <Login />
+        </AuthLayout>
       </Route>
       <Route path={path.register}>
-        <Register />
+        <AuthLayout title="Đăng ký">
+          <Register />
+        </AuthLayout>
       </Route>
       <Route path={path.products}>
         <MainLayout>

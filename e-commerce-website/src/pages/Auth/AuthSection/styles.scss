@@ -1,0 +1,52 @@
+@import 'src/assets/scss/common';
+
+.auth {
+  @include relative(0.8rem);
+  background-color: $primary-color;
+
+  &__wrapper {
+    padding: 8rem;
+  }
+
+  &__banner {
+    margin: 0 6rem;
+    height: 100%;
+    background-image: url('../../../assets/logo/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &-form {
+    @include borderRadius(4px);
+    padding: 2.4rem 3rem 5rem;
+    background-color: $white;
+    box-shadow: 0 2px 10px rgba($black, 0.3);
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: $text-color;
+      text-transform: capitalize;
+    }
+
+    &__button {
+      margin: 3rem 0;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    &__footer {
+      text-align: center;
+
+      span {
+        color: $light-text-color;
+      }
+    }
+
+    &__link {
+      margin-left: 1rem;
+      color: $primary-color;
+    }
+  }
+}
