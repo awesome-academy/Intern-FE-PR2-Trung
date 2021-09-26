@@ -1,4 +1,5 @@
 import axios from 'axios'
+import LocalStorage from 'src/constants/localStorage'
 
 class Http {
   constructor() {
@@ -15,12 +16,18 @@ class Http {
         return result
       },
       ({ response }) => {
-        const result = { data: response.data, status: response.status }
+        const result = { data: response?.data, status: response?.status }
         return Promise.reject(result)
       }
     )
     this.instance.interceptors.request.use(
-      config => config,
+      config => {
+        const accessToken = localStorage.getItem(LocalStorage.accessToken)
+        if (accessToken) {
+          config.headers.authorization = accessToken
+        }
+        return config
+      },
       error => Promise.reject(error.message)
     )
   }

@@ -1117,5 +1117,17 @@
       "createdAt": "2021-05-11T13:36:13.145Z",
       "updatedAt": "2021-09-11T09:28:38.332Z"
     }
+  ],
+  "users": [
+    {
+      "id": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "displayName": "Trung Le",
+      "photoURL": "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png",
+      "role": "user",
+      "firstName": "Trung",
+      "lastName": "Le",
+      "email": "trungle888@gmail.com",
+      "createdAt": 1632716581337
+    }
   ]
 }
