@@ -7,6 +7,7 @@ import InputField from 'src/components/InputField'
 import * as Yup from 'yup'
 import PasswordField from 'src/components/PasswordField'
 import AuthSection from '../AuthSection'
+import useAuth from 'src/hooks/useAuth'
 
 function Register(props) {
   const initialValues = {
@@ -42,6 +43,8 @@ function Register(props) {
       .max(160, 'Nhập lại mật khẩu có độ dài từ 6 - 160 kí tự')
   })
 
+  const { registerWithEmailAndPassword, error } = useAuth()
+
   return (
     <AuthSection>
       <div className="auth-form">
@@ -49,9 +52,11 @@ function Register(props) {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
+          onSubmit={registerWithEmailAndPassword}
         >
           {formik => (
             <Form className="auth-form__main">
+              {error && <p className="error">{error}</p>}
               <InputField name="firstName" type="text" placeholder="Tên" />
               <InputField name="lastName" type="text" placeholder="Họ" />
               <InputField name="email" type="email" placeholder="Email" />
