@@ -1,11 +1,15 @@
-import { createUserWithEmailAndPassword, updateProfile } from '@firebase/auth'
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile
+} from '@firebase/auth'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
 import LocalStorage from 'src/constants/localStorage'
 import { path } from 'src/constants/path'
 import { auth } from 'src/firebase/firebase'
-import { register } from 'src/pages/Auth/auth.slice'
+import { fetchUser, register } from 'src/pages/Auth/auth.slice'
 
 const useAuth = () => {
   const dispatch = useDispatch()
@@ -32,6 +36,7 @@ const useAuth = () => {
       if (response.user) {
         const { accessToken, uid, displayName, photoURL } = response.user
         const newUser = {
+          accessToken,
           id: uid,
           displayName,
           photoURL,
@@ -51,10 +56,35 @@ const useAuth = () => {
     }
   }
 
+  const loginWithEmailAndPassword = async data => {
+    const { email, password } = data
+
+    try {
+      const response = await signInWithEmailAndPassword(auth, email, password)
+
+      if (response.user) {
+        const { accessToken, uid: userId } = response.user
+
+        localStorage.setItem(LocalStorage.accessToken, accessToken)
+        dispatch(fetchUser(userId))
+        setError(null)
+        history.push(path.home)
+      }
+    } catch (err) {
+      setError(err)
+    }
+  }
+
   let errorMessage
   switch (error?.code) {
     case 'auth/email-already-in-use':
       errorMessage = 'Email này đã được sử dụng'
+      break
+    case 'auth/wrong-password':
+      errorMessage = 'Sai mật khẩu'
+      break
+    case 'auth/user-not-found':
+      errorMessage = 'Tài khoản này không tồn tại'
       break
     default:
       errorMessage = error?.code
@@ -63,6 +93,7 @@ const useAuth = () => {
   return {
     authenticated,
     registerWithEmailAndPassword,
+    loginWithEmailAndPassword,
     error: errorMessage
   }
 }
