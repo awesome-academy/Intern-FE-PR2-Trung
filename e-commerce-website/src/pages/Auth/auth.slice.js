@@ -28,6 +28,13 @@ const auth = createSlice({
   initialState: {
     profile: JSON.parse(localStorage.getItem(LocalStorage.user)) || {}
   },
+  reducers: {
+    logout: (state, action) => {
+      state.profile = {}
+      localStorage.removeItem(LocalStorage.user)
+      localStorage.removeItem(LocalStorage.accessToken)
+    }
+  },
   extraReducers: {
     [register.fulfilled]: handleAuthFulfilled,
     [fetchUser.fulfilled]: handleAuthFulfilled

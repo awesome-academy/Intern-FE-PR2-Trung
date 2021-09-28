@@ -12,7 +12,7 @@ import useAuth from 'src/hooks/useAuth'
 import { useSelector } from 'react-redux'
 
 function Navbar(props) {
-  const { authenticated } = useAuth()
+  const { authenticated, logout } = useAuth()
   const { profile } = useSelector(state => state.auth)
 
   return (
@@ -79,7 +79,7 @@ function Navbar(props) {
                   </Link>
                 </li>
                 <li className="navbar__user-item">
-                  <Link to={path.home} className="navbar__user-link">
+                  <Link to="" className="navbar__user-link" onClick={logout}>
                     Đăng xuất
                   </Link>
                 </li>
