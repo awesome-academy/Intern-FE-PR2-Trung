@@ -8,8 +8,18 @@ export const register = createAsyncThunk(
   payLoadCreater(authApi.register)
 )
 
+export const fetchUser = createAsyncThunk(
+  'auth/fetchUser',
+  payLoadCreater(authApi.fetchUser)
+)
+
 const handleAuthFulfilled = (state, action) => {
-  state.profile = action.payload.data
+  if (Array.isArray(action.payload.data)) {
+    state.profile = action.payload.data[0]
+  } else {
+    state.profile = action.payload.data
+  }
+
   localStorage.setItem(LocalStorage.user, JSON.stringify(state.profile))
 }
 
@@ -19,7 +29,8 @@ const auth = createSlice({
     profile: JSON.parse(localStorage.getItem(LocalStorage.user)) || {}
   },
   extraReducers: {
-    [register.fulfilled]: handleAuthFulfilled
+    [register.fulfilled]: handleAuthFulfilled,
+    [fetchUser.fulfilled]: handleAuthFulfilled
   }
 })
 
