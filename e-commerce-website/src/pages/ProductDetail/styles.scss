@@ -1,0 +1,224 @@
+@import 'src/assets/scss/common';
+
+.product-detail {
+  padding-bottom: 8rem;
+
+  &__wrap {
+    @include borderRadius(2px);
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+  }
+
+  &__slider {
+    padding: 1.5rem;
+  }
+
+  &__meta {
+    padding: 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__meta-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      border-right: 1px solid rgba($black, 0.2);
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        border-right: 0;
+      }
+    }
+  }
+
+  &__rating {
+    @extend .product-detail__meta-inner-item;
+
+    & > span {
+      color: $primary-color;
+
+      font-size: 1.6rem;
+      margin-right: 0.5rem;
+
+      &:first-child {
+        border-bottom: 1px solid $primary-color;
+      }
+    }
+
+    .rating-stars {
+      svg {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__sold {
+    @extend .product-detail__meta-inner-item;
+    span {
+      &:first-child {
+        font-size: 1.6rem;
+        color: $text-color;
+        margin-right: 0.5rem;
+        padding-bottom: 0.1rem;
+      }
+
+      &:last-child {
+        font-size: 1.4rem;
+        color: $light-text-color;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 3rem;
+    padding: 2.2rem 2rem;
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+
+    &-original {
+      margin-right: 1rem;
+      font-size: 1.6rem;
+      color: $light-text-color;
+      text-decoration: line-through;
+    }
+
+    &-sale {
+      font-size: 3rem;
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+
+  &__discount {
+    @include borderRadius(2px);
+    margin-left: 1.6rem;
+    padding: 0.4rem;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $white;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .buy-qty {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: $light-text-color;
+
+    &__title {
+      max-width: 11rem;
+      flex: 0 0 11rem;
+      text-transform: capitalize;
+    }
+
+    &__control {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    button {
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__button-icon {
+    margin-right: 0.6rem;
+  }
+
+  &__protect {
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    color: $text-color;
+    border-top: 1px solid $break-line-color;
+
+    span {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      &:last-child {
+        margin-left: 1.4rem;
+        color: $light-text-color;
+      }
+
+      svg {
+        margin-right: 0.4rem;
+        font-size: 2rem;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-content {
+    &__wrap {
+      @include borderRadius(2px);
+      margin-top: 2rem;
+      padding: 2rem;
+      box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+      background-color: $white;
+      overflow: hidden;
+    }
+
+    &__heading {
+      font-size: 1.8rem;
+      color: $text-color;
+      text-transform: uppercase;
+    }
+  }
+
+  &-desc {
+    &__heading {
+      padding: 1.4rem;
+      background-color: $background-color;
+    }
+
+    &__detail {
+      margin: 3rem 1.5rem 1.5rem;
+      font-size: 1.4rem;
+      line-height: 2.2;
+      color: $text-color;
+    }
+  }
+
+  &-review {
+    &__content {
+      border-bottom: 1px solid $break-line-color;
+    }
+  }
+
+  .watched-products {
+    margin-top: 2rem;
+  }
+}

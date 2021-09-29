@@ -4,7 +4,7 @@ class Path {
     this.login = '/login'
     this.register = '/register'
     this.products = '/products'
-    this.productDetail = '/products/:idProduct'
+    this.productDetail = '/products/:productParamId'
     this.cart = '/cart'
     this.checkout = '/checkout'
     this.delivery = `${this.checkout}/delivery`
