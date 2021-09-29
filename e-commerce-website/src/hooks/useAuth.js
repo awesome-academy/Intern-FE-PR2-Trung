@@ -1,7 +1,8 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  updateProfile
+  updateProfile,
+  signOut
 } from '@firebase/auth'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,7 +10,7 @@ import { useHistory } from 'react-router'
 import LocalStorage from 'src/constants/localStorage'
 import { path } from 'src/constants/path'
 import { auth } from 'src/firebase/firebase'
-import { fetchUser, register } from 'src/pages/Auth/auth.slice'
+import { authActions, fetchUser, register } from 'src/pages/Auth/auth.slice'
 
 const useAuth = () => {
   const dispatch = useDispatch()
@@ -75,6 +76,16 @@ const useAuth = () => {
     }
   }
 
+  const logout = async () => {
+    try {
+      await signOut(auth)
+      dispatch(authActions.logout())
+      history.push(path.home)
+    } catch (err) {
+      setError(err)
+    }
+  }
+
   let errorMessage
   switch (error?.code) {
     case 'auth/email-already-in-use':
@@ -94,6 +105,7 @@ const useAuth = () => {
     authenticated,
     registerWithEmailAndPassword,
     loginWithEmailAndPassword,
+    logout,
     error: errorMessage
   }
 }
