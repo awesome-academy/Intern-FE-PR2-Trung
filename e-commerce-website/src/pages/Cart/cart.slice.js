@@ -6,7 +6,6 @@ const cart = createSlice({
   initialState: {
     cart: JSON.parse(localStorage.getItem(LocalStorage.cart)) || {
       cartItems: [],
-      totalItemCount: 0,
       totalPayment: 0
     }
   },
@@ -23,7 +22,6 @@ const cart = createSlice({
         state.cart.cartItems.push({ ...product, inCart: 1 })
       }
 
-      state.cart.totalItemCount += quantity
       state.cart.totalPayment += product.price * quantity
       localStorage.setItem(LocalStorage.cart, JSON.stringify(state.cart))
     },

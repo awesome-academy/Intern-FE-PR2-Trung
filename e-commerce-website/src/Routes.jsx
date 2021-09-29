@@ -14,6 +14,7 @@ import Breadcrumbs from './components/Breadcrumbs'
 import AuthLayout from './layout/AuthLayout'
 import UnauthenticatedGuard from './guards/UnauthenticatedGuard'
 import AuthenticatedGuard from './guards/AuthenticatedGuard'
+import CartLayout from './layout/CartLayout'
 
 export default function Routes() {
   return (
@@ -50,7 +51,11 @@ export default function Routes() {
         </MainLayout>
       </Route>
       <Route path={path.cart}>
-        <Cart />
+        <AuthenticatedGuard>
+          <CartLayout>
+            <Cart />
+          </CartLayout>
+        </AuthenticatedGuard>
       </Route>
       <Route path={path.user}>
         <AuthenticatedGuard>

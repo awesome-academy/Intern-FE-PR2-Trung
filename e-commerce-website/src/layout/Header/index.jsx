@@ -25,8 +25,8 @@ function Header(props) {
   const { authenticated } = useAuth()
 
   useEffect(() => {
-    const { name = '' } = query
-    setSearchValue(name)
+    const { name_like = '' } = query
+    setSearchValue(name_like)
   }, [query])
 
   useEffect(() => {
@@ -59,6 +59,7 @@ function Header(props) {
               type="text"
               className="header__search-input"
               placeholder="Nhập để tìm kiếm sản phẩm"
+              value={searchValue}
               onChange={onChangeSearch}
             ></input>
             <button type="submit " className="header__search-btn">
