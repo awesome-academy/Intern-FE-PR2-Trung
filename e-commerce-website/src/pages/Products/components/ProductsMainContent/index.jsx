@@ -1,4 +1,5 @@
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
+import { Grid } from '@material-ui/core'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Pagination from 'src/components/Pagination'
@@ -116,9 +117,13 @@ function ProductsMainContent({ filters }) {
       ) : (
         <div>
           <div className="product-list">
-            {products.map(product => (
-              <ProductItem key={product.id} product={product} />
-            ))}
+            <Grid container>
+              {products.map(product => (
+                <Grid item xs={12} sm={6} md={3} key={product.id}>
+                  <ProductItem product={product} />
+                </Grid>
+              ))}
+            </Grid>
           </div>
           <Pagination
             pagination={pagination}

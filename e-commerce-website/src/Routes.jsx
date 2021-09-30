@@ -37,7 +37,7 @@ export default function Routes() {
           </AuthLayout>
         </UnauthenticatedGuard>
       </Route>
-      <Route path={path.products}>
+      <Route path={path.products} exact>
         <MainLayout>
           <Breadcrumbs />
           <Products />
@@ -45,6 +45,7 @@ export default function Routes() {
       </Route>
       <Route path={path.productDetail}>
         <MainLayout>
+          <Breadcrumbs />
           <ProductDetail />
         </MainLayout>
       </Route>

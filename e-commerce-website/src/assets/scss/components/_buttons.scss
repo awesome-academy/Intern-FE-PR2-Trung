@@ -8,10 +8,10 @@
   height: 3.5rem;
   background-color: $primary-color;
   color: $white;
-  padding: 1px 15px;
+  padding: 0.1rem 1.5rem;
   text-transform: capitalize;
   flex-shrink: 0;
-  border: none;
+  border: 1px solid $primary-color;
   user-select: none;
 
   &:hover {
@@ -26,5 +26,18 @@
     color: $text-color;
     pointer-events: none;
     cursor: default;
+  }
+
+  &--lg {
+    padding: 2.4rem 1.5rem;
+  }
+
+  &--outline {
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: rgba($secondary-color, 0.4);
+    }
   }
 }

@@ -8,6 +8,7 @@ import {
 import { Home, NavigateNext } from '@material-ui/icons'
 import { withRouter } from 'react-router-dom'
 import './styles.scss'
+import { convertNameIdToProductName } from 'src/utils/helper'
 
 const Breadcrumbs = props => {
   const {
@@ -44,7 +45,7 @@ const Breadcrumbs = props => {
               key={name}
               className="breadcrumbs__title breadcrumbs__title--active"
             >
-              {name}
+              {convertNameIdToProductName(name)}
             </Typography>
           ) : (
             <Link
@@ -52,7 +53,7 @@ const Breadcrumbs = props => {
               className="breadcrumbs__title"
               onClick={() => history.push(routeTo)}
             >
-              {name}
+              {convertNameIdToProductName(name)}
             </Link>
           )
         })}
