@@ -62,3 +62,8 @@ export const getProductIdFromParam = param => {
   const arr = param.split('-i.')
   return arr[arr.length - 1]
 }
+
+export const timeConverter = timestamp => {
+  const date = new Date(timestamp)
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
+}
