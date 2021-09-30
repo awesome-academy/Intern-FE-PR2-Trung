@@ -8,6 +8,7 @@ import * as Yup from 'yup'
 import PasswordField from 'src/components/PasswordField'
 import AuthSection from '../AuthSection'
 import useAuth from 'src/hooks/useAuth'
+import { VN_PHONE_NUMBER_REGEX } from 'src/constants/regex'
 
 function Register(props) {
   const initialValues = {
@@ -32,6 +33,11 @@ function Register(props) {
       .email('Email này không hợp lệ')
       .min(6, 'Email có độ dài từ 6 - 160 kí tự')
       .max(160, 'Email có độ dài từ 6 - 160 kí tự'),
+    phone: Yup.string()
+      .required('Số điện thoại là trường bắt buộc')
+      .min(10, 'Số điện thoại phải bao gồm 10 số')
+      .max(10, 'Số điện thoại phải bao gồm 10 số')
+      .matches(VN_PHONE_NUMBER_REGEX, 'Số điện thoại không hợp lệ'),
     password: Yup.string()
       .required('Mật khẩu là trường bắt buộc')
       .min(6, 'Mật khẩu có độ dài từ 6 - 160 kí tự')
@@ -60,6 +66,11 @@ function Register(props) {
               <InputField name="firstName" type="text" placeholder="Tên" />
               <InputField name="lastName" type="text" placeholder="Họ" />
               <InputField name="email" type="email" placeholder="Email" />
+              <InputField
+                name="phone"
+                type="phone"
+                placeholder="Số điện thoại"
+              />
               <PasswordField
                 name="password"
                 type="password"

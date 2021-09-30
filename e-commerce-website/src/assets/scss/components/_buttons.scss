@@ -40,4 +40,14 @@
       background-color: rgba($secondary-color, 0.4);
     }
   }
+
+  &--back {
+    color: $text-color;
+    background-color: $white;
+    border-color: $break-line-color;
+
+    &:hover {
+      background-color: $background-color;
+    }
+  }
 }
