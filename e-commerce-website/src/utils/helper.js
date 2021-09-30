@@ -67,3 +67,9 @@ export const timeConverter = timestamp => {
   const date = new Date(timestamp)
   return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
 }
+
+export const isProductExistInList = (product, productList) => {
+  if (product && productList.length) {
+    return productList.some(item => item.id === product.id)
+  }
+}
