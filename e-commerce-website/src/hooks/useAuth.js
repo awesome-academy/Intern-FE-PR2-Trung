@@ -37,7 +37,6 @@ const useAuth = () => {
       if (response.user) {
         const { accessToken, uid, displayName, photoURL } = response.user
         const newUser = {
-          accessToken,
           id: uid,
           displayName,
           photoURL,

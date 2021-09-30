@@ -1,6 +1,5 @@
 import { Container, Grid } from '@material-ui/core'
 import { AddShoppingCart, FavoriteBorder } from '@material-ui/icons'
-import { unwrapResult } from '@reduxjs/toolkit'
 import React, { useEffect, useState } from 'react'
 import { SiAdguard } from 'react-icons/si'
 import { useDispatch, useSelector } from 'react-redux'
@@ -20,7 +19,10 @@ import {
 } from 'src/utils/helper'
 import ReviewForm from './components/ReviewForm'
 import { getProductDetail } from './productDetail.slice'
+import useAuth from 'src/hooks/useAuth'
 import './styles.scss'
+import { getProductReviews } from './components/ProductReviews/productReviews.slice'
+import { unwrapResult } from '@reduxjs/toolkit'
 
 function ProductDetail(props) {
   const dispatch = useDispatch()
@@ -30,6 +32,7 @@ function ProductDetail(props) {
   const { productDetail, loading, error } = useSelector(
     state => state.productDetail
   )
+  const { authenticated } = useAuth()
 
   useEffect(() => {
     ;(async () => {
@@ -40,6 +43,11 @@ function ProductDetail(props) {
           getProductDetail(productId)
         )
         unwrapResult(productDetailResponse)
+
+        const productReviewsResponse = await dispatch(
+          getProductReviews(productId)
+        )
+        unwrapResult(productReviewsResponse)
       } catch (error) {
         // eslint-disable-next-line
         console.log(error)
@@ -146,13 +154,14 @@ function ProductDetail(props) {
               <div className="product-detail-review__content">
                 <ProductReviews />
               </div>
-              <div className="product-detail-review__form">
-                <ReviewForm />
-              </div>
+              {authenticated && (
+                <div className="product-detail-review__form">
+                  <ReviewForm productId={productDetail.id} />
+                </div>
+              )}
             </div>
           </div>
           <div className="watched-products">
-            {/* Em dùng tạm data state của product list page để dựng UI sản phẩm đã xem */}
             <ProductsListSlider title={'Sản phẩm đã xem'} products={products} />
           </div>
         </Container>

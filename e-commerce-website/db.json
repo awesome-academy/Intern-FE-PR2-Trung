@@ -1149,7 +1149,63 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus sem sed lorem tincidunt pellentesque. Donec bibendum sed ante a pellentesque. Maecenas et rutrum lectus. Proin porta urna eu sem luctus consectetur. Quisque ornare, ex luctus consectetur auctor, nulla metus rhoncus neque, a scelerisque neque nunc laoreet ante. Sed at ex augue. Praesent sit amet nunc orci. Fusce vitae arcu ultrices, mollis dolor eget, tincidunt nunc. Vivamus et vehicula arcu, vitae accumsan nisl. Pellentesque nisl metus, cursus at laoreet id, condimentum ut eros. Curabitur eu dui tortor. Donec interdum ac urna a iaculis. Ut placerat maximus urna, a tempus mi accumsan vel. Nulla ultricies, libero eu sodales commodo, nunc orci bibendum tellus, quis suscipit purus velit a dui. Donec lobortis ultrices blandit. Nullam turpis eros, semper id ullamcorper vitae, bibendum at turpis. Proin varius fermentum aliquet. Nam at lorem sodales, ultrices velit sed, tincidunt est. Ut dolor enim, fermentum ut orci et, bibendum maximus ligula. Vestibulum non consectetur lacus. Sed accumsan diam mauris, sit amet facilisis dolor euismod eu. Proin eget ante sit amet dui bibendum congue. Nunc vel suscipit mi. Proin vitae elit maximus turpis scelerisque malesuada. Donec maximus tempor porttitor. Praesent dapibus consequat lacus a sagittis. Vivamus pretium fermentum arcu. Vivamus bibendum condimentum leo. In magna neque, tristique nec diam eu, tempor aliquet justo. Integer dignissim fringilla imperdiet. Nunc viverra ante at quam congue, a efficitur mi tincidunt. Curabitur vel est lacus. Proin justo massa, aliquet vitae iaculis sed, consectetur elementum elit. Nam quis dolor odio. Ut at erat eget risus dictum condimentum et id ex. Praesent eros turpis, feugiat eu pretium quis, pretium at mauris. Curabitur fringilla aliquam sem, nec placerat dolor ullamcorper sagittis. Proin sagittis ex est, non hendrerit libero maximus nec. Integer consequat, sapien eget mattis tempor, nunc massa pulvinar dui, elementum commodo turpis neque in risus. Proin faucibus lectus a fringilla sodales. Integer porttitor nunc magna, eget finibus lorem dictum sed. Donec blandit purus ut urna feugiat, quis bibendum urna mollis. Aenean gravida purus id odio mollis vulputate. Fusce eget est vitae purus interdum dapibus ut ac est.",
       "image": "https://cf.shopee.vn/file/964626d5580e5a648038b5c3f28e117c",
       "createdAt": "2021-05-11T13:36:13.145Z",
-      "updatedAt": "2021-09-11T09:28:38.332Z"
+      "updatedAt": "2021-09-11WT09:28:38.332Z"
+    }
+  ],
+  "productReviews": [
+    {
+      "userName": "Trung Le",
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "productId": "60af70fbf1a3041b289d8ba0",
+      "rating": 5,
+      "comment": "Sản phẩm rất đẹp",
+      "createdAt": 1632853792146,
+      "id": 1
+    },
+    {
+      "userName": "Trung Le",
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "productId": "60af70fbf1a3041b289d8ba0",
+      "rating": 4,
+      "comment": "Còn mẫu nào tương tự không shop ơi",
+      "createdAt": 1632853872556,
+      "id": 2
+    },
+    {
+      "userName": "Trung Le",
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "productId": "60ad02422fb52902585972a9",
+      "rating": 4,
+      "comment": "Sản phẩm cũng oke đấy",
+      "createdAt": 1632854182025,
+      "id": 3
+    },
+    {
+      "userName": "Trung Le",
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "productId": "60ad056c2fb52902585972ae",
+      "rating": 5,
+      "comment": "Còn mẫu nào không shop",
+      "createdAt": 1632854371463,
+      "id": 4
+    },
+    {
+      "userName": "Trung Le",
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "productId": "60ad056c2fb52902585972ae",
+      "rating": 4,
+      "comment": "Đẹp lắm shop ơi",
+      "createdAt": 1632857443979,
+      "id": 5
+    },
+    {
+      "userName": "Trung Le",
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "productId": "60ad004c2fb52902585972a6",
+      "rating": 1,
+      "comment": "Chất lượng kém quá",
+      "createdAt": 1632858205453,
+      "id": 6
     }
   ],
   "users": [
