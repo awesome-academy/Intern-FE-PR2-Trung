@@ -82,7 +82,7 @@ function Delivery(props) {
         }
         dispatch(checkoutActions.setCheckoutInfo(purchase))
         toast.success('Thêm địa chỉ giao hàng thành công')
-        history.push(path.summary)
+        history.push(path.checkoutSummary)
       }
     } catch (err) {
       // eslint-disable-next-line

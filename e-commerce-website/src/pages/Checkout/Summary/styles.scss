@@ -1,0 +1,219 @@
+@import 'src/assets/scss/common';
+
+.summary {
+  &-address {
+    @include borderRadius(4px);
+    @include relative;
+    margin: 0 0 3rem;
+    padding: 2.4rem 3rem;
+    background-color: $white;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+
+    &::before {
+      @include absolute(0, 0, null, 0);
+      content: '';
+      height: 3px;
+      background-position-x: -30px;
+      background-size: 116px 3px;
+      background-image: repeating-linear-gradient(
+        45deg,
+        #6fa6d6,
+        #6fa6d6 33px,
+        transparent 0,
+        transparent 41px,
+        #f18d9b 0,
+        #f18d9b 74px,
+        transparent 0,
+        transparent 82px
+      );
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: $primary-color;
+
+      svg {
+        fill: $primary-color;
+        margin-right: 0.6rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__detail {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      span {
+        margin-right: 2rem;
+
+        &:first-child {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__link {
+      color: $blue;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  &-header {
+    @include borderRadius(3px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding: 0 2rem;
+    height: 5.5rem;
+    text-transform: capitalize;
+    background-color: $white;
+    color: $light-text-color;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+    overflow: hidden;
+
+    &__name {
+      width: 60%;
+      color: $text-color;
+    }
+
+    &__unit-price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14%;
+    }
+
+    &__quantity {
+      @extend .summary-header__unit-price;
+    }
+
+    &__total-price {
+      @extend .summary-header__unit-price;
+      width: 12%;
+    }
+  }
+
+  &-list {
+    @include borderRadius(3px);
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+  }
+
+  &-item {
+    @include borderRadius(2px);
+    display: flex;
+    margin-bottom: 2.2rem;
+    padding: 2rem 0;
+    border: 1px solid rgba($black, 0.1);
+
+    &__info {
+      @extend .summary-header__name;
+      display: flex;
+    }
+
+    &__image {
+      margin-left: 2rem;
+      width: 8rem;
+      height: 8rem;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+
+    &__name-wrap {
+      padding: 0.5rem 2rem 0 1rem;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    &__name {
+      margin-bottom: 0.3rem;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      color: $text-color;
+    }
+
+    &__unit-price {
+      @extend .summary-header__unit-price;
+
+      span:first-child {
+        margin-right: 1rem;
+        color: $light-text-color;
+        text-decoration: line-through;
+      }
+    }
+
+    &__quantity {
+      @extend .summary-header__quantity;
+    }
+
+    &__total-price {
+      @extend .summary-header__total-price;
+      span {
+        text-align: right;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-footer {
+    @extend .summary-list;
+    margin-bottom: 8rem;
+
+    &__fee {
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid rgba($black, 0.1);
+    }
+
+    &__fee-wrap {
+      width: 30rem;
+    }
+
+    &__fee-group {
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__fee-title {
+      color: $light-text-color;
+    }
+
+    &__fee-total-payment {
+      font-size: 2.4rem;
+      margin-left: 0.5rem;
+      color: #d0011b;
+    }
+
+    &__bottom {
+      margin-top: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__policy {
+      color: $light-text-color;
+    }
+
+    &__policy-link {
+      @extend .summary-address__link;
+      margin-left: 0.6rem;
+    }
+  }
+}

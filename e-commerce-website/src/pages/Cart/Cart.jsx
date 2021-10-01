@@ -59,12 +59,6 @@ function Cart(props) {
                 MUA NGAY
               </Link>
             </div>
-            <div className="watched-products">
-              <ProductsListSlider
-                title={'Sản phẩm đã xem'}
-                products={viewedProductList}
-              />
-            </div>
           </>
         )}
         {cartItems.length && (
@@ -133,7 +127,10 @@ function Cart(props) {
                 <div>Tổng thanh toán ({cartItems.length || 0} sản phẩm): </div>
                 <div>{formatCurrency(totalPayment)}</div>
               </div>
-              <Link to={path.delivery} className="button cart-footer__checkout">
+              <Link
+                to={path.checkoutDelivery}
+                className="button cart-footer__checkout"
+              >
                 Mua hàng
               </Link>
             </div>
@@ -146,6 +143,12 @@ function Cart(props) {
             />
           </>
         )}
+        <div className="watched-products">
+          <ProductsListSlider
+            title={'Sản phẩm đã xem'}
+            products={viewedProductList}
+          />
+        </div>
       </Container>
     </div>
   )

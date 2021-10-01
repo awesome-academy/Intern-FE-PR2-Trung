@@ -113,7 +113,16 @@ function ProductDetail(props) {
     if (!authenticated) {
       history.push(path.login)
     } else {
-      dispatch(cartActions.addToCart({ product: productDetail, quantity }))
+      const product = {
+        id: productDetail.id,
+        image: productDetail.image,
+        name: productDetail.name,
+        price_before_discount: productDetail.price_before_discount,
+        price: productDetail.price,
+        quantity: productDetail.quantity
+      }
+
+      dispatch(cartActions.addToCart({ product, quantity }))
       toast.success('Thêm vào giỏ hàng thành công')
     }
   }
