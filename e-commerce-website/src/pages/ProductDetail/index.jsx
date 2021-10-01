@@ -3,7 +3,7 @@ import { AddShoppingCart, FavoriteBorder } from '@material-ui/icons'
 import React, { useEffect, useState } from 'react'
 import { SiAdguard } from 'react-icons/si'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router'
+import { useParams, useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 import ProductReviews from 'src/pages/ProductDetail/components/ProductReviews'
 import ProductSlider from 'src/components/ProductSlider'
@@ -25,9 +25,13 @@ import './styles.scss'
 import { getProductReviews } from './components/ProductReviews/productReviews.slice'
 import { unwrapResult } from '@reduxjs/toolkit'
 import LocalStorage from 'src/constants/localStorage'
+import { cartActions } from '../Cart/cart.slice'
+import { toast } from 'react-toastify'
+import { path } from 'src/constants/path'
 
 function ProductDetail(props) {
   const dispatch = useDispatch()
+  const history = useHistory()
   const { productParamId } = useParams()
   const [quantity, setQuantity] = useState(1)
   const { productDetail, loading, error } = useSelector(
@@ -40,6 +44,7 @@ function ProductDetail(props) {
   useEffect(() => {
     ;(async () => {
       try {
+        setQuantity(1)
         const productId = getProductIdFromParam(productParamId)
 
         const productDetailResponse = await dispatch(
@@ -104,6 +109,15 @@ function ProductDetail(props) {
     setQuantity(value)
   }
 
+  const handleAddToCart = () => {
+    if (!authenticated) {
+      history.push(path.login)
+    } else {
+      dispatch(cartActions.addToCart({ product: productDetail, quantity }))
+      toast.success('Thêm vào giỏ hàng thành công')
+    }
+  }
+
   return (
     <div className="product-detail">
       {Object.keys(productDetail).length && (
@@ -161,7 +175,10 @@ function ProductDetail(props) {
                     />
                     Yêu thích
                   </button>
-                  <button className="button button--lg">
+                  <button
+                    className="button button--lg"
+                    onClick={handleAddToCart}
+                  >
                     <AddShoppingCart
                       fontSize="large"
                       className="product-detail__button-icon"
