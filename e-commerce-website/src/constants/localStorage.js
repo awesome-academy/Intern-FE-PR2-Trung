@@ -3,7 +3,8 @@ export const LocalStorage = {
   accessToken: 'accessToken',
   cart: 'cart',
   viewedProducts: 'viewedProducts',
-  purchase: 'purchase'
+  purchase: 'purchase',
+  wishList: 'wishList'
 }
 
 export default LocalStorage

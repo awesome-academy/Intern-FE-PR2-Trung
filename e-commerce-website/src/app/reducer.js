@@ -6,6 +6,7 @@ import productReviewsReducer from 'src/pages/ProductDetail/components/ProductRev
 import cartReducer from 'src/pages/Cart/cart.slice'
 import checkoutReducer from 'src/pages/Checkout/checkout.slice'
 import bannersReducer from 'src/pages/Home/banners.slice'
+import wishListReducer from 'src/pages/ProductDetail/wishlist.slice'
 
 const rootReducer = {
   products: productsReducer,
@@ -15,7 +16,8 @@ const rootReducer = {
   banners: bannersReducer,
   cart: cartReducer,
   checkout: checkoutReducer,
-  auth: authReducer
+  auth: authReducer,
+  wishList: wishListReducer
 }
 
 export default rootReducer
