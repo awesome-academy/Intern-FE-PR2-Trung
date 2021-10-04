@@ -123,7 +123,7 @@ function ProductDetail(props) {
         name,
         price_before_discount,
         price,
-        quantity
+        quantity: productDetail.quantity
       }
 
       dispatch(cartActions.addToCart({ product, quantity }))

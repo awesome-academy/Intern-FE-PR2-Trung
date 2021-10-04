@@ -1,0 +1,148 @@
+@import 'src/assets/scss/common';
+
+.purchase {
+  padding-top: 2rem;
+
+  &__tabs {
+    @include borderRadius(2px);
+    margin-bottom: 1.2rem;
+    display: flex;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+    background: $white;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    &-item {
+      padding: 1.6rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      font-size: 1.6rem;
+      user-select: none;
+
+      &.active {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+
+  &-card {
+    @include borderRadius(2px);
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+
+    &__header {
+      padding-bottom: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $break-line-color;
+    }
+
+    &__purchase-id {
+      font-weight: 600;
+    }
+
+    &__status {
+      font-size: 1.6rem;
+      color: $primary-color;
+      text-transform: uppercase;
+    }
+
+    &-cart {
+      &-list {
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid $break-line-color;
+      }
+
+      &-item {
+        padding-top: 1.2rem;
+        flex-grow: 1;
+        display: flex;
+
+        img {
+          width: 8rem;
+          height: 8rem;
+        }
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+          margin-left: 1rem;
+          flex-grow: 1;
+        }
+
+        &__name {
+          margin-bottom: 0.5rem;
+          display: --webkit-box;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          font-size: 1.6rem;
+        }
+
+        &__price-group {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &__price {
+          &-original {
+            color: $light-text-color;
+            text-decoration: line-through;
+            padding: 0 0.4rem 0 1rem;
+          }
+          &-sale {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__delivery {
+      padding: 1rem 0;
+
+      &-title {
+        margin-bottom: 0.2rem;
+        text-transform: uppercase;
+      }
+    }
+
+    &__payment {
+      padding: 1.6rem 0;
+      display: flex;
+      justify-content: flex-end;
+
+      &-title {
+        margin-right: 1rem;
+      }
+
+      &-total {
+        font-size: 2.4rem;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__no-purchase {
+    padding: 20rem;
+    text-align: center;
+  }
+}
