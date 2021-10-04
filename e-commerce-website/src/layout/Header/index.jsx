@@ -9,33 +9,29 @@ import './styles.scss'
 import logo from 'src/assets/logo/logo.svg'
 import { useHistory } from 'react-router'
 import useQuery from 'src/hooks/useQuery'
+import { useDispatch, useSelector } from 'react-redux'
+import useAuth from 'src/hooks/useAuth'
+import { cartActions } from 'src/pages/Cart/cart.slice'
 
 function Header(props) {
-  const cartItems = [
-    {
-      link: '/products/productDetail',
-      img: noCartImage,
-      name: 'Áo nỉ dài tay dáng rộng phong cách',
-      price: 900000,
-      id: 1
-    },
-    {
-      link: '/products/productDetail',
-      img: noCartImage,
-      name: 'Quần nỉ dài tay dáng rộng phong cách',
-      price: 500000,
-      id: 2
-    }
-  ]
+  const {
+    cart: { cartItems }
+  } = useSelector(state => state.cart)
 
   const [searchValue, setSearchValue] = useState('')
   const history = useHistory()
   const query = useQuery()
+  const dispatch = useDispatch()
+  const { authenticated } = useAuth()
 
   useEffect(() => {
     const { name = '' } = query
     setSearchValue(name)
   }, [query])
+
+  useEffect(() => {
+    !authenticated && dispatch(cartActions.resetCart())
+  }, [authenticated, dispatch])
 
   const onChangeSearch = event => {
     setSearchValue(event.target.value)
@@ -101,7 +97,7 @@ function Header(props) {
                           >
                             <img
                               className="header__cart-item-img"
-                              src={item.img}
+                              src={item.image}
                               alt={item.name}
                             />
                             <h4 className="header__cart-item-title">

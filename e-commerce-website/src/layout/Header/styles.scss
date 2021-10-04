@@ -159,7 +159,13 @@
     }
 
     &-item {
+      @include transition;
       padding: 1rem;
+
+      &:hover {
+        background-color: rgba($light-text-color, 0.2);
+      }
+
       &-img {
         width: 4rem;
         height: 4rem;
@@ -167,10 +173,16 @@
       }
 
       &-title {
+        display: -webkit-box;
         margin-left: 2rem;
         flex: 1;
         text-align: start;
         color: $text-color;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
       }
 
       .price {

@@ -94,6 +94,7 @@
     }
 
     &-link {
+      @include transition;
       display: block;
       padding: 4px 16px;
       text-decoration: none;
@@ -101,6 +102,7 @@
 
       &:hover {
         background-color: rgba($light-text-color, 0.2);
+        color: $primary-color;
       }
 
       &:first-child {
@@ -117,6 +119,7 @@
 
   &__item,
   &__link {
+    @include transition;
     display: inline-flex;
     align-items: center;
     font-size: 1.5rem;
