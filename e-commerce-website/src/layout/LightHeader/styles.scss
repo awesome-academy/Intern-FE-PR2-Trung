@@ -1,0 +1,78 @@
+@import 'src/assets/scss/common';
+
+.light-header {
+  width: 100%;
+  min-width: max-content;
+  background: $white;
+  border-bottom: 1px solid rgba($black, 0.1);
+
+  &__navbar {
+    background-color: $primary-color;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    padding-left: 1.8rem;
+    text-decoration: none;
+
+    &-img {
+      width: 13rem;
+      height: auto;
+      cursor: pointer;
+      fill: $primary-color;
+    }
+  }
+
+  &__title {
+    margin: 1rem 0 0 1.5rem;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: $primary-color;
+    border-left: 1px solid $primary-color;
+    text-transform: capitalize;
+  }
+
+  &__search {
+    @include borderRadius(2px);
+    display: flex;
+    align-items: stretch;
+    flex: 0 0 50%;
+    height: 3.6rem;
+    background-color: $white;
+
+    &-input {
+      @include borderRadius(2px);
+      padding: 0 1rem;
+      border: 2px solid $primary-color;
+      flex-grow: 1;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &-btn {
+      @include borderRadius(2px);
+      height: unset;
+      width: 8rem;
+      background-color: $primary-color;
+      color: $white;
+      border: none;
+      outline: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &:hover {
+        background-color: rgba($primary-color, 0.7);
+      }
+    }
+  }
+}

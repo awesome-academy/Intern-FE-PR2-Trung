@@ -1,0 +1,227 @@
+@import 'src/assets/scss/common';
+
+.cart {
+  padding: 3rem 0;
+
+  &-header {
+    @include borderRadius(3px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding: 0 2rem;
+    height: 5.5rem;
+    text-transform: capitalize;
+    background-color: $white;
+    color: $light-text-color;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+    overflow: hidden;
+
+    &__name {
+      width: 45%;
+      color: $text-color;
+    }
+
+    &__unit-price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15%;
+    }
+
+    &__quantity {
+      @extend .cart-header__unit-price;
+    }
+
+    &__total-price {
+      @extend .cart-header__unit-price;
+      width: 13%;
+    }
+
+    &__action {
+      @extend .cart-header__unit-price;
+      width: 12%;
+    }
+  }
+
+  &-list {
+    @include borderRadius(3px);
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
+  }
+
+  &-item {
+    @include borderRadius(2px);
+    display: flex;
+    margin-bottom: 2.2rem;
+    padding: 2rem 0;
+    border: 1px solid rgba($black, 0.1);
+
+    &__info {
+      @extend .cart-header__name;
+      display: flex;
+    }
+
+    &__image {
+      margin-left: 2rem;
+      width: 8rem;
+      height: 8rem;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+
+    &__name-wrap {
+      padding: 0.5rem 2rem 0 1rem;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    &__name {
+      margin-bottom: 0.3rem;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      color: $text-color;
+    }
+
+    &__unit-price {
+      @extend .cart-header__unit-price;
+
+      span:first-child {
+        margin-right: 1rem;
+        color: $light-text-color;
+        text-decoration: line-through;
+      }
+    }
+
+    &__quantity {
+      @extend .cart-header__quantity;
+    }
+
+    &__total-price {
+      @extend .cart-header__total-price;
+      span {
+        text-align: right;
+        color: $primary-color;
+      }
+    }
+
+    &__action {
+      @extend .cart-header__action;
+    }
+
+    &__remove {
+      @include transition;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-footer {
+    @include borderRadius(3px);
+    @include sticky(null, null, 0);
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    box-shadow: 0rem 0.1rem 0.4rem 0.2rem rgba($black, 0.1);
+    z-index: 4;
+
+    &::before {
+      @include absolute(-1rem, null, null, 0);
+      height: 1rem;
+      width: 100%;
+      content: '';
+      background-color: linear-gradient(transparent, rgba($black, 0.1));
+    }
+
+    &__total-item {
+      margin: 0 1rem 0 2rem;
+    }
+
+    &__btn {
+      @include transition;
+      margin: 0 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &__space-between {
+      flex-grow: 1;
+    }
+
+    &__total-payment {
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+
+      div {
+        &:first-child {
+          color: $text-color;
+        }
+
+        &:last-child {
+          font-size: 2.4rem;
+          margin-left: 0.5rem;
+          color: $primary-color;
+        }
+      }
+    }
+
+    &__checkout {
+      margin: 0 2rem;
+      height: 4rem;
+      width: 21rem;
+      font-weight: 300;
+    }
+  }
+
+  &-no-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+    width: 100%;
+
+    &__image {
+      max-height: 16rem;
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+
+    &__message {
+      margin: 1.6rem 0;
+      text-align: center;
+      font-weight: 600;
+      color: $light-text-color;
+    }
+
+    &__button {
+      width: 16rem;
+    }
+  }
+}

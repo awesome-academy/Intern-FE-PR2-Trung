@@ -1,23 +1,23 @@
 import React from 'react'
+import LightHeader from '../LightHeader'
 import Footer from '../Footer'
-import Header from '../Header'
 import PropTypes from 'prop-types'
 
-MainLayout.propTypes = {
+CartLayout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element)
   ])
 }
 
-function MainLayout({ children }) {
+function CartLayout({ children }) {
   return (
     <div>
-      <Header />
+      <LightHeader title="Giỏ hàng" hasSearch={true} />
       {children}
       <Footer />
     </div>
   )
 }
 
-export default MainLayout
+export default CartLayout
