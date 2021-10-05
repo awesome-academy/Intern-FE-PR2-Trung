@@ -11,13 +11,15 @@ function InputField(props) {
       <TextField
         id={name}
         {...field}
-        {...props}
+        variant="outlined"
         autoComplete="off"
         fullWidth
         size="medium"
         margin="normal"
         InputProps={{ style: { fontSize: 14 } }}
+        InputLabelProps={{ style: { fontSize: 14 } }}
         error={meta.touched && meta.error ? true : false}
+        {...props}
       />
       <ErrorMessage component="div" name={name} className="error" />
     </>

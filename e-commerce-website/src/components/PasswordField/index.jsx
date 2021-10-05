@@ -13,14 +13,15 @@ function PasswordField(props) {
     <>
       <TextField
         id={name}
-        {...field}
-        {...props}
-        type={showPassword ? 'text' : 'password'}
+        variant="outlined"
         autoComplete="off"
         fullWidth
         size="medium"
         margin="normal"
         error={meta.touched && meta.error ? true : false}
+        {...field}
+        {...props}
+        type={showPassword ? 'text' : 'password'}
         InputProps={{
           style: { fontSize: 14 },
           endAdornment: (

@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { path } from './constants/path'
 import MainLayout from './layout/MainLayout'
 import Login from './pages/Auth/Login'
@@ -14,7 +14,9 @@ import Breadcrumbs from './components/Breadcrumbs'
 import AuthLayout from './layout/AuthLayout'
 import UnauthenticatedGuard from './guards/UnauthenticatedGuard'
 import AuthenticatedGuard from './guards/AuthenticatedGuard'
-import CartLayout from './layout/CartLayout'
+import CartLayout from './layout/CheckoutLayout'
+import CheckoutLayout from './layout/CheckoutLayout'
+import Delivery from './pages/Checkout/Delivery'
 
 export default function Routes() {
   return (
@@ -53,9 +55,21 @@ export default function Routes() {
       <Route path={path.cart}>
         <AuthenticatedGuard>
           <CartLayout>
+            <Breadcrumbs />
             <Cart />
           </CartLayout>
         </AuthenticatedGuard>
+      </Route>
+      <Route path={path.delivery} exact>
+        <AuthenticatedGuard>
+          <CheckoutLayout>
+            <Breadcrumbs />
+            <Delivery />
+          </CheckoutLayout>
+        </AuthenticatedGuard>
+      </Route>
+      <Route path={path.checkout} exact>
+        <Redirect to={path.delivery} />
       </Route>
       <Route path={path.user}>
         <AuthenticatedGuard>

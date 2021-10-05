@@ -4,6 +4,7 @@ import authReducer from 'src/pages/Auth/auth.slice'
 import productDetailReducer from 'src/pages/ProductDetail/productDetail.slice'
 import productReviewsReducer from 'src/pages/ProductDetail/components/ProductReviews/productReviews.slice'
 import cartReducer from 'src/pages/Cart/cart.slice'
+import checkoutReducer from 'src/pages/Checkout/checkout.slice'
 
 const rootReducer = {
   products: productsReducer,
@@ -11,6 +12,7 @@ const rootReducer = {
   productDetail: productDetailReducer,
   productReviews: productReviewsReducer,
   cart: cartReducer,
+  checkout: checkoutReducer,
   auth: authReducer
 }
 
