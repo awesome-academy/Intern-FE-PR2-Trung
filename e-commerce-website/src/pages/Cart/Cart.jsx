@@ -1,6 +1,6 @@
 import { Container } from '@material-ui/core'
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import noCartImage from 'src/assets/images/no-cart-transparent.png'
 import ProductsListSlider from 'src/components/ProductsListSlider'
@@ -8,14 +8,40 @@ import QuantityController from 'src/components/QuantityController'
 import LocalStorage from 'src/constants/localStorage'
 import { path } from 'src/constants/path'
 import { formatCurrency, generateNameId } from 'src/utils/helper'
+import { cartActions } from './cart.slice'
+import ConfirmationModal from 'src/components/ConfirmationModal'
 import './styles.scss'
 
 function Cart(props) {
+  const dispatch = useDispatch()
   const {
     cart: { cartItems, totalPayment }
   } = useSelector(state => state.cart)
   const viewedProductList =
     JSON.parse(localStorage.getItem(LocalStorage.viewedProducts)) || []
+  const [showRemoveConfirmation, setShowRemoveConfirmation] = useState(false)
+  const [currentCartItemRemove, setCurrentCartItemRemove] = useState(null)
+
+  const handleQuantityChange = (value, item) => {
+    dispatch(
+      cartActions.changeCarItemQuantity({ quantity: value, product: item })
+    )
+  }
+
+  const handleResetCart = () => {
+    dispatch(cartActions.resetCart())
+  }
+
+  const handleConfirmRemoveItem = item => {
+    setShowRemoveConfirmation(true)
+    setCurrentCartItemRemove(item)
+  }
+
+  const handleRemoveCartItem = () => {
+    dispatch(cartActions.removeCartItem(currentCartItemRemove))
+  }
+
+  const handleCloseConfirmation = () => setShowRemoveConfirmation(false)
 
   return (
     <div className="cart">
@@ -75,15 +101,22 @@ function Cart(props) {
                   </div>
                   <div className="cart-item__quantity">
                     <QuantityController
-                      max={item.quanity}
+                      max={item.quantity}
                       value={item.inCart}
+                      item={item}
+                      onChange={handleQuantityChange}
                     />
                   </div>
                   <div className="cart-item__total-price">
                     <span>{formatCurrency(item.inCart * item.price)}</span>
                   </div>
                   <div className="cart-item__action">
-                    <button className="cart-item__remove">Xóa</button>
+                    <button
+                      className="cart-item__remove"
+                      onClick={() => handleConfirmRemoveItem(item)}
+                    >
+                      Xóa
+                    </button>
                   </div>
                 </div>
               ))}
@@ -92,7 +125,9 @@ function Cart(props) {
               <div className="cart-footer__total-item">
                 Tất cả sản phẩm ({cartItems.length || 0})
               </div>
-              <button className="cart-footer__btn">Xóa</button>
+              <button className="cart-footer__btn" onClick={handleResetCart}>
+                Xóa
+              </button>
               <div className="cart-footer__space-between" />
               <div className="cart-footer__total-payment">
                 <div>Tổng thanh toán ({cartItems.length || 0} sản phẩm): </div>
@@ -102,6 +137,13 @@ function Cart(props) {
                 Mua hàng
               </Link>
             </div>
+            <ConfirmationModal
+              title="Xóa sản phẩm"
+              content="Bạn chắc chắn muốn xóa sản phẩm khỏi giỏ chứ?"
+              confirmActions={handleRemoveCartItem}
+              showConfirmation={showRemoveConfirmation}
+              handleClose={handleCloseConfirmation}
+            />
           </>
         )}
       </Container>

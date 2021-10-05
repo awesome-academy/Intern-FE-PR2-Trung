@@ -73,3 +73,7 @@ export const isProductExistInList = (product, productList) => {
     return productList.some(item => item.id === product.id)
   }
 }
+
+export const findIndexById = (item, array) => {
+  return array.findIndex(arrayItem => arrayItem.id === item.id)
+}

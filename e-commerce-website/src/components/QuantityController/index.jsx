@@ -2,7 +2,7 @@ import React from 'react'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import './styles.scss'
 
-function QuantityController({ max, value, onChange }) {
+function QuantityController({ max, value, item, onChange }) {
   const handleInputChange = event => {
     let inputValue = Number(event.target.value)
 
@@ -12,7 +12,7 @@ function QuantityController({ max, value, onChange }) {
       inputValue = 1
     }
 
-    onChange && onChange(inputValue)
+    onChange && onChange(inputValue, item)
   }
 
   const increaseNumber = () => {
@@ -22,7 +22,7 @@ function QuantityController({ max, value, onChange }) {
       inputValue = max
     }
 
-    onChange && onChange(inputValue)
+    onChange && onChange(inputValue, item)
   }
 
   const descreseNumber = () => {
@@ -32,7 +32,7 @@ function QuantityController({ max, value, onChange }) {
       inputValue = 1
     }
 
-    onChange && onChange(inputValue)
+    onChange && onChange(inputValue, item)
   }
 
   return (

@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import LocalStorage from 'src/constants/localStorage'
+import { findIndexById } from 'src/utils/helper'
 
 const cart = createSlice({
   name: 'cart',
@@ -12,9 +13,7 @@ const cart = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { product, quantity } = action.payload
-      const itemIndex = state.cart.cartItems.findIndex(
-        item => item.id === product.id
-      )
+      const itemIndex = findIndexById(product, state.cart.cartItems)
 
       if (itemIndex >= 0) {
         state.cart.cartItems[itemIndex].inCart += quantity
@@ -31,6 +30,23 @@ const cart = createSlice({
         totalItemCount: 0,
         totalPayment: 0
       }
+      localStorage.setItem(LocalStorage.cart, JSON.stringify(state.cart))
+    },
+    removeCartItem: (state, action) => {
+      const product = action.payload
+      const itemIndex = findIndexById(product, state.cart.cartItems)
+      state.cart.cartItems.splice(itemIndex, 1)
+      state.cart.totalPayment -= product.price * product.inCart
+      localStorage.setItem(LocalStorage.cart, JSON.stringify(state.cart))
+    },
+    changeCarItemQuantity: (state, action) => {
+      const { quantity, product } = action.payload
+
+      const itemIndex = findIndexById(product, state.cart.cartItems)
+
+      state.cart.cartItems[itemIndex].inCart = quantity
+      state.cart.totalPayment += product.price * (quantity - product.inCart)
+      localStorage.setItem(LocalStorage.cart, JSON.stringify(state.cart))
     }
   }
 })

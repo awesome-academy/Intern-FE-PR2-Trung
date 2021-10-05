@@ -108,5 +108,4 @@ const useAuth = () => {
     error: errorMessage
   }
 }
-
 export default useAuth
