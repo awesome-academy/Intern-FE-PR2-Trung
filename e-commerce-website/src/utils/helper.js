@@ -65,7 +65,7 @@ export const getProductIdFromParam = param => {
 
 export const timeConverter = timestamp => {
   const date = new Date(timestamp)
-  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
+  return `${date.getDate()}-${date.getMonth()}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 export const isProductExistInList = (product, productList) => {
