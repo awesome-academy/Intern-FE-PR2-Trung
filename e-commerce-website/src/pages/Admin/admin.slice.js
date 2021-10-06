@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { findIndexById, payLoadCreater } from 'src/utils/helper'
 import authApi from 'src/api/auth.api'
 import purchaseApi from 'src/api/purchase.api'
+import productApi from 'src/api/product.api'
 
 export const fetchAllUsers = createAsyncThunk(
   'admin/fetchAllUsers',
@@ -23,11 +24,17 @@ export const updateOrder = createAsyncThunk(
   payLoadCreater(purchaseApi.updatePurchases)
 )
 
+export const fetchAllProducts = createAsyncThunk(
+  'admin/fetchAllProducts',
+  payLoadCreater(productApi.getProducts)
+)
+
 const admin = createSlice({
   name: 'admin',
   initialState: {
     allUsers: [],
     allOrders: [],
+    allProducts: [],
     loading: false,
     error: ''
   },
@@ -81,6 +88,18 @@ const admin = createSlice({
       state.allOrders.splice(itemIndex, 1, order)
     },
     [updateOrder.rejected]: (state, action) => {
+      state.loading = false
+      state.error = action.payload
+    },
+    [fetchAllProducts.pending]: (state, action) => {
+      state.loading = true
+    },
+    [fetchAllProducts.fulfilled]: (state, action) => {
+      state.loading = false
+      state.error = ''
+      state.allProducts = action.payload.data
+    },
+    [fetchAllProducts.rejected]: (state, action) => {
       state.loading = false
       state.error = action.payload
     }
