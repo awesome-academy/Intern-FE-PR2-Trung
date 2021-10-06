@@ -1208,6 +1208,34 @@
       "id": 6
     }
   ],
+  "purchases": [
+    {
+      "cartItems": [
+        {
+          "id": "60af6f12f1a3041b289d8b9b",
+          "image": "https://cf.shopee.vn/file/6f85ffdc6135729dcf240a1545706b13",
+          "name": "Áo thun Polo nam cổ bẻ BASIC vải cá sấu Cotton xuất xịn, chuẩn đẹp, màu HỒNG",
+          "price_before_discount": 150000,
+          "price": 75000,
+          "quantity": 52,
+          "inCart": 4
+        }
+      ],
+      "totalPayment": 300000,
+      "userId": "riViPaxAiKYdDm9gYBoI5KD6Kji2",
+      "paymentMethod": "ShopyPay",
+      "delivery": {
+        "firstName": "Trung",
+        "lastName": "Le",
+        "email": "trungle888@gmail.com",
+        "phone": "0328939913",
+        "address": "123 Nguyễn Văn A, Sơn Trà, Đà Nẵng"
+      },
+      "status": 1,
+      "createdAt": 1633048902552,
+      "id": 1
+    }
+  ],
   "users": [
     {
       "id": "riViPaxAiKYdDm9gYBoI5KD6Kji2",

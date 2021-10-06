@@ -14,9 +14,11 @@ import Breadcrumbs from './components/Breadcrumbs'
 import AuthLayout from './layout/AuthLayout'
 import UnauthenticatedGuard from './guards/UnauthenticatedGuard'
 import AuthenticatedGuard from './guards/AuthenticatedGuard'
-import CartLayout from './layout/CheckoutLayout'
+import CartLayout from './layout/CartLayout'
 import CheckoutLayout from './layout/CheckoutLayout'
 import Delivery from './pages/Checkout/Delivery'
+import Summary from './pages/Checkout/Summary'
+import EmptyCartGuard from './guards/EmptyCartGuard'
 
 export default function Routes() {
   return (
@@ -60,16 +62,28 @@ export default function Routes() {
           </CartLayout>
         </AuthenticatedGuard>
       </Route>
-      <Route path={path.delivery} exact>
+      <Route path={path.checkoutDelivery} exact>
         <AuthenticatedGuard>
-          <CheckoutLayout>
-            <Breadcrumbs />
-            <Delivery />
-          </CheckoutLayout>
+          <EmptyCartGuard>
+            <CheckoutLayout>
+              <Breadcrumbs />
+              <Delivery />
+            </CheckoutLayout>
+          </EmptyCartGuard>
+        </AuthenticatedGuard>
+      </Route>
+      <Route path={path.checkoutSummary} exact>
+        <AuthenticatedGuard>
+          <EmptyCartGuard>
+            <CheckoutLayout>
+              <Breadcrumbs />
+              <Summary />
+            </CheckoutLayout>
+          </EmptyCartGuard>
         </AuthenticatedGuard>
       </Route>
       <Route path={path.checkout} exact>
-        <Redirect to={path.delivery} />
+        <Redirect to={path.checkoutDelivery} />
       </Route>
       <Route path={path.user}>
         <AuthenticatedGuard>
