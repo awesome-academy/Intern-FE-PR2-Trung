@@ -19,11 +19,14 @@ import { toast } from 'react-toastify'
 import './styles.scss'
 import { useDispatch } from 'react-redux'
 import { checkoutActions } from '../checkout.slice'
+import { useTranslation } from 'react-i18next'
+import PageTitle from 'src/components/PageTitle'
 
 function Delivery(props) {
   const { firstName, lastName, email, phone } = JSON.parse(
     localStorage.getItem(LocalStorage.user)
   )
+  const { t } = useTranslation()
   const history = useHistory()
   const dispatch = useDispatch()
 
@@ -93,6 +96,7 @@ function Delivery(props) {
 
   return (
     <div className="delivery">
+      <PageTitle title={t('pageTitle.delivery')} />
       <div className="delivery-form">
         <Container maxWidth="lg">
           <Formik
@@ -104,26 +108,32 @@ function Delivery(props) {
               <Form className="delivery-form__main">
                 <Grid container spacing={5} className="delivery-form__wrapper">
                   <Grid item xs={12} md={7}>
-                    <div className="delivery-form__title">
-                      Địa chỉ giao hàng
-                    </div>
-                    <InputField name="firstName" type="text" label="Tên" />
-                    <InputField name="lastName" type="text" label="Họ" />
+                    <div className="delivery-form__title">{t('address')}</div>
+                    <InputField
+                      name="firstName"
+                      type="text"
+                      label={t('form.firstName')}
+                    />
+                    <InputField
+                      name="lastName"
+                      type="text"
+                      label={t('form.lastName')}
+                    />
                     <InputField name="email" type="email" label="Email" />
                     <InputField
                       name="phone"
                       type="text"
-                      label="Số điện thoại"
+                      label={t('form.phoneNumber')}
                     />
                     <InputField
                       name="address"
                       type="text"
-                      label="Địa chỉ nhận hàng"
+                      label={t('form.address')}
                     />
                   </Grid>
                   <Grid item xs={12} md={5}>
                     <div className="delivery-form__title">
-                      Hình thức thanh toán
+                      {t('paymentMethod')}
                     </div>
                     <FormControl component="fieldset">
                       <Field
@@ -134,17 +144,17 @@ function Delivery(props) {
                         <FormControlLabel
                           control={<Radio />}
                           value="ShopyPay"
-                          label="Ví ShopyPay"
+                          label={t('shopyPay')}
                         />
                         <FormControlLabel
                           control={<Radio />}
                           value="CreditCard"
-                          label="Thẻ tín dụng"
+                          label={t('creditCard')}
                         />
                         <FormControlLabel
                           control={<Radio />}
                           value="COD"
-                          label="Thanh toán khi nhận hàng (COD)"
+                          label={t('cashOnDelivery')}
                         />
                       </Field>
                     </FormControl>
@@ -163,13 +173,13 @@ function Delivery(props) {
                     to={path.cart}
                     className="button button--back button delivery-form__button"
                   >
-                    Trở lại
+                    {t('back')}
                   </Link>
                   <button
                     className="button delivery-form__button"
                     type="submit"
                   >
-                    Tiếp tục
+                    {t('continue')}
                   </button>
                 </div>
               </Form>

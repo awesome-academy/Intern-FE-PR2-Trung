@@ -11,8 +11,11 @@ import { formatCurrency, generateNameId } from 'src/utils/helper'
 import { cartActions } from './cart.slice'
 import ConfirmationModal from 'src/components/ConfirmationModal'
 import './styles.scss'
+import { useTranslation } from 'react-i18next'
+import PageTitle from 'src/components/PageTitle'
 
 function Cart(props) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const {
     cart: { cartItems, totalPayment }
@@ -46,6 +49,7 @@ function Cart(props) {
 
   return (
     <div className="cart">
+      <PageTitle title={t('pageTitle.cart')} />
       <Container maxWidth="lg">
         {!cartItems.length && (
           <>
@@ -53,23 +57,25 @@ function Cart(props) {
               <div className="cart-no-cart__image">
                 <img src={noCartImage} alt="no cart" />
               </div>
-              <p className="cart-no-cart__message">
-                Giỏ hàng của bạn còn trống
-              </p>
+              <p className="cart-no-cart__message">{t('cart.noCart')}</p>
               <Link to={path.home} className="button cart-no-cart__button">
-                MUA NGAY
+                {t('cart.buy')}
               </Link>
             </div>
           </>
         )}
-        {cartItems.length && (
+        {!!cartItems.length && (
           <>
             <div className="cart-header">
-              <div className="cart-header__name">Sản phẩm</div>
-              <div className="cart-header__unit-price">Đơn giá</div>
-              <div className="cart-header__quantity">Số lượng</div>
-              <div className="cart-header__total-price">Số tiền</div>
-              <div className="cart-header__action">Thao tác</div>
+              <div className="cart-header__name">{t('cart.product')}</div>
+              <div className="cart-header__unit-price">
+                {t('cart.unitPrice')}
+              </div>
+              <div className="cart-header__quantity">{t('cart.inCart')}</div>
+              <div className="cart-header__total-price">
+                {t('cart.totalPrice')}
+              </div>
+              <div className="cart-header__action">{t('cart.actions')}</div>
             </div>
             <div className="cart-list">
               {cartItems.map(item => (
@@ -110,7 +116,7 @@ function Cart(props) {
                       className="cart-item__remove"
                       onClick={() => handleConfirmRemoveItem(item)}
                     >
-                      Xóa
+                      {t('cart.remove')}
                     </button>
                   </div>
                 </div>
@@ -118,26 +124,29 @@ function Cart(props) {
             </div>
             <div className="cart-footer">
               <div className="cart-footer__total-item">
-                Tất cả sản phẩm ({cartItems.length || 0})
+                {t('cart.allProduct')} ({cartItems.length || 0})
               </div>
               <button className="cart-footer__btn" onClick={handleResetCart}>
-                Xóa
+                {t('cart.remove')}
               </button>
               <div className="cart-footer__space-between" />
               <div className="cart-footer__total-payment">
-                <div>Tổng thanh toán ({cartItems.length || 0} sản phẩm): </div>
+                <div>
+                  {t('cart.totalPayment')} ({cartItems.length || 0}{' '}
+                  {t('cart.product')}):{' '}
+                </div>
                 <div>{formatCurrency(totalPayment)}</div>
               </div>
               <Link
                 to={path.checkoutDelivery}
                 className="button cart-footer__checkout"
               >
-                Mua hàng
+                {t('cart.buy')}
               </Link>
             </div>
             <ConfirmationModal
-              title="Xóa sản phẩm"
-              content="Bạn chắc chắn muốn xóa sản phẩm khỏi giỏ chứ?"
+              title={t('cart.removeCartItemTitle')}
+              content={t('cart.removeCartItemMessage')}
               confirmActions={handleRemoveCartItem}
               showConfirmation={showRemoveConfirmation}
               handleClose={handleCloseConfirmation}
@@ -147,14 +156,14 @@ function Cart(props) {
 
         <div className="wish-list-products">
           <ProductsListSlider
-            title={'Sản phẩm yêu thích'}
+            title={t('productsList.wishlist')}
             products={wishList}
           />
         </div>
 
         <div className="watched-products">
           <ProductsListSlider
-            title={'Sản phẩm đã xem'}
+            title={t('productsList.viewed')}
             products={viewedProductList}
           />
         </div>

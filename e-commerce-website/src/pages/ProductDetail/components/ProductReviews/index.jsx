@@ -4,8 +4,10 @@ import noReviewImg from 'src/assets/images/no-review.png'
 import './styles.scss'
 import { timeConverter } from 'src/utils/helper'
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 function ProductReviews(props) {
+  const { t } = useTranslation()
   const { productReviews, loading, loadingError } = useSelector(
     state => state.productReviews
   )
@@ -46,7 +48,7 @@ function ProductReviews(props) {
           ) : (
             <div className="product-reviews__no-review">
               <img src={noReviewImg} alt="no review" />
-              <p>Chưa có đánh giá</p>
+              <p>{t('productReviews.noReviews')}</p>
             </div>
           )}
         </div>

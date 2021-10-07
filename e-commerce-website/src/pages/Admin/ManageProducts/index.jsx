@@ -11,11 +11,13 @@ import {
 } from '@material-ui/core'
 import { unwrapResult } from '@reduxjs/toolkit'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
 import { toast } from 'react-toastify'
 import ConfirmationModal from 'src/components/ConfirmationModal'
 import DetailModal from 'src/components/DetailModal'
+import PageTitle from 'src/components/PageTitle'
 import SortTableHead from 'src/components/Table/SortTableHead'
 import { path } from 'src/constants/path'
 import useTable from 'src/hooks/useTable'
@@ -101,6 +103,7 @@ const columns = [
 ]
 
 function ManageProducts(props) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const { allProducts } = useSelector(state => state.admin)
   const [updateProductShowsing, setUpdateProductShowsing] = useState(false)
@@ -283,6 +286,7 @@ function ManageProducts(props) {
 
   return (
     <div className="manage">
+      <PageTitle title={t('pageTitle.manageProducts')} />
       <header className="manage-header">
         <div className="manage-header__title">Quản lí sản phẩm</div>
         <div className="manage-header__subtitle">

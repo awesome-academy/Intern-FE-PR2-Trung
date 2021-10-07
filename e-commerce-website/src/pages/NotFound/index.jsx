@@ -1,7 +1,13 @@
 import React from 'react'
+import PageTitle from 'src/components/PageTitle'
 
 function NotFound(props) {
-  return <div>Not Found</div>
+  return (
+    <div>
+      <PageTitle title="404" />
+      Not Found
+    </div>
+  )
 }
 
 export default NotFound

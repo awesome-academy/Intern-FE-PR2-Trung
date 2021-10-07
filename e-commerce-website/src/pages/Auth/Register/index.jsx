@@ -9,8 +9,12 @@ import PasswordField from 'src/components/PasswordField'
 import AuthSection from '../AuthSection'
 import useAuth from 'src/hooks/useAuth'
 import { VN_PHONE_NUMBER_REGEX } from 'src/constants/regex'
+import { useTranslation } from 'react-i18next'
+import PageTitle from 'src/components/PageTitle'
 
 function Register(props) {
+  const { t } = useTranslation()
+
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -53,8 +57,9 @@ function Register(props) {
 
   return (
     <AuthSection>
+      <PageTitle title={t('pageTitle.register')} />
       <div className="auth-form">
-        <div className="auth-form__title">Đăng ký</div>
+        <div className="auth-form__title">{t('pageTitle.register')}</div>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -63,36 +68,44 @@ function Register(props) {
           {formik => (
             <Form className="auth-form__main">
               {error && <p className="error">{error}</p>}
-              <InputField name="firstName" type="text" placeholder="Tên" />
-              <InputField name="lastName" type="text" placeholder="Họ" />
+              <InputField
+                name="firstName"
+                type="text"
+                placeholder={t('form.firstName')}
+              />
+              <InputField
+                name="lastName"
+                type="text"
+                placeholder={t('form.lastName')}
+              />
               <InputField name="email" type="email" placeholder="Email" />
               <InputField
                 name="phone"
                 type="phone"
-                placeholder="Số điện thoại"
+                placeholder={t('form.phoneNumber')}
               />
               <PasswordField
                 name="password"
                 type="password"
-                placeholder="Nhập vào mật khẩu"
+                placeholder={t('password.enterPassword')}
               />
               <PasswordField
                 name="confirmPassword"
                 type="password"
-                placeholder="Nhập lại mật khẩu"
+                placeholder={t('password.reEnterPassword')}
               />
               <div className="auth-form__button">
                 <button className="button auth-form__button" type="submit">
-                  Đăng ký
+                  {t('pageTitle.register')}
                 </button>
               </div>
             </Form>
           )}
         </Formik>
         <div className="auth-form__footer">
-          <span>Bạn đã có tài khoản?</span>
+          <span>{t('register.registeredUser')}</span>
           <Link to={path.login} className="auth-form__link">
-            Đăng nhập
+            {t('pageTitle.login')}
           </Link>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import LightHeader from '../LightHeader'
 import Footer from '../Footer'
 import PropTypes from 'prop-types'
+import { useTranslation } from 'react-i18next'
 
 CartLayout.propTypes = {
   children: PropTypes.oneOfType([
@@ -11,9 +12,11 @@ CartLayout.propTypes = {
 }
 
 function CartLayout({ children }) {
+  const { t } = useTranslation()
+
   return (
     <div>
-      <LightHeader title="Giỏ hàng" hasSearch={true} />
+      <LightHeader title={t('header.cartHeader')} hasSearch={true} />
       {children}
       <Footer />
     </div>

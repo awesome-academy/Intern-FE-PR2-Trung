@@ -8,6 +8,7 @@ import {
   formatQuantity,
   generateNameId
 } from 'src/utils/helper'
+import { useTranslation } from 'react-i18next'
 import './styles.scss'
 import PropTypes from 'prop-types'
 
@@ -16,6 +17,8 @@ ProductItem.propTypes = {
 }
 
 function ProductItem({ product }) {
+  const { t } = useTranslation()
+
   return (
     <div className="product-item">
       <Link to={path.products + `/${generateNameId(product)}`}>
@@ -39,7 +42,9 @@ function ProductItem({ product }) {
               </span>
               <div className="product-item__sold">
                 <RatingStars rate={Math.round(product.rating)} />
-                <span> Đã bán </span>
+                <span style={{ marginLeft: 6, marginRight: 3 }}>
+                  {t('productDetail.sold')}
+                </span>
                 <span>{formatQuantity(product.sold)}</span>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { unwrapResult } from '@reduxjs/toolkit'
 import { Form, Formik } from 'formik'
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FaStar } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
@@ -10,6 +11,7 @@ import { postProductReviews } from '../ProductReviews/productReviews.slice'
 import './styles.scss'
 
 function ReviewForm({ productId }) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const { sendingError } = useSelector(state => state.productReviews)
   const { profile } = useSelector(state => state.auth)
@@ -78,7 +80,9 @@ function ReviewForm({ productId }) {
         {formik => (
           <Form className="review-form">
             {sendingError && (
-              <p className="error">Có lỗi khi gửi đánh giá: {sendingError}</p>
+              <p className="error">
+                {t('productReviews.error')}: {sendingError}
+              </p>
             )}
             <div className="review-form__rating">
               {Array.from({ length: 5 }, (_, index) => (
@@ -97,18 +101,18 @@ function ReviewForm({ productId }) {
                 </span>
               ))}
               {ratingError && (
-                <p className="error">Vui lòng đánh giá từ 1 - 5 sao</p>
+                <p className="error">{t('productReviews.invalid')}</p>
               )}
             </div>
             <TextareaField
               name="productComment"
               cols="100"
               rows="6"
-              placeholder="Hãy chia sẽ những gì bạn thích về sản phẩm này nhé"
+              placeholder={t('productReviews.placeholder')}
               className="review-form__comment"
             />
             <button className="review-form__button button" type="submit">
-              Gửi đánh giá
+              {t('productReviews.sendReivews')}
             </button>
           </Form>
         )}

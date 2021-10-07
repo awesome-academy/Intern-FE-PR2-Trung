@@ -22,8 +22,11 @@ import EmptyCartGuard from './guards/EmptyCartGuard'
 import CheckoutProgressBar from './components/CheckoutProgressBar'
 import AdminGuard from './guards/AdminGuard'
 import AdminLayout from './layout/AdminLayout'
+import { useTranslation } from 'react-i18next'
 
 export default function Routes() {
+  const { t } = useTranslation()
+
   return (
     <Switch>
       <Route path={path.home} exact>
@@ -33,14 +36,14 @@ export default function Routes() {
       </Route>
       <Route path={path.login}>
         <UnauthenticatedGuard>
-          <AuthLayout title="Đăng nhập">
+          <AuthLayout title={t('pageTitle.login')}>
             <Login />
           </AuthLayout>
         </UnauthenticatedGuard>
       </Route>
       <Route path={path.register}>
         <UnauthenticatedGuard>
-          <AuthLayout title="Đăng ký">
+          <AuthLayout title={t('pageTitle.register')}>
             <Register />
           </AuthLayout>
         </UnauthenticatedGuard>

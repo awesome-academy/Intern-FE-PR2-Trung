@@ -29,10 +29,13 @@ import LocalStorage from 'src/constants/localStorage'
 import { cartActions } from '../Cart/cart.slice'
 import { toast } from 'react-toastify'
 import { path } from 'src/constants/path'
+import { useTranslation } from 'react-i18next'
+import PageTitle from 'src/components/PageTitle'
 
 function ProductDetail(props) {
   const dispatch = useDispatch()
   const history = useHistory()
+  const { t } = useTranslation()
   const { productParamId } = useParams()
   const [quantity, setQuantity] = useState(1)
   const { productDetail, loading, error } = useSelector(
@@ -148,6 +151,7 @@ function ProductDetail(props) {
 
   return (
     <div className="product-detail">
+      {name && <PageTitle title={name} />}
       {!!Object.keys(productDetail).length && (
         <Container maxWidth="lg">
           <Grid container className="product-detail__wrap">
@@ -164,7 +168,7 @@ function ProductDetail(props) {
                   </div>
                   <div className="product-detail__sold">
                     <span>{formatQuantity(sold)}</span>
-                    <span>Đã bán</span>
+                    <span>{t('productDetail.sold')}</span>
                   </div>
                 </div>
                 <div className="product-detail__price">
@@ -175,11 +179,14 @@ function ProductDetail(props) {
                     {formatCurrency(price)}
                   </div>
                   <div className="product-detail__discount">
-                    {discountPercentage(price_before_discount, price)} giảm
+                    {discountPercentage(price_before_discount, price)}{' '}
+                    {t('productDetail.off')}
                   </div>
                 </div>
                 <div className="buy-qty">
-                  <span className="buy-qty__title">Số lượng</span>
+                  <span className="buy-qty__title">
+                    {t('productDetail.quantity')}
+                  </span>
                   <div className="buy-qty__control">
                     <QuantityController
                       max={productDetail.quantity}
@@ -188,7 +195,7 @@ function ProductDetail(props) {
                     />
                   </div>
                   <div className="buy-qty__stock">
-                    {productDetail.quantity} sản phẩm có sẵn
+                    {productDetail.quantity} {t('productDetail.available')}
                   </div>
                 </div>
                 <div className="product-detail__buttons">
@@ -207,7 +214,7 @@ function ProductDetail(props) {
                         className="product-detail__button-icon"
                       />
                     )}
-                    Yêu thích
+                    {t('productDetail.wishList')}
                   </button>
                   <button
                     className="button button--lg"
@@ -217,7 +224,7 @@ function ProductDetail(props) {
                       fontSize="medium"
                       className="product-detail__button-icon"
                     />
-                    Thêm vào giỏ hàng
+                    {t('productDetail.addToCart')}
                   </button>
                 </div>
               </div>
@@ -225,9 +232,9 @@ function ProductDetail(props) {
                 <Link to="" className="product-detail__protect">
                   <span>
                     <SiAdguard />
-                    Shopy đảm bảo
+                    {t('productDetail.guarantees')}
                   </span>
-                  <span>3 Ngày Trả Hàng / Hoàn Tiền</span>
+                  <span>{t('productDetail.refund')}</span>
                 </Link>
               </div>
             </Grid>
@@ -235,7 +242,7 @@ function ProductDetail(props) {
           <div className="product-detail-desc">
             <div className="product-detail-content__wrap">
               <div className="product-detail-content__heading product-detail-desc__heading">
-                Mô tả sản phẩm
+                {t('productDetail.description')}
               </div>
               <div className="product-detail-desc__detail">{description}</div>
             </div>
@@ -243,7 +250,7 @@ function ProductDetail(props) {
           <div className="product-detail-review">
             <div className="product-detail-content__wrap">
               <div className="product-detail-content__heading">
-                Đánh giá sản phẩm
+                {t('productDetail.review')}
               </div>
               <div className="product-detail-review__content">
                 <ProductReviews />
@@ -257,7 +264,7 @@ function ProductDetail(props) {
           </div>
           <div className="watched-products">
             <ProductsListSlider
-              title={'Sản phẩm đã xem'}
+              title={t('productsList.viewed')}
               products={viewedProductList}
             />
           </div>

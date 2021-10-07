@@ -1,7 +1,9 @@
 import { Container, Grid } from '@material-ui/core'
 import { unwrapResult } from '@reduxjs/toolkit'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
+import PageTitle from 'src/components/PageTitle'
 import useQuery from 'src/hooks/useQuery'
 import { getAllProducts } from './allProducts.slice'
 import FilterPanel from './components/FilterPanel'
@@ -10,6 +12,7 @@ import { getProducts } from './products.slice'
 import './styles.scss'
 
 function Products(props) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const [filters, setFilters] = useState({})
   const query = useQuery()
@@ -55,6 +58,7 @@ function Products(props) {
 
   return (
     <div className="products">
+      <PageTitle title={t('pageTitle.products')} />
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4} md={3} lg={2}>

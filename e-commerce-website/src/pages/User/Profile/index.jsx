@@ -2,15 +2,18 @@ import { Grid } from '@material-ui/core'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { Form, Formik } from 'formik'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import InputField from 'src/components/InputField'
+import PageTitle from 'src/components/PageTitle'
 import { NAME_REGEX, VN_PHONE_NUMBER_REGEX } from 'src/constants/regex'
 import { updateUser } from 'src/pages/Auth/auth.slice'
 import * as Yup from 'yup'
 import './styles.scss'
 
 function Profile(props) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const { id, firstName, lastName, dob, email, phone, address, photoURL } =
     useSelector(state => state.auth.profile)
@@ -72,11 +75,10 @@ function Profile(props) {
 
   return (
     <div className="profile">
+      <PageTitle title={t('pageTitle.profile')} />
       <header className="profile-header">
-        <div className="profile-header__title">Hồ sơ của tôi</div>
-        <div className="profile-header__subtitle">
-          Quản lí thông tin hồ sơ để bảo mật tài khoản
-        </div>
+        <div className="profile-header__title">{t('profile.myProfile')}</div>
+        <div className="profile-header__subtitle">{t('profile.subtite')}</div>
       </header>
       <main className="profile-info">
         <Formik
@@ -89,11 +91,19 @@ function Profile(props) {
               <Grid container spacing={5}>
                 <Grid item xs={8}>
                   <div className="profile-info__left">
-                    <InputField name="firstName" type="text" label="Tên" />
-                    <InputField name="lastName" type="text" label="Họ" />
+                    <InputField
+                      name="firstName"
+                      type="text"
+                      label={t('form.firstName')}
+                    />
+                    <InputField
+                      name="lastName"
+                      type="text"
+                      label={t('form.lastName')}
+                    />
                     <InputField
                       name="dob"
-                      label="Ngày sinh"
+                      label={t('form.dob')}
                       type="date"
                       InputLabelProps={{
                         shrink: true
@@ -103,19 +113,19 @@ function Profile(props) {
                     <InputField
                       name="phone"
                       type="text"
-                      label="Số điện thoại"
+                      label={t('form.phoneNumber')}
                     />
                     <InputField
                       name="address"
                       type="text"
-                      label="Địa chỉ nhận hàng"
+                      label={t('form.address')}
                     />
 
                     <button
                       className="button profile-info__submit-btn"
                       type="submit"
                     >
-                      Lưu
+                      {t('save')}
                     </button>
                   </div>
                 </Grid>
@@ -128,9 +138,9 @@ function Profile(props) {
                       <InputField
                         name="photoURL"
                         type="text"
-                        label="URL ảnh đại diện"
+                        label={t('profile.avatarURL')}
                       />
-                      <p>Nhập vào URL ảnh đại diện</p>
+                      <p>{t('profile.avatarURLInput')}</p>
                     </div>
                   </div>
                 </Grid>

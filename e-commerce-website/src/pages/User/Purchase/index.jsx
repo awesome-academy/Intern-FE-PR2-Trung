@@ -9,9 +9,12 @@ import useQuery from 'src/hooks/useQuery'
 import { formatCurrency, statusNumberToText } from 'src/utils/helper'
 import { getPurchases, updatePurchases } from '../user.slice'
 import ConfirmationModal from 'src/components/ConfirmationModal'
+import { useTranslation } from 'react-i18next'
 import './styles.scss'
+import PageTitle from 'src/components/PageTitle'
 
 function Purchase(props) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const query = useQuery()
   const status = useMemo(() => query.status, [query])
@@ -67,13 +70,14 @@ function Purchase(props) {
 
   return (
     <div className="purchase">
+      <PageTitle title={t('pageTitle.purchase')} />
       <div className="purchase__tabs">
         <NavLink
           to={path.purchase}
           className="purchase__tabs-item"
           isActive={isActive(purchaseStatus.all)}
         >
-          Tất cả
+          {t('purchase.all')}
         </NavLink>
         {Object.values(purchaseStatus).map((statusItem, index) => (
           <NavLink
@@ -99,7 +103,7 @@ function Purchase(props) {
               <div className="purchase-card__content">
                 <div className="purchase-card__header">
                   <div className="purchase-card__purchase-id">
-                    Mã đơn hàng: {purchase.id}
+                    {t('purchase.orderId')}: {purchase.id}
                   </div>
                   <div className="purchase-card__status">
                     {statusNumberToText(purchase.status)}
@@ -135,20 +139,20 @@ function Purchase(props) {
                 <div className="purchase-card__footer-left">
                   <div className="purchase-card__delivery">
                     <h4 className="purchase-card__delivery-title">
-                      Địa chỉ nhận hàng
+                      {t('address')}
                     </h4>
                     <div className="purchase-card__delivery-info">
-                      Họ và tên:{' '}
+                      {t('fullName')}:{' '}
                       {`${purchase.delivery.firstName} ${purchase.delivery.lastName}`}
                     </div>
                     <div className="purchase-card__delivery-info">
-                      Số điện thoại: {purchase.delivery.phone}
+                      {t('form.phoneNumber')}: {purchase.delivery.phone}
                     </div>
                     <div className="purchase-card__delivery-info">
-                      Địa chỉ: {purchase.delivery.address}
+                      {t('address')}: {purchase.delivery.address}
                     </div>
                     <div className="purchase-card__delivery-info">
-                      Hình thức thanh toán: {purchase.paymentMethod}
+                      {t('paymentMethod')}: {purchase.paymentMethod}
                     </div>
                   </div>
                 </div>
@@ -156,7 +160,7 @@ function Purchase(props) {
                 <div className="purchase-card__footer-right">
                   <div className="purchase-card__payment">
                     <div className="purchase-card__payment-title">
-                      Số tiền phải trả:
+                      {t('purchase.totalPayment')}:
                     </div>
                     <div className="purchase-card__payment-total">
                       {formatCurrency(purchase.totalPayment)}
@@ -168,7 +172,7 @@ function Purchase(props) {
                         className="button button--back"
                         onClick={() => handleConfirmCancelOrder(purchase)}
                       >
-                        Hủy đơn hàng
+                        {t('purchase.cancelOrder')}
                       </button>
                     </div>
                   )}
@@ -177,7 +181,7 @@ function Purchase(props) {
             </li>
           ))
         ) : (
-          <p className="purchase__no-purchase">Không tồn tại đơn hàng</p>
+          <p className="purchase__no-purchase">{t('purchase.noOrder')}</p>
         )}
       </ul>
       <ConfirmationModal

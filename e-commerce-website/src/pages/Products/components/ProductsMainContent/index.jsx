@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 import { useHistory } from 'react-router'
 import { path } from 'src/constants/path'
 import qs from 'query-string'
+import { useTranslation } from 'react-i18next'
 
 ProductsMainContent.propTypes = {
   filters: PropTypes.object
@@ -16,6 +17,7 @@ ProductsMainContent.propTypes = {
 
 function ProductsMainContent({ filters }) {
   const { loading, products, pagination } = useSelector(state => state.products)
+  const { t } = useTranslation()
   const history = useHistory()
 
   const sortProductsBy = (_sort, order) => {
@@ -47,41 +49,41 @@ function ProductsMainContent({ filters }) {
   return (
     <div>
       <div className="sort-bar">
-        <span className="sort-bar__title">Sắp xếp theo</span>
+        <span className="sort-bar__title">{t('products.sortBy')}</span>
         <div className="sort-options">
           <div
             className={`sort-options__option ${isActive('view')}`}
             onClick={() => sortProductsBy('view', 'desc')}
           >
-            Phổ biến
+            {t('products.popular')}
           </div>
           <div
             className={`sort-options__option ${isActive('createdAt')}`}
             onClick={() => sortProductsBy('createdAt', 'desc')}
           >
-            Mới nhất
+            {t('products.newest')}
           </div>
           <div
             className={`sort-options__option ${isActive('sold')}`}
             onClick={() => sortProductsBy('sold', 'desc')}
           >
-            Bán chạy
+            {t('products.bestSelling')}
           </div>
           <select
             className="sort-options__price"
             onChange={event => sortProductsBy('price', event.target.value)}
           >
-            <option value="">Giá</option>
-            <option value="asc">Giá: Thấp đến cao</option>
-            <option value="desc">Giá: Cao đến thấp`</option>
+            <option value="">{t('products.price')}</option>
+            <option value="asc">{t('products.priceAsc')}</option>
+            <option value="desc">{t('products.priceDesc')}</option>
           </select>
           <select
             className="sort-options__name"
             onChange={event => sortProductsBy('name', event.target.value)}
           >
-            <option value="">Tên</option>
-            <option value="asc">Tên: Từ A đến Z</option>
-            <option value="desc">Tên: Từ Z đến A</option>
+            <option value="">{t('products.name')}</option>
+            <option value="asc">{t('products.nameAsc')}</option>
+            <option value="desc">{t('products.nameDesc')}</option>
           </select>
         </div>
         <div className="mini-page-control">
