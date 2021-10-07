@@ -19,6 +19,7 @@ import CheckoutLayout from './layout/CheckoutLayout'
 import Delivery from './pages/Checkout/Delivery'
 import Summary from './pages/Checkout/Summary'
 import EmptyCartGuard from './guards/EmptyCartGuard'
+import CheckoutProgressBar from './components/CheckoutProgressBar'
 
 export default function Routes() {
   return (
@@ -58,6 +59,7 @@ export default function Routes() {
         <AuthenticatedGuard>
           <CartLayout>
             <Breadcrumbs />
+            <CheckoutProgressBar step="cart" />
             <Cart />
           </CartLayout>
         </AuthenticatedGuard>
@@ -67,6 +69,7 @@ export default function Routes() {
           <EmptyCartGuard>
             <CheckoutLayout>
               <Breadcrumbs />
+              <CheckoutProgressBar step="delivery" />
               <Delivery />
             </CheckoutLayout>
           </EmptyCartGuard>
@@ -77,6 +80,7 @@ export default function Routes() {
           <EmptyCartGuard>
             <CheckoutLayout>
               <Breadcrumbs />
+              <CheckoutProgressBar step="=summary" />
               <Summary />
             </CheckoutLayout>
           </EmptyCartGuard>
