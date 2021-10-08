@@ -18,8 +18,7 @@ FilterPanel.propTypes = {
 }
 
 function FilterPanel({ filters }) {
-  const { allProducts } = useSelector(state => state.allProducts)
-  const [categories, setCategories] = useState([])
+  const { allProducts, allCategories } = useSelector(state => state.allProducts)
   const [brands, setBrands] = useState([])
   const [places, setPlaces] = useState([])
   const [currentSelection, setCurrentSelection] = useState(null)
@@ -42,7 +41,6 @@ function FilterPanel({ filters }) {
 
   useEffect(() => {
     if (allProducts.length) {
-      setCategories(extractData('category', allProducts))
       if (currentSelection !== 'brand')
         setBrands(extractData('brand', allProducts))
       if (currentSelection !== 'place')
@@ -146,7 +144,7 @@ function FilterPanel({ filters }) {
         </Link>
 
         <ul className="category__list">
-          {categories.map(category => (
+          {allCategories.map(category => (
             <li key={category.id} className="category__item">
               <NavLink
                 to={path.products + `?category.id=${category.id}`}

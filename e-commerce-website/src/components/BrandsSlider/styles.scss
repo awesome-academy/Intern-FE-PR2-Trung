@@ -1,0 +1,10 @@
+@import 'src/assets/scss/common';
+
+.brands-slider {
+  &__image {
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
