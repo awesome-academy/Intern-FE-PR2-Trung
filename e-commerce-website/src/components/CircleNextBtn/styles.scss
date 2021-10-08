@@ -1,0 +1,6 @@
+@import 'src/assets/scss/common';
+
+.circle-next-btn {
+  @include absoluteCenter;
+  color: $light-text-color;
+}

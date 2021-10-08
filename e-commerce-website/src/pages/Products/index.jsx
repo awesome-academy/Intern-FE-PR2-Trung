@@ -20,8 +20,9 @@ function Products(props) {
         const _filters = {
           ...query,
           _page: query._page || 1,
-          _limit: query._limit || 10,
-          _sort: query._sort || 'view'
+          _limit: query._limit || 12,
+          _sort: query._sort || 'view',
+          _order: query._order || 'desc'
         }
         setFilters(_filters)
 

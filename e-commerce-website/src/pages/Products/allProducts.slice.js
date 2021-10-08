@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { payLoadCreater } from 'src/utils/helper'
+import { extractData, payLoadCreater } from 'src/utils/helper'
 import productApi from 'src/api/product.api'
 
 export const getAllProducts = createAsyncThunk(
@@ -11,6 +11,8 @@ const allProducts = createSlice({
   name: 'allProducts', // prefix for create action type
   initialState: {
     allProducts: [],
+    allCategories: [],
+    allBrands: [],
     loading: false,
     error: ''
   },
@@ -22,6 +24,10 @@ const allProducts = createSlice({
     [getAllProducts.fulfilled]: (state, action) => {
       state.loading = false
       state.allProducts = action.payload.data
+      state.allCategories = extractData('category', action.payload.data)
+      state.allBrands = extractData('brand', action.payload.data)
+
+      extractData('brand', allProducts)
     },
     [getAllProducts.rejected]: (state, action) => {
       state.loading = false

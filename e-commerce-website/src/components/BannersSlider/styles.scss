@@ -1,0 +1,87 @@
+@import 'src/assets/scss/common';
+
+.banners-slider {
+  height: 100%;
+
+  &:hover {
+    .slick-arrow {
+      @include transition;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  div {
+    height: 100%;
+  }
+
+  &__link {
+    height: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  &__icon {
+    @include absoluteCenter;
+    color: $white;
+  }
+
+  .slick-arrow {
+    @include transition;
+    visibility: hidden;
+    opacity: 0;
+
+    &.slick-prev {
+      left: 0;
+      z-index: 1;
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+
+    &.slick-prev,
+    &.slick-next {
+      @include transition;
+      @include borderRadius(3px);
+      width: 3.5rem;
+      height: 6rem;
+      text-align: center;
+      background-color: rgba($black, 0.2);
+      box-shadow: 0 0 6px rgba($black, 0.1);
+
+      &:hover {
+        background-color: rgba($black, 0.4);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: 1.2rem;
+
+    li {
+      &.slick-active {
+        button {
+          &:before {
+            color: $primary-color;
+          }
+        }
+      }
+
+      button {
+        &:before {
+          font-size: 1rem;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
