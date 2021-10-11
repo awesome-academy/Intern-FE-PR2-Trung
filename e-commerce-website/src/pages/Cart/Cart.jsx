@@ -19,6 +19,7 @@ function Cart(props) {
   } = useSelector(state => state.cart)
   const viewedProductList =
     JSON.parse(localStorage.getItem(LocalStorage.viewedProducts)) || []
+  const { wishList } = useSelector(state => state.wishList)
   const [showRemoveConfirmation, setShowRemoveConfirmation] = useState(false)
   const [currentCartItemRemove, setCurrentCartItemRemove] = useState(null)
 
@@ -143,6 +144,14 @@ function Cart(props) {
             />
           </>
         )}
+
+        <div className="wish-list-products">
+          <ProductsListSlider
+            title={'Sản phẩm yêu thích'}
+            products={wishList}
+          />
+        </div>
+
         <div className="watched-products">
           <ProductsListSlider
             title={'Sản phẩm đã xem'}

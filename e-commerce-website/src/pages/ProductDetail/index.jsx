@@ -1,5 +1,5 @@
 import { Container, Grid } from '@material-ui/core'
-import { AddShoppingCart, FavoriteBorder } from '@material-ui/icons'
+import { AddShoppingCart, FavoriteBorder, Favorite } from '@material-ui/icons'
 import React, { useEffect, useState } from 'react'
 import { SiAdguard } from 'react-icons/si'
 import { useDispatch, useSelector } from 'react-redux'
@@ -20,6 +20,7 @@ import {
 } from 'src/utils/helper'
 import ReviewForm from './components/ReviewForm'
 import { getProductDetail } from './productDetail.slice'
+import { wishListActions } from './wishlist.slice'
 import useAuth from 'src/hooks/useAuth'
 import './styles.scss'
 import { getProductReviews } from './components/ProductReviews/productReviews.slice'
@@ -37,9 +38,22 @@ function ProductDetail(props) {
   const { productDetail, loading, error } = useSelector(
     state => state.productDetail
   )
+  const { wishList } = useSelector(state => state.wishList)
   const { authenticated } = useAuth()
   const viewedProductList =
     JSON.parse(localStorage.getItem(LocalStorage.viewedProducts)) || []
+  const {
+    id,
+    image,
+    images,
+    name,
+    description,
+    price_before_discount,
+    price,
+    rating,
+    sold,
+    place
+  } = productDetail
 
   useEffect(() => {
     ;(async () => {
@@ -56,9 +70,9 @@ function ProductDetail(props) {
           getProductReviews(productId)
         )
         unwrapResult(productReviewsResponse)
-      } catch (error) {
+      } catch (err) {
         // eslint-disable-next-line
-        console.log(error)
+        console.log(err)
       }
     })()
   }, [productParamId, dispatch])
@@ -69,17 +83,6 @@ function ProductDetail(props) {
       JSON.parse(localStorage.getItem(LocalStorage.viewedProducts)) || []
 
     if (Object.keys(productDetail).length) {
-      const {
-        id,
-        image,
-        name,
-        price_before_discount,
-        price,
-        rating,
-        sold,
-        place
-      } = productDetail
-
       newViewedProduct = {
         id,
         image,
@@ -88,7 +91,7 @@ function ProductDetail(props) {
         price,
         rating,
         sold,
-        place: { name: place.name }
+        place
       }
     }
 
@@ -103,6 +106,7 @@ function ProductDetail(props) {
         JSON.stringify(viewedProducts)
       )
     }
+    // eslint-disable-next-line
   }, [productDetail])
 
   const handleQuantityChange = value => {
@@ -114,12 +118,12 @@ function ProductDetail(props) {
       history.push(path.login)
     } else {
       const product = {
-        id: productDetail.id,
-        image: productDetail.image,
-        name: productDetail.name,
-        price_before_discount: productDetail.price_before_discount,
-        price: productDetail.price,
-        quantity: productDetail.quantity
+        id,
+        image,
+        name,
+        price_before_discount,
+        price,
+        quantity
       }
 
       dispatch(cartActions.addToCart({ product, quantity }))
@@ -127,40 +131,51 @@ function ProductDetail(props) {
     }
   }
 
+  const handleToggleWishList = () => {
+    const favouriteProduct = {
+      id,
+      image,
+      name,
+      price_before_discount,
+      price,
+      rating,
+      sold,
+      place
+    }
+
+    dispatch(wishListActions.toggleWishList(favouriteProduct))
+  }
+
   return (
     <div className="product-detail">
-      {Object.keys(productDetail).length && (
+      {!!Object.keys(productDetail).length && (
         <Container maxWidth="lg">
           <Grid container className="product-detail__wrap">
             <Grid item xs={12} md={5} className="product-detail__slider">
-              <ProductSlider images={productDetail.images} />
+              <ProductSlider images={images} />
             </Grid>
             <Grid item xs={12} md={7} className="product-detail__meta">
               <div className="product-detail__meta-top">
-                <h1 className="product-detail__title">{productDetail.name}</h1>
+                <h1 className="product-detail__title">{name}</h1>
                 <div className="product-detail__meta-inner">
                   <div className="product-detail__rating">
-                    <span>{formatRatingNumber(productDetail.rating)}</span>
-                    <RatingStars rate={productDetail.rating} />
+                    <span>{formatRatingNumber(rating)}</span>
+                    <RatingStars rate={rating} />
                   </div>
                   <div className="product-detail__sold">
-                    <span>{formatQuantity(productDetail.sold)}</span>
+                    <span>{formatQuantity(sold)}</span>
                     <span>Đã bán</span>
                   </div>
                 </div>
                 <div className="product-detail__price">
                   <div className="product-detail__price-original">
-                    {formatCurrency(productDetail.price_before_discount)}
+                    {formatCurrency(price_before_discount)}
                   </div>
                   <div className="product-detail__price-sale">
-                    {formatCurrency(productDetail.price)}
+                    {formatCurrency(price)}
                   </div>
                   <div className="product-detail__discount">
-                    {discountPercentage(
-                      productDetail.price_before_discount,
-                      productDetail.price
-                    )}{' '}
-                    giảm
+                    {discountPercentage(price_before_discount, price)} giảm
                   </div>
                 </div>
                 <div className="buy-qty">
@@ -177,11 +192,21 @@ function ProductDetail(props) {
                   </div>
                 </div>
                 <div className="product-detail__buttons">
-                  <button className="button button--lg button--outline">
-                    <FavoriteBorder
-                      fontSize="large"
-                      className="product-detail__button-icon"
-                    />
+                  <button
+                    className="button button--lg button--outline"
+                    onClick={handleToggleWishList}
+                  >
+                    {isProductExistInList(productDetail, wishList) ? (
+                      <Favorite
+                        fontSize="medium"
+                        className="product-detail__button-icon"
+                      />
+                    ) : (
+                      <FavoriteBorder
+                        fontSize="medium"
+                        className="product-detail__button-icon"
+                      />
+                    )}
                     Yêu thích
                   </button>
                   <button
@@ -189,7 +214,7 @@ function ProductDetail(props) {
                     onClick={handleAddToCart}
                   >
                     <AddShoppingCart
-                      fontSize="large"
+                      fontSize="medium"
                       className="product-detail__button-icon"
                     />
                     Thêm vào giỏ hàng
@@ -212,9 +237,7 @@ function ProductDetail(props) {
               <div className="product-detail-content__heading product-detail-desc__heading">
                 Mô tả sản phẩm
               </div>
-              <div className="product-detail-desc__detail">
-                {productDetail.description}
-              </div>
+              <div className="product-detail-desc__detail">{description}</div>
             </div>
           </div>
           <div className="product-detail-review">
@@ -227,7 +250,7 @@ function ProductDetail(props) {
               </div>
               {authenticated && (
                 <div className="product-detail-review__form">
-                  <ReviewForm productId={productDetail.id} />
+                  <ReviewForm productId={id} />
                 </div>
               )}
             </div>

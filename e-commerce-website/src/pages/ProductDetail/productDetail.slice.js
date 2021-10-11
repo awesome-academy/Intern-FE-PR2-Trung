@@ -12,7 +12,7 @@ const productDetail = createSlice({
   initialState: {
     productDetail: {},
     loading: false,
-    error: true
+    error: ''
   },
   extraReducers: {
     [getProductDetail.pending]: (state, action) => {
@@ -20,6 +20,7 @@ const productDetail = createSlice({
     },
     [getProductDetail.fulfilled]: (state, action) => {
       state.loading = false
+      state.error = ''
       state.productDetail = action.payload.data
     },
     [getProductDetail.rejected]: (state, action) => {
