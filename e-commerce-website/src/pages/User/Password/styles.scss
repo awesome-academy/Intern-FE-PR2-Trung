@@ -1,0 +1,31 @@
+@import 'src/assets/scss/common';
+@import '../Profile/styles.scss';
+
+.password {
+  @extend .profile;
+
+  &-header {
+    @extend .profile-header;
+
+    &__title {
+      @extend .profile-header__title;
+    }
+
+    &__subtitle {
+      @extend .profile-header__subtitle;
+    }
+  }
+
+  &-info {
+    @extend .profile-info;
+
+    &__form {
+      width: 50rem;
+      margin: 0 auto;
+    }
+
+    &__submit-btn {
+      @extend .profile-info__submit-btn;
+    }
+  }
+}
