@@ -77,3 +77,20 @@ export const isProductExistInList = (product, productList) => {
 export const findIndexById = (item, array) => {
   return array.findIndex(arrayItem => arrayItem.id === item.id)
 }
+
+export const statusNumberToText = number => {
+  switch (number) {
+    case 1:
+      return 'Chờ xác nhận'
+    case 2:
+      return 'Chờ lấy hàng'
+    case 3:
+      return 'Đang giao'
+    case 4:
+      return 'Đã giao'
+    case 5:
+      return 'Đã hủy'
+    default:
+      return 'Không rõ'
+  }
+}

@@ -68,7 +68,7 @@ function User(props) {
                 <Route path={path.password}>
                   <Password />
                 </Route>
-                <Route path={path.purchase}>
+                <Route path={path.purchase} exact>
                   <Purchase />
                 </Route>
               </Switch>
