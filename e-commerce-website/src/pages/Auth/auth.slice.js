@@ -13,6 +13,11 @@ export const fetchUser = createAsyncThunk(
   payLoadCreater(authApi.fetchUser)
 )
 
+export const updateUser = createAsyncThunk(
+  'auth/updateUser',
+  payLoadCreater(authApi.updateUser)
+)
+
 const handleAuthFulfilled = (state, action) => {
   if (Array.isArray(action.payload.data)) {
     state.profile = action.payload.data[0]
@@ -38,7 +43,11 @@ const auth = createSlice({
   },
   extraReducers: {
     [register.fulfilled]: handleAuthFulfilled,
-    [fetchUser.fulfilled]: handleAuthFulfilled
+    [fetchUser.fulfilled]: handleAuthFulfilled,
+    [updateUser.fulfilled]: (state, action) => {
+      state.profile = action.payload.data
+      localStorage.setItem(LocalStorage.user, JSON.stringify(state.profile))
+    }
   }
 })
 

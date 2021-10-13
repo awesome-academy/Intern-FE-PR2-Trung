@@ -138,7 +138,7 @@ function Purchase(props) {
                       {formatCurrency(purchase.totalPayment)}
                     </div>
                   </div>
-                  {status < 3 && (
+                  {purchase.status < 3 && (
                     <div className="purchase-card__actions">
                       <button className="button button--back">
                         Hủy đơn hàng

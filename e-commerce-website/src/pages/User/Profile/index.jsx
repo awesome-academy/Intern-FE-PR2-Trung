@@ -1,14 +1,18 @@
 import { Grid } from '@material-ui/core'
+import { unwrapResult } from '@reduxjs/toolkit'
 import { Form, Formik } from 'formik'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
 import InputField from 'src/components/InputField'
 import { NAME_REGEX, VN_PHONE_NUMBER_REGEX } from 'src/constants/regex'
+import { updateUser } from 'src/pages/Auth/auth.slice'
 import * as Yup from 'yup'
 import './styles.scss'
 
 function Profile(props) {
-  const { firstName, lastName, dob, email, phone, address, photoURL } =
+  const dispatch = useDispatch()
+  const { id, firstName, lastName, dob, email, phone, address, photoURL } =
     useSelector(state => state.auth.profile)
 
   const initialValues = {
@@ -18,7 +22,7 @@ function Profile(props) {
     email: email || '',
     phone: phone || '',
     address: address || '',
-    photoUrl: ''
+    photoURL: ''
   }
 
   const validationSchema = Yup.object().shape({
@@ -43,11 +47,27 @@ function Profile(props) {
     address: Yup.string()
       .min(20, 'Địa chỉ có độ dài từ 20 đến 100 kí tự')
       .max(160, 'Địa chỉ có độ dài từ 20 đến 100 kí tự'),
-    photoUrl: Yup.string().url('URL ảnh không hợp lệ')
+    photoURL: Yup.string().url('URL ảnh không hợp lệ')
   })
 
-  const handleUpdateProfile = data => {
-    console.log(data)
+  const handleUpdateProfile = async data => {
+    const { photoURL: avatarUrl, ...updatedData } = data
+
+    if (avatarUrl) {
+      updatedData.photoURL = avatarUrl
+    }
+
+    try {
+      const response = await dispatch(
+        updateUser({ userId: id, data: updatedData })
+      )
+      unwrapResult(response)
+      toast.success('Cập nhật hồ sơ thành công')
+    } catch (error) {
+      // eslint-disable-next-line
+      console.log(error)
+      toast.error('Có lỗi xảy ra')
+    }
   }
 
   return (
@@ -106,7 +126,7 @@ function Profile(props) {
                         <img src={photoURL} alt="user avatar" />
                       </div>
                       <InputField
-                        name="photoUrl"
+                        name="photoURL"
                         type="text"
                         label="URL ảnh đại diện"
                       />
