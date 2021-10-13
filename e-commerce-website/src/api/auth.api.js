@@ -9,6 +9,9 @@ const authApi = {
   fetchUser(userId) {
     return http.get(URL + `?id=${userId}`)
   },
+  fetchAllUsers(config) {
+    return http.get(URL, config)
+  },
   updateUser({ userId, data }) {
     return http.patch(`${URL}/${userId}`, data)
   }

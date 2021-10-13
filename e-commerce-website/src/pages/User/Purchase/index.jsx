@@ -17,6 +17,8 @@ function Purchase(props) {
   const status = useMemo(() => query.status, [query])
   const { purchases } = useSelector(state => state.user)
   const { id: userId } = useSelector(state => state.auth.profile)
+  const [showRemoveConfirmation, setShowRemoveConfirmation] = useState(false)
+  const [currentPurchaseCancel, setCurrentPurchaseCancel] = useState(null)
 
   useEffect(() => {
     ;(async () => {

@@ -20,6 +20,8 @@ import Delivery from './pages/Checkout/Delivery'
 import Summary from './pages/Checkout/Summary'
 import EmptyCartGuard from './guards/EmptyCartGuard'
 import CheckoutProgressBar from './components/CheckoutProgressBar'
+import AdminGuard from './guards/AdminGuard'
+import AdminLayout from './layout/AdminLayout'
 
 export default function Routes() {
   return (
@@ -98,7 +100,11 @@ export default function Routes() {
       </Route>
       <Route path={path.admin}>
         <AuthenticatedGuard>
-          <Admin />
+          <AdminGuard>
+            <AdminLayout>
+              <Admin />
+            </AdminLayout>
+          </AdminGuard>
         </AuthenticatedGuard>
       </Route>
       <Route path={path.notFound}>
