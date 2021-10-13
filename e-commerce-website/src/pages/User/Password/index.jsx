@@ -1,6 +1,7 @@
 import { Form, Formik } from 'formik'
 import React from 'react'
 import PasswordField from 'src/components/PasswordField'
+import useAuth from 'src/hooks/useAuth'
 import * as Yup from 'yup'
 import './styles.scss'
 
@@ -10,6 +11,8 @@ function Password(props) {
     newPassword: '',
     confirmNewPassword: ''
   }
+
+  const { changePassword, error } = useAuth()
 
   const validationSchema = Yup.object().shape({
     password: Yup.string()
@@ -30,8 +33,14 @@ function Password(props) {
       .max(160, 'Nhập lại mật khẩu có độ dài từ 6 - 160 kí tự')
   })
 
-  const handleChangePassword = data => {
-    console.log(data)
+  const handleChangePassword = async (data, { resetForm }) => {
+    try {
+      await changePassword(data)
+      resetForm()
+    } catch (err) {
+      // eslint-disable-next-line
+      console.log(err)
+    }
   }
 
   return (
@@ -50,6 +59,7 @@ function Password(props) {
         >
           {formik => (
             <Form>
+              {error && <p className="error">{error}</p>}
               <div className="password-info__form">
                 <PasswordField
                   name="password"

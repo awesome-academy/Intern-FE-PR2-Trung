@@ -1,12 +1,16 @@
 import {
   createUserWithEmailAndPassword,
+  reauthenticateWithCredential,
   signInWithEmailAndPassword,
+  EmailAuthProvider,
+  updatePassword,
   updateProfile,
   signOut
 } from '@firebase/auth'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
+import { toast } from 'react-toastify'
 import LocalStorage from 'src/constants/localStorage'
 import { path } from 'src/constants/path'
 import { auth } from 'src/firebase/firebase'
@@ -75,6 +79,27 @@ const useAuth = () => {
     }
   }
 
+  const reauthenticate = currentPassword => {
+    const user = auth.currentUser
+    const credential = EmailAuthProvider.credential(user.email, currentPassword)
+
+    return reauthenticateWithCredential(user, credential)
+  }
+
+  const changePassword = async data => {
+    const { password, newPassword } = data
+
+    try {
+      const user = auth.currentUser
+      await reauthenticate(password)
+      await updatePassword(user, newPassword)
+      toast.success('Đổi mật khẩu thành công')
+    } catch (err) {
+      setError(err)
+      toast.error('Đã có lỗi xảy ra: ', err)
+    }
+  }
+
   const logout = async () => {
     try {
       await signOut(auth)
@@ -104,6 +129,7 @@ const useAuth = () => {
     authenticated,
     registerWithEmailAndPassword,
     loginWithEmailAndPassword,
+    changePassword,
     logout,
     error: errorMessage
   }
