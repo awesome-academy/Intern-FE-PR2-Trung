@@ -12,7 +12,7 @@ import useAuth from 'src/hooks/useAuth'
 import { useSelector } from 'react-redux'
 
 function Navbar(props) {
-  const { authenticated, logout } = useAuth()
+  const { authenticated, logout, userRole } = useAuth()
   const { profile } = useSelector(state => state.auth)
 
   return (
@@ -73,6 +73,13 @@ function Navbar(props) {
                     Tài khoản của tôi
                   </Link>
                 </li>
+                {userRole === 'admin' && (
+                  <li className="navbar__user-item">
+                    <Link to={path.admin} className="navbar__user-link">
+                      Quản trị viên
+                    </Link>
+                  </li>
+                )}
                 <li className="navbar__user-item">
                   <Link to={path.purchase} className="navbar__user-link">
                     Đơn mua

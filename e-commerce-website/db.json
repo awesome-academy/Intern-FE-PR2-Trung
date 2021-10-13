@@ -1505,6 +1505,7 @@
       "displayName": "Trung Le",
       "photoURL": "https://cf.shopee.vn/file/d814f2831935bb1a9143abfe2e16d293",
       "role": "user",
+      "status": 1,
       "firstName": "Trung",
       "lastName": "Le",
       "email": "trungle888@gmail.com",
@@ -1512,6 +1513,17 @@
       "createdAt": 1632716581337,
       "dob": "2001-12-04",
       "address": "162 ABC, XYZ, YKMLAAA"
+    },
+    {
+      "id": "cswo3GSW0UfmgUBAg4DiEfPljnf2",
+      "displayName": "Admin Admin",
+      "photoURL": "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png",
+      "role": "admin",
+      "status": 1,
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "email": "admin@shopy.vn",
+      "createdAt": 1633391812450
     }
   ]
 }

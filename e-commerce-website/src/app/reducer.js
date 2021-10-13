@@ -8,6 +8,7 @@ import checkoutReducer from 'src/pages/Checkout/checkout.slice'
 import bannersReducer from 'src/pages/Home/banners.slice'
 import wishListReducer from 'src/pages/ProductDetail/wishlist.slice'
 import userReducer from 'src/pages/User/user.slice'
+import adminReducer from 'src/pages/Admin/admin.slice'
 
 const rootReducer = {
   products: productsReducer,
@@ -18,6 +19,7 @@ const rootReducer = {
   cart: cartReducer,
   checkout: checkoutReducer,
   user: userReducer,
+  admin: adminReducer,
   auth: authReducer,
   wishList: wishListReducer
 }

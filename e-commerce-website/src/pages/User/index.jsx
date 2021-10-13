@@ -14,7 +14,7 @@ import purchseIcon from 'src/assets/images/purchase-icon.png'
 import './styles.scss'
 
 function User(props) {
-  const { photoURL } = useSelector(state => state.auth.profile)
+  const { photoURL, displayName } = useSelector(state => state.auth.profile)
 
   return (
     <div className="user">
@@ -27,7 +27,7 @@ function User(props) {
                   <img src={photoURL} alt="user avatar" />
                 </Link>
                 <div className="user-sidebar__user-account">
-                  <div className="user-sidebar__username">Trung Le</div>
+                  <div className="user-sidebar__username">{displayName}</div>
                   <Link to={path.profile} className="user-sidebar__brief-edit">
                     <Edit fontSize="small" />
                     Sửa hồ sơ

@@ -1,0 +1,22 @@
+@import 'src/assets/scss/common';
+@import '../../User/Profile/styles.scss';
+
+.manage {
+  @extend .profile;
+
+  &-header {
+    @extend .profile-header;
+
+    &__title {
+      @extend .profile-header__title;
+    }
+
+    &__subtitle {
+      @extend .profile-header__subtitle;
+    }
+  }
+
+  &-info {
+    @extend .profile-info;
+  }
+}
