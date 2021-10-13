@@ -1,13 +1,14 @@
 import { unwrapResult } from '@reduxjs/toolkit'
 import qs from 'query-string'
-import React, { useEffect, useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { path } from 'src/constants/path'
 import { purchaseStatus } from 'src/constants/purchaseStatus'
 import useQuery from 'src/hooks/useQuery'
 import { formatCurrency, statusNumberToText } from 'src/utils/helper'
-import { getPurchases } from '../user.slice'
+import { getPurchases, updatePurchases } from '../user.slice'
+import ConfirmationModal from 'src/components/ConfirmationModal'
 import './styles.scss'
 
 function Purchase(props) {
@@ -40,6 +41,27 @@ function Purchase(props) {
     }
     return Number(value) === Number(status)
   }
+
+  const handleCancelOrder = async () => {
+    const data = { status: purchaseStatus.cancelled }
+
+    try {
+      const response = await dispatch(
+        updatePurchases({ id: currentPurchaseCancel.id, data })
+      )
+      unwrapResult(response)
+    } catch (err) {
+      // eslint-disable-next-line
+      console.log(err)
+    }
+  }
+
+  const handleConfirmCancelOrder = purchase => {
+    setShowRemoveConfirmation(true)
+    setCurrentPurchaseCancel(purchase)
+  }
+
+  const handleCloseConfirmation = () => setShowRemoveConfirmation(false)
 
   return (
     <div className="purchase">
@@ -140,7 +162,10 @@ function Purchase(props) {
                   </div>
                   {purchase.status < 3 && (
                     <div className="purchase-card__actions">
-                      <button className="button button--back">
+                      <button
+                        className="button button--back"
+                        onClick={() => handleConfirmCancelOrder(purchase)}
+                      >
                         Hủy đơn hàng
                       </button>
                     </div>
@@ -153,6 +178,13 @@ function Purchase(props) {
           <p className="purchase__no-purchase">Không tồn tại đơn hàng</p>
         )}
       </ul>
+      <ConfirmationModal
+        title="Xác nhận huỷ đơn hàng"
+        content={`Bạn chắc chắn muốn hủy đơn hàng số ${currentPurchaseCancel?.id} chứ?`}
+        confirmActions={handleCancelOrder}
+        showConfirmation={showRemoveConfirmation}
+        handleClose={handleCloseConfirmation}
+      />
     </div>
   )
 }

@@ -8,6 +8,9 @@ const purchaseApi = {
   },
   getPurchases(config) {
     return http.get(URL, config)
+  },
+  updatePurchases({ id, data }) {
+    return http.patch(`${URL}/${id}`, data)
   }
 }
 
