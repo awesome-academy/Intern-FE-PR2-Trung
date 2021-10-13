@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './styles.scss'
+import '../styles.scss'
 import {
   FormControl,
   makeStyles,
@@ -14,9 +14,10 @@ import {
 } from '@material-ui/core'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAllUsers } from '../admin.slice'
+import { fetchAllUsers, updateUser } from '../admin.slice'
 import SortTableHead from 'src/components/Table/SortTableHead'
 import useTable from 'src/hooks/useTable'
+import { toast } from 'react-toastify'
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -115,12 +116,28 @@ function ManageUsers(props) {
     })()
   }, [dispatch])
 
-  const handleChangeRole = event => {
-    console.log(event.target.value)
+  const handleChangeRole = async (event, userId) => {
+    const data = { role: event.target.value }
+
+    try {
+      const response = await dispatch(updateUser({ userId, data }))
+      unwrapResult(response)
+      toast.success('Cập nhật vai trò thành công')
+    } catch (err) {
+      toast.error('Cập nhật vai trò thất bại')
+    }
   }
 
-  const handleChangeStatus = event => {
-    console.log(event.target.value)
+  const handleChangeStatus = async (event, userId) => {
+    const data = { status: event.target.value }
+
+    try {
+      const response = await dispatch(updateUser({ userId, data }))
+      unwrapResult(response)
+      toast.success('Cập nhật trạng thái thành công')
+    } catch (err) {
+      toast.error('Cập nhật trạng thái thất bại')
+    }
   }
 
   return (
@@ -157,7 +174,7 @@ function ManageUsers(props) {
                       <FormControl className={classes.formControl}>
                         <Select
                           value={user.role}
-                          onChange={handleChangeRole}
+                          onChange={event => handleChangeRole(event, user.id)}
                           displayEmpty
                           className={classes.selectEmpty}
                           inputProps={{ 'aria-label': 'Without label' }}
@@ -171,7 +188,7 @@ function ManageUsers(props) {
                       <FormControl className={classes.formControl}>
                         <Select
                           value={user.status}
-                          onChange={handleChangeStatus}
+                          onChange={event => handleChangeStatus(event, user.id)}
                           displayEmpty
                           className={classes.selectEmpty}
                         >

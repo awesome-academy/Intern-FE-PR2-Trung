@@ -7,6 +7,7 @@ import {
   updateProfile,
   signOut
 } from '@firebase/auth'
+import { unwrapResult } from '@reduxjs/toolkit'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
@@ -72,7 +73,19 @@ const useAuth = () => {
         const { accessToken, uid: userId } = response.user
 
         localStorage.setItem(LocalStorage.accessToken, accessToken)
+
+        // fetch user data và tự động logout nếu tài khoản bị vô hiệu hóa
         dispatch(fetchUser(userId))
+          .then(unwrapResult)
+          .then(res => {
+            const { status } = res.data[0]
+            if (status === 0) {
+              logout()
+              toast.warn(
+                'Tài khoản của bạn đã bị vô hiệu hóa, liên hệ Shopy để biết thêm thông tin chi tiết'
+              )
+            }
+          })
         setError(null)
         history.push(path.home)
       }
