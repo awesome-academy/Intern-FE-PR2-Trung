@@ -61,117 +61,12 @@
     }
   }
 
-  &-header {
+  &-footer {
     @include borderRadius(3px);
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.2rem;
-    padding: 0 2rem;
-    height: 5.5rem;
-    text-transform: capitalize;
-    background-color: $white;
-    color: $light-text-color;
-    box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
-    overflow: hidden;
-
-    &__name {
-      width: 60%;
-      color: $text-color;
-    }
-
-    &__unit-price {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 14%;
-    }
-
-    &__quantity {
-      @extend .summary-header__unit-price;
-    }
-
-    &__total-price {
-      @extend .summary-header__unit-price;
-      width: 12%;
-    }
-  }
-
-  &-list {
-    @include borderRadius(3px);
-    margin-bottom: 2.5rem;
+    margin-bottom: 8rem;
     padding: 2rem;
     background-color: $white;
     box-shadow: 0 0.1rem 0.1rem 0 rgba($black, 0.1);
-  }
-
-  &-item {
-    @include borderRadius(2px);
-    display: flex;
-    margin-bottom: 2.2rem;
-    padding: 2rem 0;
-    border: 1px solid rgba($black, 0.1);
-
-    &__info {
-      @extend .summary-header__name;
-      display: flex;
-    }
-
-    &__image {
-      margin-left: 2rem;
-      width: 8rem;
-      height: 8rem;
-      flex-shrink: 0;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
-    }
-
-    &__name-wrap {
-      padding: 0.5rem 2rem 0 1rem;
-      flex-grow: 1;
-      overflow: hidden;
-    }
-
-    &__name {
-      margin-bottom: 0.3rem;
-      display: -webkit-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-word;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      color: $text-color;
-    }
-
-    &__unit-price {
-      @extend .summary-header__unit-price;
-
-      span:first-child {
-        margin-right: 1rem;
-        color: $light-text-color;
-        text-decoration: line-through;
-      }
-    }
-
-    &__quantity {
-      @extend .summary-header__quantity;
-    }
-
-    &__total-price {
-      @extend .summary-header__total-price;
-      span {
-        text-align: right;
-        color: $primary-color;
-      }
-    }
-  }
-
-  &-footer {
-    @extend .summary-list;
-    margin-bottom: 8rem;
 
     &__fee {
       display: flex;

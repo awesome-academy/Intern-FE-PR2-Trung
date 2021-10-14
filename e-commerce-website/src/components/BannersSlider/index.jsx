@@ -6,7 +6,7 @@ import Slider from 'react-slick'
 import './styles.scss'
 
 BannersSlider.propTypes = {
-  brands: PropTypes.array
+  banners: PropTypes.array
 }
 
 function BannersSlider({ banners }) {

@@ -18,6 +18,11 @@ export const fetchAllOrders = createAsyncThunk(
   payLoadCreater(purchaseApi.getAllPurchases)
 )
 
+export const updateOrder = createAsyncThunk(
+  'admin/updatePurchases',
+  payLoadCreater(purchaseApi.updatePurchases)
+)
+
 const admin = createSlice({
   name: 'admin',
   initialState: {
@@ -62,6 +67,20 @@ const admin = createSlice({
       state.allOrders = action.payload.data
     },
     [fetchAllOrders.rejected]: (state, action) => {
+      state.loading = false
+      state.error = action.payload
+    },
+    [updateOrder.pending]: (state, action) => {
+      state.loading = true
+    },
+    [updateOrder.fulfilled]: (state, action) => {
+      state.loading = false
+      state.error = ''
+      const order = action.payload.data
+      const itemIndex = findIndexById(order, state.allOrders)
+      state.allOrders.splice(itemIndex, 1, order)
+    },
+    [updateOrder.rejected]: (state, action) => {
       state.loading = false
       state.error = action.payload
     }
