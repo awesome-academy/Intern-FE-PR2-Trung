@@ -73,21 +73,24 @@ const useAuth = () => {
         const { accessToken, uid: userId } = response.user
 
         localStorage.setItem(LocalStorage.accessToken, accessToken)
+        setError(null)
 
         // fetch user data và tự động logout nếu tài khoản bị vô hiệu hóa
         dispatch(fetchUser(userId))
           .then(unwrapResult)
           .then(res => {
-            const { status } = res.data[0]
+            const { status, role } = res.data[0]
             if (status === 0) {
               logout()
               toast.warn(
                 'Tài khoản của bạn đã bị vô hiệu hóa, liên hệ Shopy để biết thêm thông tin chi tiết'
               )
             }
+
+            role === 'admin'
+              ? history.push(path.admin)
+              : history.push(path.home)
           })
-        setError(null)
-        history.push(path.home)
       }
     } catch (err) {
       setError(err)

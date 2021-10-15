@@ -13,6 +13,7 @@ import { checkoutActions, createPurchases } from '../checkout.slice'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
 import { purchaseStatus } from 'src/constants/purchaseStatus'
+import SummaryCartItems from 'src/components/SummaryCartItems'
 
 function Summary(props) {
   const { delivery, paymentMethod } = JSON.parse(
@@ -70,42 +71,7 @@ function Summary(props) {
                 </Link>
               </div>
             </div>
-            <div className="summary-header">
-              <div className="summary-header__name">Sản phẩm</div>
-              <div className="summary-header__unit-price">Đơn giá</div>
-              <div className="summary-header__quantity">Số lượng</div>
-              <div className="summary-header__total-price">Thành tiền</div>
-            </div>
-            <div className="summary-list">
-              {cartItems.map(item => (
-                <div className="summary-item" key={item.id}>
-                  <div className="summary-item__info">
-                    <Link
-                      className="summary-item__image"
-                      to={path.products + `/${generateNameId(item)}`}
-                    >
-                      <img src={item.image} alt={item.name} />
-                    </Link>
-                    <div className="summary-item__name-wrap">
-                      <Link
-                        className="summary-item__name"
-                        to={path.products + `/${generateNameId(item)}`}
-                      >
-                        {item.name}
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="summary-item__unit-price">
-                    <span>{formatCurrency(item.price_before_discount)}</span>
-                    <span>{formatCurrency(item.price)}</span>
-                  </div>
-                  <div className="summary-item__quantity">{item.inCart}</div>
-                  <div className="summary-item__total-price">
-                    <span>{formatCurrency(item.inCart * item.price)}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <SummaryCartItems cartItems={cartItems} />
             <div className="summary-footer">
               <div className="summary-footer__fee">
                 <div className="summary-footer__fee-wrap">

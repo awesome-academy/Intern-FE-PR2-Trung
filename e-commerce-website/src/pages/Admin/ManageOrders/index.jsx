@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles.scss'
 import {
   Button,
@@ -15,11 +15,14 @@ import {
 } from '@material-ui/core'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAllOrders } from '../admin.slice'
+import { fetchAllOrders, updateOrder } from '../admin.slice'
 import SortTableHead from 'src/components/Table/SortTableHead'
 import useTable from 'src/hooks/useTable'
+import { toast } from 'react-toastify'
 import { purchaseStatus } from 'src/constants/purchaseStatus'
 import { formatCurrency, timeConverter } from 'src/utils/helper'
+import DetailModal from 'src/components/DetailModal'
+import SummaryCartItems from 'src/components/SummaryCartItems'
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -93,6 +96,8 @@ const columns = [
 function ManageOrders(props) {
   const dispatch = useDispatch()
   const { allOrders } = useSelector(state => state.admin)
+  const [detailShowing, setDetailShowing] = useState(false)
+  const [currentOrder, setCurrentOrder] = useState({})
   const {
     order,
     orderBy,
@@ -119,11 +124,22 @@ function ManageOrders(props) {
   }, [dispatch])
 
   const handleChangeStatus = async (event, id) => {
-    console.log(event.target.value)
+    const data = { status: event.target.value }
+
+    try {
+      const response = await dispatch(updateOrder({ id, data }))
+      unwrapResult(response)
+      toast.success('Cập nhật trạng thái thành công')
+    } catch (err) {
+      // eslint-disable-next-line
+      console.log(err)
+      toast.error('Cập nhật trạng thái thất bại')
+    }
   }
 
   const handleViewDetail = value => {
-    console.log(value)
+    setDetailShowing(true)
+    setCurrentOrder(value)
   }
 
   return (
@@ -220,6 +236,15 @@ function ManageOrders(props) {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </main>
+      <DetailModal
+        title="Chi tiết đơn hàng"
+        detailShowing={detailShowing}
+        setDetailShowing={setDetailShowing}
+      >
+        {Object.keys(currentOrder).length && (
+          <SummaryCartItems cartItems={currentOrder.cartItems} />
+        )}
+      </DetailModal>
     </div>
   )
 }
