@@ -1,0 +1,24 @@
+@import 'src/assets/scss/common';
+@import 'src/pages/Checkout/Delivery/styles';
+
+.product-form {
+  @extend .delivery-form__main;
+  margin-bottom: 0;
+
+  &__title {
+    margin-bottom: 1.4rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $primary-color;
+  }
+
+  &__image {
+    @include borderRadius(4px);
+    width: 22.6rem;
+    height: 22.6rem;
+  }
+
+  &__button {
+    margin: 1.4rem auto 0;
+  }
+}
