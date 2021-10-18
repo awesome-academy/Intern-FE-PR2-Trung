@@ -6,14 +6,14 @@ import SelectField from 'src/components/SelectField'
 import * as Yup from 'yup'
 import './styles.scss'
 
-const categories = [
+export const categories = [
   { id: '60afafe76ef5b902180aacb5', name: 'Điện thoại' },
   { id: '60afacca6ef5b902180aacaf', name: 'Đồng hồ' },
   { id: '60aba4e24efcc70f8892e1c6', name: 'Áo thun' },
   { id: '60afafe76ef5b902180hacb6', name: 'Giày dép' }
 ]
 
-const brands = [
+export const brands = [
   { id: 'b1', name: 'Xiaomi' },
   { id: 'b2', name: 'Vsmart' },
   { id: 'b3', name: 'Apple' },
@@ -29,7 +29,7 @@ const brands = [
   { id: 'b13', name: 'Bitis' }
 ]
 
-const places = [
+export const places = [
   {
     id: 'p1',
     name: 'Hà Nội'

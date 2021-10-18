@@ -13,15 +13,22 @@ import { unwrapResult } from '@reduxjs/toolkit'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
+import { toast } from 'react-toastify'
 import ConfirmationModal from 'src/components/ConfirmationModal'
 import DetailModal from 'src/components/DetailModal'
 import SortTableHead from 'src/components/Table/SortTableHead'
 import { path } from 'src/constants/path'
 import useTable from 'src/hooks/useTable'
 import { formatCurrency, generateNameId } from 'src/utils/helper'
-import { fetchAllProducts } from '../admin.slice'
+import {
+  adminActions,
+  createNewProduct,
+  deleteProduct,
+  fetchAllProducts,
+  updateProduct
+} from '../admin.slice'
 import '../styles.scss'
-import ProductForm from './ProductForm'
+import ProductForm, { places, brands, categories } from './ProductForm'
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -98,7 +105,7 @@ function ManageProducts(props) {
   const { allProducts } = useSelector(state => state.admin)
   const [updateProductShowsing, setUpdateProductShowsing] = useState(false)
   const [createProductShowsing, setCreateProductShowsing] = useState(false)
-  const [currentProduct, setCurrentProduct] = useState({})
+  const [currentProductUpate, setCurrentProductUpate] = useState({})
   const [showDeleteProductConfirmation, setShowDeleteProductConfirmation] =
     useState(false)
   const [currentProductDelele, setCurrentProductDelele] = useState(null)
@@ -134,11 +141,63 @@ function ManageProducts(props) {
 
   const onEditProduct = value => {
     setUpdateProductShowsing(true)
-    setCurrentProduct(value)
+    setCurrentProductUpate(value)
   }
 
-  const handleUpateProduct = data => {
-    console.log(data)
+  const handleUpateProduct = async data => {
+    const {
+      name,
+      price_before_discount,
+      price,
+      quantity,
+      categoryId,
+      brandId,
+      placeId,
+      description,
+      imageURL1,
+      imageURL2,
+      imageURL3,
+      imageURL4,
+      imageURL5
+    } = data
+
+    const productImages = [
+      imageURL1,
+      imageURL2,
+      imageURL3,
+      imageURL4,
+      imageURL5
+    ]
+
+    const category = categories.find(item => item.id === categoryId)
+    const brand = brands.find(item => item.id === brandId)
+    const place = places.find(item => item.id === placeId)
+
+    const updatedProduct = {
+      name,
+      price_before_discount,
+      price,
+      quantity,
+      description,
+      image: imageURL1,
+      images: productImages,
+      category,
+      brand,
+      place
+    }
+
+    try {
+      const response = await dispatch(
+        updateProduct({ id: currentProductUpate.id, data: updatedProduct })
+      )
+      unwrapResult(response)
+      setUpdateProductShowsing(false)
+      toast.success('Chỉnh sửa sản phẩm thành công')
+    } catch (err) {
+      // eslint-disable-next-line
+      console.log(err)
+      toast.error('Chỉnh sửa sản phẩm thất bại')
+    }
   }
 
   const handleConfirmDeleteProduct = product => {
@@ -146,7 +205,18 @@ function ManageProducts(props) {
     setCurrentProductDelele(product)
   }
 
-  const handleDeleteProduct = async () => {}
+  const handleDeleteProduct = async () => {
+    try {
+      const response = dispatch(deleteProduct(currentProductDelele.id))
+      unwrapResult(response)
+      dispatch(adminActions.removeProductInStore(currentProductDelele))
+      toast.success('Xóa sản phẩm thành công')
+    } catch (err) {
+      // eslint-disable-next-line
+      console.log(err)
+      toast.error('Xóa sản phẩm thấy bại')
+    }
+  }
 
   const handleCloseConfirmation = () => setShowDeleteProductConfirmation(false)
 
@@ -154,8 +224,61 @@ function ManageProducts(props) {
     setCreateProductShowsing(true)
   }
 
-  const handleAddNewProduct = data => {
-    console.log(data)
+  const handleAddNewProduct = async data => {
+    const {
+      name,
+      price_before_discount,
+      price,
+      quantity,
+      categoryId,
+      brandId,
+      placeId,
+      description,
+      imageURL1,
+      imageURL2,
+      imageURL3,
+      imageURL4,
+      imageURL5
+    } = data
+
+    const productImages = [
+      imageURL1,
+      imageURL2,
+      imageURL3,
+      imageURL4,
+      imageURL5
+    ]
+
+    const category = categories.find(item => item.id === categoryId)
+    const brand = brands.find(item => item.id === brandId)
+    const place = places.find(item => item.id === placeId)
+
+    const newProduct = {
+      name,
+      price_before_discount,
+      price,
+      quantity,
+      description,
+      image: imageURL1,
+      images: productImages,
+      category,
+      brand,
+      place,
+      rating: 0,
+      sold: 0,
+      view: 0
+    }
+
+    try {
+      const response = await dispatch(createNewProduct(newProduct))
+      unwrapResult(response)
+      setCreateProductShowsing(false)
+      toast.success('Tạo sản phẩm mới thành công')
+    } catch (err) {
+      // eslint-disable-next-line
+      console.log(err)
+      toast.error('Tạo sản phẩm mới thất bại')
+    }
   }
 
   return (
@@ -252,7 +375,7 @@ function ManageProducts(props) {
         setDetailShowing={setUpdateProductShowsing}
       >
         <ProductForm
-          product={currentProduct}
+          product={currentProductUpate}
           handleSubmit={handleUpateProduct}
         />
       </DetailModal>

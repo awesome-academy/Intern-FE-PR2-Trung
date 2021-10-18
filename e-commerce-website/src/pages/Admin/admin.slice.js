@@ -29,6 +29,21 @@ export const fetchAllProducts = createAsyncThunk(
   payLoadCreater(productApi.getProducts)
 )
 
+export const createNewProduct = createAsyncThunk(
+  'admin/createNewProduct',
+  payLoadCreater(productApi.createNewProduct)
+)
+
+export const updateProduct = createAsyncThunk(
+  'admin/updateProduct',
+  payLoadCreater(productApi.updateProduct)
+)
+
+export const deleteProduct = createAsyncThunk(
+  'admin/deleteProduct',
+  payLoadCreater(productApi.deleteProduct)
+)
+
 const admin = createSlice({
   name: 'admin',
   initialState: {
@@ -37,6 +52,14 @@ const admin = createSlice({
     allProducts: [],
     loading: false,
     error: ''
+  },
+  reducers: {
+    removeProductInStore: (state, action) => {
+      const newProductList = state.allProducts.filter(
+        item => item.id !== action.payload.id
+      )
+      state.allProducts = newProductList
+    }
   },
   extraReducers: {
     [fetchAllUsers.pending]: (state, action) => {
@@ -100,6 +123,43 @@ const admin = createSlice({
       state.allProducts = action.payload.data
     },
     [fetchAllProducts.rejected]: (state, action) => {
+      state.loading = false
+      state.error = action.payload
+    },
+    [createNewProduct.pending]: (state, action) => {
+      state.loading = true
+    },
+    [createNewProduct.fulfilled]: (state, action) => {
+      state.loading = false
+      state.error = ''
+      state.allProducts.unshift(action.payload.data)
+    },
+    [createNewProduct.rejected]: (state, action) => {
+      state.loading = false
+      state.error = action.payload
+    },
+    [updateProduct.pending]: (state, action) => {
+      state.loading = true
+    },
+    [updateProduct.fulfilled]: (state, action) => {
+      state.loading = false
+      state.error = ''
+      const updatedProduct = action.payload.data
+      const itemIndex = findIndexById(updatedProduct, state.allProducts)
+      state.allProducts.splice(itemIndex, 1, updatedProduct)
+    },
+    [updateProduct.rejected]: (state, action) => {
+      state.loading = false
+      state.error = action.payload
+    },
+    [deleteProduct.pending]: (state, action) => {
+      state.loading = true
+    },
+    [deleteProduct.fulfilled]: (state, action) => {
+      state.loading = false
+      state.error = ''
+    },
+    [deleteProduct.rejected]: (state, action) => {
       state.loading = false
       state.error = action.payload
     }
