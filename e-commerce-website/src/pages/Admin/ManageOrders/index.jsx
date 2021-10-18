@@ -23,6 +23,8 @@ import { purchaseStatus } from 'src/constants/purchaseStatus'
 import { formatCurrency, timeConverter } from 'src/utils/helper'
 import DetailModal from 'src/components/DetailModal'
 import SummaryCartItems from 'src/components/SummaryCartItems'
+import PageTitle from 'src/components/PageTitle'
+import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -94,6 +96,7 @@ const columns = [
 ]
 
 function ManageOrders(props) {
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const { allOrders } = useSelector(state => state.admin)
   const [detailShowing, setDetailShowing] = useState(false)
@@ -144,6 +147,7 @@ function ManageOrders(props) {
 
   return (
     <div className="manage">
+      <PageTitle title={t('pageTitle.manageOrders')} />
       <header className="manage-header">
         <div className="manage-header__title">Quản lí đơn hàng</div>
         <div className="manage-header__subtitle">

@@ -12,6 +12,7 @@ import { LIST_PRICE_RANGE } from 'src/constants/priceRange'
 import PropTypes from 'prop-types'
 import { Controller, useForm } from 'react-hook-form'
 import qs from 'query-string'
+import { useTranslation } from 'react-i18next'
 
 FilterPanel.propTypes = {
   filters: PropTypes.object
@@ -22,6 +23,7 @@ function FilterPanel({ filters }) {
   const [brands, setBrands] = useState([])
   const [places, setPlaces] = useState([])
   const [currentSelection, setCurrentSelection] = useState(null)
+  const { t } = useTranslation()
   const history = useHistory()
   const {
     control,
@@ -140,7 +142,7 @@ function FilterPanel({ filters }) {
       <nav className="category">
         <Link to={path.products} className="category__heading">
           <FaListUl size="0.8em" className="icon" />
-          Tất cả danh mục
+          {t('filterPanel.allCategories')}
         </Link>
 
         <ul className="category__list">
@@ -164,10 +166,10 @@ function FilterPanel({ filters }) {
         <div className="filter">
           <h3 className="filter__heading">
             <BiFilterAlt size="0.8em" className="icon" />
-            Bộ lọc tìm kiếm
+            {t('filterPanel.filter')}
           </h3>
           <div className="filter__group">
-            <p className="filter__title">Nơi bán</p>
+            <p className="filter__title">{t('filterPanel.places')}</p>
             <div className="filter__brand">
               <CheckBoxList
                 name="place"
@@ -178,7 +180,7 @@ function FilterPanel({ filters }) {
             </div>
           </div>
           <div className="filter__group">
-            <p className="filter__title">Thương hiệu</p>
+            <p className="filter__title">{t('filterPanel.brands')}</p>
             <div className="filter__brand">
               <CheckBoxList
                 name="brand"
@@ -189,7 +191,7 @@ function FilterPanel({ filters }) {
             </div>
           </div>
           <div className="filter__group">
-            <p className="filter__title">Khoảng giá</p>
+            <p className="filter__title">{t('filterPanel.priceRange')}</p>
             <div className="filter__price">
               <div className="filter__price-group">
                 <ul className="filter__price-list">
@@ -252,21 +254,21 @@ function FilterPanel({ filters }) {
               </div>
               {Object.values(errors).length !== 0 && (
                 <p className="filter__price-error">
-                  Vui lòng điền khoảng giá phù hợp
+                  {t('filterPanel.priceRangeError')}
                 </p>
               )}
               <button
                 className="button filter-panel__button"
                 onClick={handleSubmit(applyPriceRange)}
               >
-                Áp dụng
+                {t('filterPanel.apply')}
               </button>
             </div>
           </div>
         </div>
         <div className="filter__group">
           <div className="filter">
-            <p className="filter__title">Đánh giá</p>
+            <p className="filter__title">{t('filterPanel.rating')}</p>
             <div className="filter__rating">
               <ul>
                 {Array.from({ length: 5 }, (_, index) => (
@@ -279,7 +281,7 @@ function FilterPanel({ filters }) {
                   >
                     <NavLink to="#" className="filter__rating-link">
                       <RatingStars rate={5 - index} />
-                      {index !== 0 && <span> trở lên </span>}
+                      {index !== 0 && <span> {t('filterPanel.up')} </span>}
                     </NavLink>
                   </li>
                 ))}

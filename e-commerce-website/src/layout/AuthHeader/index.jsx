@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import { path } from 'src/constants/path'
 import './styles.scss'
 import logo from 'src/assets/logo/logo-primary.svg'
+import { useTranslation } from 'react-i18next'
 
 function AuthHeader({ title }) {
+  const { t } = useTranslation()
+
   return (
     <header className="auth-header">
       <Container maxWidth="lg">
@@ -22,7 +25,7 @@ function AuthHeader({ title }) {
           </div>
           <div className="auth-header__right">
             <Link to="" className="auth-header__help">
-              Cần trợ giúp?
+              {t('register.help')}
             </Link>
           </div>
         </div>

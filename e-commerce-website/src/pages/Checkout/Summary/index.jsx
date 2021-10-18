@@ -14,6 +14,8 @@ import { unwrapResult } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
 import { purchaseStatus } from 'src/constants/purchaseStatus'
 import SummaryCartItems from 'src/components/SummaryCartItems'
+import { useTranslation } from 'react-i18next'
+import PageTitle from 'src/components/PageTitle'
 
 function Summary(props) {
   const { delivery, paymentMethod } = JSON.parse(
@@ -24,6 +26,7 @@ function Summary(props) {
     cart: { cartItems, totalPayment }
   } = useSelector(state => state.cart)
 
+  const { t } = useTranslation()
   const { profile } = useSelector(state => state.auth)
   const dispatch = useDispatch()
   const history = useHistory()
@@ -52,13 +55,14 @@ function Summary(props) {
 
   return (
     <div className="summary">
+      <PageTitle title={t('pageTitle.summary')} />
       <Container maxWidth="lg">
         {cartItems.length && (
           <>
             <div className="summary-address">
               <div className="summary-address__title">
                 <LocationOn />
-                Địa chỉ nhận hàng
+                {t('address')}
               </div>
               <div className="summary-address__detail">
                 <span>{`${delivery.firstName} ${delivery.lastName} ${delivery.phone}`}</span>
@@ -67,7 +71,7 @@ function Summary(props) {
                   to={path.checkoutDelivery}
                   className="summary-address__link"
                 >
-                  Thay đổi
+                  {t('change')}
                 </Link>
               </div>
             </div>
@@ -77,7 +81,7 @@ function Summary(props) {
                 <div className="summary-footer__fee-wrap">
                   <div className="summary-footer__fee-group">
                     <div className="summary-footer__fee-title">
-                      Tổng thanh toán:
+                      {t('cart.totalPayment')}:
                     </div>
                     <div className="summary-footer__fee-total-payment">
                       {formatCurrency(totalPayment)}
@@ -85,7 +89,7 @@ function Summary(props) {
                   </div>
                   <div className="summary-footer__fee-group">
                     <div className="summary-footer__fee-title">
-                      Hình thức thanh toán:
+                      {t('paymentMethod')}:
                     </div>
                     <div className="summary-footer__fee-price">
                       {formatCurrency(paymentMethod)}
@@ -95,16 +99,16 @@ function Summary(props) {
               </div>
               <div className="summary-footer__bottom">
                 <div className="summary-footer__policy">
-                  Nhấn "Đặt hàng" đồng nghĩa với việc bạn đồng ý tuân theo
+                  {t('summary.policy')}
                   <Link to="" className="summary-footer__policy-link">
-                    Điều khoản shopy
+                    {t('summary.shopyPolicy')}
                   </Link>
                 </div>
                 <button
                   className="button summary-footer__checkout"
                   onClick={onCheckoutConfirm}
                 >
-                  Đặt hàng
+                  {t('summary.placeOrder')}
                 </button>
               </div>
             </div>

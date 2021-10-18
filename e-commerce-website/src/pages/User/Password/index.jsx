@@ -1,5 +1,7 @@
 import { Form, Formik } from 'formik'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import PageTitle from 'src/components/PageTitle'
 import PasswordField from 'src/components/PasswordField'
 import useAuth from 'src/hooks/useAuth'
 import * as Yup from 'yup'
@@ -11,7 +13,7 @@ function Password(props) {
     newPassword: '',
     confirmNewPassword: ''
   }
-
+  const { t } = useTranslation()
   const { changePassword, error } = useAuth()
 
   const validationSchema = Yup.object().shape({
@@ -45,10 +47,13 @@ function Password(props) {
 
   return (
     <div className="password">
+      <PageTitle title={t('pageTitle.password')} />
       <header className="password-header">
-        <div className="password-header__title">Đổi Mật Khẩu</div>
+        <div className="password-header__title">
+          {t('password.changePassword')}
+        </div>
         <div className="password-header__subtitle">
-          Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác
+          {t('password.subtitle')}
         </div>
       </header>
       <main className="password-info">
@@ -64,23 +69,23 @@ function Password(props) {
                 <PasswordField
                   name="password"
                   type="password"
-                  label="Nhập vào mật khẩu"
+                  label={t('password.enterPassword')}
                 />
                 <PasswordField
                   name="newPassword"
                   type="password"
-                  label="Nhập vào mật khẩu mới"
+                  label={t('password.enterNewPassword')}
                 />
                 <PasswordField
                   name="confirmNewPassword"
                   type="password"
-                  label="Nhập lại mật khẩu mới"
+                  label={t('password.reEnterNewPassword')}
                 />
                 <button
                   className="button password-info__submit-btn"
                   type="submit"
                 >
-                  Xác Nhận
+                  {t('confirm')}
                 </button>
               </div>
             </Form>

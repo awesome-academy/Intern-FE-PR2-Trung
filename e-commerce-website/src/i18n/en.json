@@ -1,0 +1,181 @@
+{
+  "header": {
+    "app": "Go to the store on the Shopy app",
+    "connect": "Connect with",
+    "notification": "Notification",
+    "help": "Help",
+    "register": "Register",
+    "login": "Login",
+    "cartHeader": "Cart",
+    "searchPlaceholder": "Search for products"
+  },
+  "homepage": {
+    "categories": "Categories",
+    "brands": "Brands"
+  },
+  "productsList": {
+    "bestSelling": "Best selling product",
+    "viewed": "Viewed products",
+    "wishlist": "Wishlist products"
+  },
+  "footer": {
+    "customerCare": "Customer care",
+    "helpCenter": "Help center",
+    "shoppingGuide": "Shopping guide",
+    "sellingGuide": "Selling guide",
+    "aboutShopy": "About Shopy",
+    "recruitment": "Recruitment",
+    "shopyRules": "Shopy rules",
+    "privacyPolicy": "PrivacyPolicy",
+    "payment": "Payment",
+    "followUs": "Follow us on",
+    "downloadApp": "Download Shopy app now",
+    "copyright": "All rights reserved.",
+    "country": "Country & Region: Singapore | Indonesia | Taiwan | Thailand | Malaysia | Vietnam | Philippines | Brazil | Mexico | Colombia | Chile"
+  },
+  "filterPanel": {
+    "allCategories": "All Categories",
+    "filter": "Filter",
+    "places": "Places",
+    "brands": "Brands",
+    "priceRange": "Price Range",
+    "priceRangeError": "Please enter the appropriate price range",
+    "apply": "Apply",
+    "rating": "Ratings",
+    "up": "Up",
+    "clearFilter": "Clear all filters"
+  },
+  "products": {
+    "sortBy": "Sort by",
+    "popular": "Popular",
+    "newest": "Newest",
+    "bestSelling": "Best selling",
+    "price": "Price",
+    "priceAsc": "Price: Ascending",
+    "priceDesc": "Price: Descending",
+    "name": "Name",
+    "nameAsc": "Name: From A to Z",
+    "nameDesc": "Name: From Z to A"
+  },
+  "productDetail": {
+    "sold": "Sold",
+    "off": "Off",
+    "quantity": "In Stock",
+    "available": "Available",
+    "wishList": "Wishlist",
+    "addToCart": "Add to cart",
+    "guarantees": "Guarantees",
+    "refund": "3 Days Return / Refund",
+    "description": "Product Description",
+    "review": "Product Reviews"
+  },
+  "progressBar": {
+    "cart": "Cart",
+    "delivery": "Delivery",
+    "payment": "Payment"
+  },
+  "cart": {
+    "noCart": "Your shopping cart is empty",
+    "buy": "Buy now",
+    "product": "Product",
+    "unitPrice": "Unit price",
+    "inCart": "Quantity",
+    "totalPrice": "Total",
+    "actions": "Actions",
+    "remove": "Remove",
+    "allProduct": "All products",
+    "totalPayment": "Total payment",
+    "removeCartItemTitle": "Remove cart item",
+    "removeCartItemMessage": "Are you sure you want to remove the product from the cart?"
+  },
+  "cartHover": {
+    "noCart": "No cart item",
+    "newCartItem": "New cart item added",
+    "goToCart": "Go to cart"
+  },
+  "form": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "dob": "Date of Birth",
+    "phoneNumber": "Phone Number",
+    "address": "Address"
+  },
+  "productReviews": {
+    "noReviews": "There are no reviews yet",
+    "error": "There was an error submitting the review",
+    "invalid": "Please rate 1 - 5 stars",
+    "sendReivews": "Gửi đánh giá",
+    "placeholder": "Please share what you like about this product"
+  },
+  "summary": {
+    "policy": "Clicking \"Place Order\" means that you agree to comply",
+    "shopyPolicy": "Shopy Policy",
+    "placeOrder": "Place order"
+  },
+  "profile": {
+    "myProfile": "My Profile",
+    "editProfile": "Edit profile",
+    "subtite": "Manage profile information for account security",
+    "avatarURL": "Avatar URL",
+    "avatarURLInput": "Enter Avatar URL"
+  },
+  "password": {
+    "changePassword": "Password Change",
+    "subtitle": "For account security, please do not share your password with others",
+    "enterPassword": "Enter your password",
+    "reEnterPassword": "Re-enter your password",
+    "enterNewPassword": "Enter your new password",
+    "reEnterNewPassword": "Re-enter your new password"
+  },
+  "purchase": {
+    "orders": "My Purchase",
+    "all": "All",
+    "waitForConfirmation": "Wait for confirmation",
+    "waitForGoods": "Wait for goods",
+    "delivering": "Delivering",
+    "delivered": "Delivered",
+    "cancelled": "Cancelled",
+    "orderId": "Order ID",
+    "cancelOrder": "Cancel order",
+    "noOrder": "No order exists",
+    "totalPayment": "Total payment"
+  },
+  "account": {
+    "myAccount": "My account",
+    "admin": "Admin",
+    "logout": "Logout"
+  },
+  "pageTitle": {
+    "home": "Homepage",
+    "login": "Login",
+    "register": "Register",
+    "cart": "Cart",
+    "products": "Products",
+    "delivery": "Delivery",
+    "summary": "Summary",
+    "purchase": "Purchase",
+    "password": "Password",
+    "profile": "My profile",
+    "manageOrders": "Orders management",
+    "manageProducts": "Products management",
+    "manageUsers": "Users management"
+  },
+  "register": {
+    "registeredUser": "Already have an account?",
+    "help": "Need help?"
+  },
+  "login": {
+    "newUser": "New to Shopy?"
+  },
+  "fullName": "Full name",
+  "address": "Address",
+  "paymentMethod": "Payment method",
+  "shopyPay": "Shopy wallet",
+  "creditCard": "Credit Card",
+  "cashOnDelivery": "Cash On Delivery (COD)",
+  "save": "Save",
+  "change": "Change",
+  "back": "Back",
+  "continue": "Continue",
+  "confirm": "Xác nhận"
+}

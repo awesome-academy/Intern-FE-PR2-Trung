@@ -10,10 +10,12 @@ import Purchase from './Purchase'
 import profileIcon from 'src/assets/images/profile-icon.png'
 import passwordIcon from 'src/assets/images/password-icon.png'
 import purchseIcon from 'src/assets/images/purchase-icon.png'
+import { useTranslation } from 'react-i18next'
 
 import './styles.scss'
 
 function User(props) {
+  const { t } = useTranslation()
   const { photoURL, displayName } = useSelector(state => state.auth.profile)
 
   return (
@@ -30,7 +32,7 @@ function User(props) {
                   <div className="user-sidebar__username">{displayName}</div>
                   <Link to={path.profile} className="user-sidebar__brief-edit">
                     <Edit fontSize="small" />
-                    Sửa hồ sơ
+                    {t('profile.editProfile')}
                   </Link>
                 </div>
               </div>
@@ -39,19 +41,19 @@ function User(props) {
                   <div className="user-sidebar__menu-icon">
                     <img src={profileIcon} alt="profile icon" />
                   </div>
-                  Hồ sơ của tôi
+                  {t('profile.myProfile')}
                 </NavLink>
                 <NavLink to={path.password} className="user-sidebar__menu-link">
                   <div className="user-sidebar__menu-icon">
                     <img src={passwordIcon} alt="password icon" />
                   </div>
-                  Đổi mật khẩu
+                  {t('password.changePassword')}
                 </NavLink>
                 <NavLink to={path.purchase} className="user-sidebar__menu-link">
                   <div className="user-sidebar__menu-icon">
                     <img src={purchseIcon} alt="purchase icon" />
                   </div>
-                  Đơn mua
+                  {t('purchase.orders')}
                 </NavLink>
               </div>
             </div>

@@ -12,12 +12,14 @@ import useQuery from 'src/hooks/useQuery'
 import { useDispatch, useSelector } from 'react-redux'
 import useAuth from 'src/hooks/useAuth'
 import { cartActions } from 'src/pages/Cart/cart.slice'
+import { useTranslation } from 'react-i18next'
 
 function Header(props) {
   const {
     cart: { cartItems }
   } = useSelector(state => state.cart)
 
+  const { t } = useTranslation()
   const [searchValue, setSearchValue] = useState('')
   const history = useHistory()
   const query = useQuery()
@@ -58,7 +60,7 @@ function Header(props) {
             <input
               type="text"
               className="header__search-input"
-              placeholder="Nhập để tìm kiếm sản phẩm"
+              placeholder={t('header.searchPlaceholder')}
               value={searchValue}
               onChange={onChangeSearch}
             ></input>
@@ -81,12 +83,14 @@ function Header(props) {
                     src={noCartImage}
                     alt="no cart"
                   />
-                  <span className="header__cart-message">Chưa có sản phẩm</span>
+                  <span className="header__cart-message">
+                    {t('cartHover.noCart')}
+                  </span>
                 </div>
               ) : (
                 <div className="header__cart-block">
                   <header className="header__cart-header">
-                    Sản Phẩm Mới Thêm
+                    {t('cartHover.newCartItem')}
                   </header>
                   <ul className="header__cart-list">
                     {cartItems.map(item => {
@@ -116,7 +120,7 @@ function Header(props) {
                     })}
                   </ul>
                   <Link className="header__cart-show-btn button" to={path.cart}>
-                    Xem Giỏ Hàng
+                    {t('cartHover.goToCart')}
                   </Link>
                 </div>
               )}

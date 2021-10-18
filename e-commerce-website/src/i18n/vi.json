@@ -1,0 +1,181 @@
+{
+  "header": {
+    "app": "Vào cửa hàng trên ứng dụng Shopy",
+    "connect": "Kết nối",
+    "notification": "Thông báo",
+    "help": "Trợ giúp",
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+    "cartHeader": "Giỏ hàng",
+    "searchPlaceholder": "Nhập để tìm kiếm sản phẩm"
+  },
+  "homepage": {
+    "categories": "Danh mục sản phẩm",
+    "brands": "Thương hiệu"
+  },
+  "productsList": {
+    "bestSelling": "Sản phẩm bán chạy",
+    "viewed": "Sản phẩm đã xem",
+    "wishlist": "Sản phẩm yêu thích"
+  },
+  "footer": {
+    "customerCare": "Chăm sóc khách hàng",
+    "helpCenter": "Trung tâm trợ giúp",
+    "shoppingGuide": "Hướng dẫn mua hàng",
+    "sellingGuide": "Hướng dẫn bán hàng",
+    "aboutShopy": "Về Shopy",
+    "recruitment": "Tuyền dụng",
+    "shopyRules": "Điều Khoản Shopy",
+    "privacyPolicy": "Chính sách bảo mật",
+    "payment": "Thanh toán",
+    "followUs": "Theo dõi chúng tôi trên",
+    "downloadApp": "Tải ứng dụng Shopy ngay thôi",
+    "copyright": "Tất cả các quyền được bảo lưu.",
+    "country": "Quốc gia & Khu vực: Singapore | Indonesia | Đài Loan | Thái Lan | Malaysia | Việt Nam | Philippines | Brazil | México | Colombia | Chile"
+  },
+  "filterPanel": {
+    "allCategories": "Tất cả danh mục",
+    "filter": "Bộ lọc tìm kiếm",
+    "places": "Nơi bán",
+    "brands": "Thương hiệu",
+    "priceRange": "Khoảng giá",
+    "priceRangeError": "Vui lòng điền khoảng giá phù hợp",
+    "apply": "Áp dụng",
+    "rating": "Đánh giá",
+    "up": "Trở lên",
+    "clearFilter": "Xoá tất cả"
+  },
+  "products": {
+    "sortBy": "Sắp xếp theo",
+    "popular": "Phổ biến",
+    "newest": "Mới nhất",
+    "bestSelling": "Bán chạy",
+    "price": "Giá",
+    "priceAsc": "Giá: Thấp đến cao",
+    "priceDesc": "Giá: Cao đến thấp",
+    "nane": "Tên",
+    "nameAsc": "Tên: Từ A đến Z",
+    "nameDesc": "Tên: Từ Z đến A"
+  },
+  "productDetail": {
+    "sold": "Đã bán",
+    "off": "Giảm",
+    "quantity": "Số lượng",
+    "available": "sản phẩm có sẵn",
+    "wishList": "Yêu thích",
+    "addToCart": "Thêm vào giỏ hàng",
+    "guarantees": "Shopy đảm bảo",
+    "refund": "3 Ngày Trả Hàng / Hoàn Tiền",
+    "description": "Mô tả sản phẩm",
+    "review": "Đánh giá sản phẩm"
+  },
+  "progressBar": {
+    "cart": "Giỏ hàng",
+    "delivery": "Địa chỉ giao hàng",
+    "payment": "Thanh toán"
+  },
+  "cart": {
+    "noCart": "Giỏ hàng của bạn còn trống",
+    "buy": "Mua ngay",
+    "product": "Sản phẩm",
+    "unitPrice": "Đơn giá",
+    "inCart": "Số lượng",
+    "totalPrice": "Thành tiền",
+    "actions": "Thao tác",
+    "remove": "Xóa",
+    "allProduct": "Tất cả sản phẩm",
+    "totalPayment": "Tổng thanh toán",
+    "removeCartItemTitle": "Xóa sản phẩm",
+    "removeCartItemMessage": "Bạn chắc chắn muốn xóa sản phẩm khỏi giỏ chứ?"
+  },
+  "cartHover": {
+    "noCart": "chưa có sản phẩm",
+    "newCartItem": "Sản phẩm mới thêm",
+    "goToCart": "Xem Giỏ Hàng"
+  },
+  "form": {
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "dob": "Ngày sinh",
+    "phoneNumber": "Số điện thoại",
+    "address": "Địa chỉ nhận hàng"
+  },
+  "productReviews": {
+    "noReviews": "Chưa có đánh giá",
+    "error": "There was an error submitting the review",
+    "invalid": "Vui lòng đánh giá từ 1 - 5 sao",
+    "sendReivews": "Gửi đánh giá",
+    "placeholder": "Hãy chia sẽ những gì bạn thích về sản phẩm này nhé"
+  },
+  "summary": {
+    "policy": "Nhấn \"Đặt hàng\" đồng nghĩa với việc bạn đồng ý tuân theo",
+    "shopyPolicy": "Điều khoản shopy",
+    "placeOrder": "Đặt hàng"
+  },
+  "profile": {
+    "myProfile": "Hồ sơ của tôi",
+    "editProfile": "Sửa hồ sơ",
+    "subtite": "Quản lí thông tin hồ sơ để bảo mật tài khoản",
+    "avatarURL": "URL ảnh đại diện",
+    "avatarURLInput": "Nhập vào URL ảnh đại diện"
+  },
+  "password": {
+    "changePassword": "Đổi mật khẩu",
+    "subtitle": "Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác",
+    "enterPassword": "Nhập vào mật khẩu",
+    "reEnterPassword": "Nhập lại mật khẩu",
+    "enterNewPassword": "Nhập vào mật khẩu mới",
+    "reEnterNewPassword": "Nhập lại mật khẩu mới"
+  },
+  "purchase": {
+    "orders": "Đơn mua",
+    "all": "Tất cả",
+    "waitForConfirmation": "Chờ xác nhận",
+    "waitForGoods": "Chờ lấy hàng",
+    "delivering": "Đang giao",
+    "delivered": "Đã giao",
+    "cancelled": "Đã hủy",
+    "orderId": "Mã đơn hàng",
+    "cancelOrder": "Hủy đơn hàng",
+    "noOrder": "Không tồn tại đơn hàng",
+    "totalPayment": "Số tiền phải trả"
+  },
+  "account": {
+    "myAccount": "Tài khoản của tôi",
+    "admin": "Quản trị viên",
+    "logout": "Đăng xuất"
+  },
+  "pageTitle": {
+    "home": "Trang chủ",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "cart": "Giỏ hàng",
+    "products": "Danh sách sản phẩm",
+    "delivery": "Địa chỉ giao hàng",
+    "summary": "Thanh toán",
+    "purchase": "Đơn mua",
+    "password": "Mật khẩu",
+    "profile": "Hồ sơ của tôi",
+    "manageOrders": "Quản lí đơn hàng",
+    "manageProducts": "Quản lí sản phẩm",
+    "manageUsers": "Quản lí người dùng"
+  },
+  "register": {
+    "registeredUser": "Bạn đã có tài khoản?",
+    "help": "Cần trợ giúp?"
+  },
+  "login": {
+    "newUser": "Bạn mới biết đến Shopy?"
+  },
+  "fullName": "Họ và tên",
+  "address": "Địa chỉ nhận hàng",
+  "paymentMethod": "Hình thức thanh toán",
+  "shopyPay": "Ví ShopyPay",
+  "creditCard": "Thẻ tín dụng",
+  "cashOnDelivery": "Thanh toán khi nhận hàng (COD)",
+  "save": "Lưu",
+  "change": "Thay đổi",
+  "back": "Trở lại",
+  "continue": "Tiếp tục",
+  "confirm": "Xác nhận"
+}

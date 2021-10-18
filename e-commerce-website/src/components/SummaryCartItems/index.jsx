@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { path } from 'src/constants/path'
 import { formatCurrency, generateNameId } from 'src/utils/helper'
+import { useTranslation } from 'react-i18next'
 import './styles.scss'
 
 SummaryCartItems.propTypes = {
@@ -10,13 +11,17 @@ SummaryCartItems.propTypes = {
 }
 
 function SummaryCartItems({ cartItems }) {
+  const { t } = useTranslation()
+
   return (
     <>
       <div className="summary-header">
-        <div className="summary-header__name">Sản phẩm</div>
-        <div className="summary-header__unit-price">Đơn giá</div>
-        <div className="summary-header__quantity">Số lượng</div>
-        <div className="summary-header__total-price">Thành tiền</div>
+        <div className="summary-header__name">{t('cart.product')}</div>
+        <div className="summary-header__unit-price">{t('cart.unitPrice')}</div>
+        <div className="summary-header__quantity">{t('cart.inCart')}</div>
+        <div className="summary-header__total-price">
+          {t('cart.totalPrice')}
+        </div>
       </div>
       <div className="summary-list">
         {cartItems.map(item => (

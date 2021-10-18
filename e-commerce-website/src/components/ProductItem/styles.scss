@@ -89,6 +89,8 @@
   }
 
   &__sold {
+    display: flex;
+
     .rating-stars {
       svg {
         margin-right: 0;

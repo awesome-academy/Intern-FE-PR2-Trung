@@ -1,20 +1,24 @@
 import { Container, Grid } from '@material-ui/core'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { Link, NavLink, Redirect, Route, Switch } from 'react-router-dom'
 import manageUserIcon from 'src/assets/images/manage-user-icon.png'
 import productIcon from 'src/assets/images/product-icon.jpg'
 import purchseIcon from 'src/assets/images/purchase-icon.png'
+import PageTitle from 'src/components/PageTitle'
 import { path } from 'src/constants/path'
 import ManageOrders from './ManageOrders'
 import ManageProducts from './ManageProducts'
 import ManageUsers from './ManageUsers'
 
 function Admin(props) {
+  const { t } = useTranslation()
   const { photoURL, displayName } = useSelector(state => state.auth.profile)
 
   return (
     <div className="user">
+      <PageTitle title={t('pageTitle.manageUsers')} />
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={3} md={2}>

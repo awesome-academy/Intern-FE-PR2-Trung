@@ -10,18 +10,19 @@ import { getProducts } from '../Products/products.slice'
 import skinnyBannerFirst from 'src/assets/images/skinny-banner-1.jfif'
 import skinnyBannerSecond from 'src/assets/images/skinny-banner-2.jfif'
 import skinnyBannerThird from 'src/assets/images/skinny-banner-3.jfif'
-
+import PageTitle from 'src/components/PageTitle'
 import './styles.scss'
 import { getAllProducts } from '../Products/allProducts.slice'
 import { path } from 'src/constants/path'
 import BrandsSlider from 'src/components/BrandsSlider'
 import { getBanners } from './banners.slice'
+import { useTranslation } from 'react-i18next'
 
 function Home(props) {
   const { mainBanners, rightMainBanners, subLeftBanners } = useSelector(
     state => state.banners
   )
-
+  const { t } = useTranslation()
   const { products } = useSelector(state => state.products)
   const { allCategories, allBrands } = useSelector(state => state.allProducts)
 
@@ -59,6 +60,7 @@ function Home(props) {
 
   return (
     <div className="homepage">
+      <PageTitle title={t('pageTitle.home')} />
       <Container maxWidth="lg">
         <section className="homepage-banners">
           <Grid container spacing={1}>
@@ -89,7 +91,7 @@ function Home(props) {
         <section className="homepage-categories">
           <div className="homepage__box">
             <div className="homepage__header">
-              <Link to={path.products}>Danh mục sản phẩm</Link>
+              <Link to={path.products}>{t('homepage.categories')}</Link>
             </div>
             <ul className="homepage-categories__list">
               {allCategories.map((category, index) => (
@@ -110,7 +112,10 @@ function Home(props) {
         </section>
 
         <section className="best-selling-products">
-          <ProductsListSlider title={'Sản phẩm bán chạy'} products={products} />
+          <ProductsListSlider
+            title={t('productsList.bestSelling')}
+            products={products}
+          />
         </section>
 
         <section className="homepage__skinny-banners">
@@ -122,7 +127,7 @@ function Home(props) {
         <section className="homepage-brands">
           <div className="homepage__box">
             <div className="homepage__header">
-              <Link to={path.products}>Thương hiệu</Link>
+              <Link to={path.products}>{t('homepage.brands')}</Link>
             </div>
             <Grid container>
               <Grid item xs={12} sm={4}>
@@ -141,7 +146,7 @@ function Home(props) {
 
         <section className="watched-products">
           <ProductsListSlider
-            title={'Sản phẩm đã xem'}
+            title={t('productsList.viewed')}
             products={viewedProductList}
           />
         </section>
