@@ -10,6 +10,7 @@ import wishListReducer from 'src/pages/ProductDetail/wishlist.slice'
 import userReducer from 'src/pages/User/user.slice'
 import adminReducer from 'src/pages/Admin/admin.slice'
 import languageReducer from 'src/components/LanguageSelect/language.slice'
+import appReducer from 'src/app.slice'
 
 const rootReducer = {
   products: productsReducer,
@@ -23,7 +24,8 @@ const rootReducer = {
   admin: adminReducer,
   auth: authReducer,
   wishList: wishListReducer,
-  language: languageReducer
+  language: languageReducer,
+  app: appReducer
 }
 
 export default rootReducer
