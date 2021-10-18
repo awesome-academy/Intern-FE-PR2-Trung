@@ -191,6 +191,7 @@ function ManageUsers(props) {
                           onChange={event => handleChangeStatus(event, user.id)}
                           displayEmpty
                           className={classes.selectEmpty}
+                          disabled={user.role === 'admin'}
                         >
                           <MenuItem value={1}>Hoạt động</MenuItem>
                           <MenuItem value={0}>Vô hiệu</MenuItem>

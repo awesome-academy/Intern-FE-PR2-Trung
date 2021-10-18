@@ -23,7 +23,7 @@ import { useTranslation } from 'react-i18next'
 import PageTitle from 'src/components/PageTitle'
 
 function Delivery(props) {
-  const { firstName, lastName, email, phone } = JSON.parse(
+  const { firstName, lastName, email, phone, address } = JSON.parse(
     localStorage.getItem(LocalStorage.user)
   )
   const { t } = useTranslation()
@@ -35,7 +35,7 @@ function Delivery(props) {
     lastName: lastName || '',
     email: email || '',
     phone: phone || '',
-    address: '',
+    address: address || '',
     paymentMethod: ''
   }
 

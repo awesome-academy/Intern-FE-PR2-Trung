@@ -25,7 +25,7 @@ const useAuth = () => {
   const { role: userRole } = useSelector(state => state.auth.profile)
 
   const registerWithEmailAndPassword = async data => {
-    const { firstName, lastName, email, password } = data
+    const { firstName, lastName, email, password, phone } = data
 
     try {
       const response = await createUserWithEmailAndPassword(
@@ -50,7 +50,8 @@ const useAuth = () => {
           status: 1,
           firstName,
           lastName,
-          email
+          email,
+          phone
         }
 
         localStorage.setItem(LocalStorage.accessToken, accessToken)

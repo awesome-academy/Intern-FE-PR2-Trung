@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import ScrollToTop from 'src/ScrollToTop'
 import { createTheme, ThemeProvider } from '@material-ui/core'
 import Inter from 'src/assets/fonts/Inter-VariableFont_slnt,wght.ttf'
+import Loading from 'src/components/Loading'
 
 const theme = createTheme({
   typography: {
@@ -36,6 +37,7 @@ function App() {
         <BrowserRouter>
           <ScrollToTop />
           <Routes />
+          <Loading />
           <ToastContainer
             position="top-center"
             autoClose={3000}

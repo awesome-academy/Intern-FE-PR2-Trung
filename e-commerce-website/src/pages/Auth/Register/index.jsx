@@ -19,6 +19,7 @@ function Register(props) {
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
     password: '',
     confirmPassword: ''
   }
